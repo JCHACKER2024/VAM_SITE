@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const elementsToReveal = document.querySelectorAll('.card, .saida-row, .parceiro-link, .titulo-seccao, .titulo-medio, .project-card, .testimonial-card, .ato-wrapper, .video-slide, .image-gallery-component');
+    const elementsToReveal = document.querySelectorAll('.card, .saida-row, .parceiro-link, .titulo-seccao, .titulo-medio, .project-card, .testimonial-card, .ato-wrapper, .video-slide');
     
     elementsToReveal.forEach(el => {
         observer.observe(el);
@@ -46,19 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    /* --- INICIALIZAR OS 4 SLIDERS DO HOF SIMULTANEAMENTE --- */
-    // Configuração de cada galeria: ID da calha, Nome exato da pasta de imagens, Quantidade de fotos
-    const galleriesConfig = [
-        { trackId: "track-posters", folder: "Posters", count: 19 },
-        { trackId: "track-mockups", folder: "Mockups", count: 18 },
-        { trackId: "track-concepts", folder: "Concept Art", count: 20 },
-        { trackId: "track-3d", folder: "Modelacao 3D", count: 12 }
-    ];
-
-    galleriesConfig.forEach(galeria => {
-        initIndependentGallery(galeria.trackId, galeria.folder, galeria.count);
-    });
 });
 
 /* LÓGICA DO SLIDER DE VÍDEOS (HALL OF FAME) */
@@ -103,7 +90,7 @@ function openAlumniModal(id) {
                 ${fotoHTML}
             </div>
             <h3 style="color: #fff; font-size: 26px; margin-bottom: 5px;">${nome}</h3>
-            <span class="cargo" style="color: #00ff66; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">
+            <span class="cargo" style="color: #ffee00; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">
                 ${cargo}
             </span>
         </div>
@@ -124,7 +111,7 @@ function closeAlumniModal() {
     }
 }
 
-/* LÓGICA UNIVERSAL DE CARROSSEIS (GALERIAS DE IMAGENS ESTÁTICAS) */
+/* LÓGICA UNIVERSAL DE CARROSSEIS (GALERIAS DE IMAGENS) */
 function moveSlide(id, step, imgClass = '.c-img') {
     const container = document.getElementById(id);
     if (!container) return;
@@ -146,60 +133,4 @@ function moveSlide(id, step, imgClass = '.c-img') {
 
 function moveSobreSlide(id, step) {
     moveSlide(id, step, '.c-img');
-}
-
-/* --- NOVA LÓGICA DO SLIDER AUTOMÁTICO INDEPENDENTE (MÚLTIPLOS SLIDERS SIMULTÂNEOS) --- */
-function initIndependentGallery(trackId, folderName, imageCount) {
-    const track = document.getElementById(trackId);
-    if (!track) return;
-
-    // 1. Injetar dinamicamente as imagens originais da pasta correspondente
-    for (let i = 1; i <= imageCount; i++) {
-        const slide = document.createElement('div');
-        slide.className = 'img-slide';
-        
-        const img = document.createElement('img');
-        img.src = `IMGS/Hall Of Fame/${folderName}/${i}.png`;
-        img.alt = `${folderName} - Trabalho ${i}`;
-        img.loading = "lazy";
-        
-        slide.appendChild(img);
-        track.appendChild(slide);
-    }
-
-    // 2. Clonar todas as imagens originais no final para garantir o loop infinito contínuo e sem falhas visuais
-    const originalSlides = Array.from(track.children);
-    originalSlides.forEach(slideNode => {
-        const slideClone = slideNode.cloneNode(true);
-        slideClone.classList.add('clone');
-        track.appendChild(slideClone);
-    });
-
-    // 3. Inicializar e gerir o loop de animação específico para esta calha
-    let scrollX = 0;
-    const speed = 1; // Controla a velocidade de rolamento (podes aumentar para acelerar)
-
-    function stepAnimation() {
-        scrollX -= speed;
-        
-        const firstChild = track.querySelector('.img-slide');
-        if (!firstChild) return;
-        
-        // Mede a largura do elemento real + gap dinâmico do CSS (geralmente 20px)
-        const slideWidth = firstChild.getBoundingClientRect().width + 20;
-        
-        // Ponto de reset: quando a metade correspondente a todas as imagens originais passar
-        const resetPoint = slideWidth * imageCount;
-
-        // Faz o reset matemático instantâneo para a posição inicial (efeito infinito impercetível)
-        if (Math.abs(scrollX) >= resetPoint) {
-            scrollX = 0;
-        }
-        
-        track.style.transform = `translateX(${scrollX}px)`;
-        requestAnimationFrame(stepAnimation);
-    }
-
-    // Dispara a animação individual e independente desta galeria
-    requestAnimationFrame(stepAnimation);
 }
