@@ -6,7 +6,7 @@
     <title>SOBRE - VAM</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/sobre.css">
-    <link rel="icon" type="image/png" href="IMGS/logo_icon.png">
+    <link rel="icon" type="image/png" href="IMGS/logo_VAM_favicon.png">
 </head>
 <body>
 
@@ -39,8 +39,7 @@
     <main>
         <section id="hero-wrap">
             <div class="logo-animation-container">
-                <img src="IMGS/logo_icon.png" alt="Ícone VAM" class="logo-img-icon">
-                <img src="IMGS/logo_texto.png" alt="Texto VAM" class="logo-img-text">
+                <img src="IMGS/logo_VAM_branco.png" alt="Ícone VAM" class="logo-img-icon">
             </div>
 
             <div id="indexvideo">
@@ -69,10 +68,17 @@
                 
                 <!-- CARD 1: PITCH VAM -->
                 <div class="card">
-                    <div class="media-container multiplex-video-fix">
-                        <video controls class="card-video">
-                            <source src="VIDS/pitch_vam.mp4" type="video/mp4">
-                        </video>
+                    <div class="media-container">
+                        <div class="carousel-sobre" id="carousel-pitch">
+                            <div class="carousel-track">
+                                <img src="IMGS/picth/pitch0.png" alt="Pitch VAM 1" class="c-img active">
+                                <img src="IMGS/picth/pitch1.png" alt="Pitch VAM 2" class="c-img">
+                                <img src="IMGS/picth/pitch2.png" alt="Pitch VAM 3" class="c-img">
+                                <img src="IMGS/picth/pitch3.png" alt="Pitch VAM 4" class="c-img">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-pitch', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-pitch', 1)">&#10095;</button>
+                        </div>
                     </div>
                     <div class="card-info">
                         <span class="tag-amarela">Competência</span>
@@ -86,8 +92,7 @@
                     <div class="media-container">
                         <div class="carousel-sobre" id="carousel-discord">
                             <div class="carousel-track">
-                                <img src="IMGS/discord/print1.jpg" alt="Discord Community 1" class="c-img active">
-                                <img src="IMGS/discord/print2.jpg" alt="Discord Community 2" class="c-img">
+                                <img src="IMGS/discord/discord.png" alt="Discord Community 1" class="c-img active">
                             </div>
                             <button class="c-prev" onclick="moveSobreSlide('carousel-discord', -1)">&#10094;</button>
                             <button class="c-next" onclick="moveSobreSlide('carousel-discord', 1)">&#10095;</button>
@@ -96,7 +101,7 @@
                     <div class="card-info">
                         <span class="tag-amarela">Comunidade</span>
                         <h3>DISCORD VAM</h3>
-                        <p>Temos uma comunidade ativa de Discord em que estudantes, licenciados, professores e profissionais podem interagir online, expor trabalhos, tirar dúvidas, ter acesso a oportunidades de emprego, falar sobre jogos, filmes, anime, cultura geek, etc. Muito para além do simples grupo de WhatsApp.</p>
+                        <p>Temos uma comunidade activa de Discord em que estudantes, licenciados, professores e profissionais podem interagir online, expor trabalhos, tirar dúvidas, ter acesso a oportunidades de emprego, falar sobre jogos, filmes, anime, cultura geek, etc. Muito para além do simples grupo de WhatsApp.</p>
                     </div>
                 </div>
 
@@ -105,8 +110,13 @@
                     <div class="media-container">
                         <div class="carousel-sobre" id="carousel-jam">
                             <div class="carousel-track">
-                                <img src="IMGS/gamejam/foto1.jpg" alt="Game Jam 1" class="c-img active">
-                                <img src="IMGS/gamejam/foto2.jpg" alt="Game Jam 2" class="c-img">
+                                <img src="IMGS/gamejam/JAM_1.png" alt="Game Jam 1" class="c-img active">
+                                <img src="IMGS/gamejam/JAM_2.png" alt="Game Jam 2" class="c-img">
+                                <img src="IMGS/gamejam/JAM_3.png" alt="Game Jam 3" class="c-img">
+                                <img src="IMGS/gamejam/JAM_4.png" alt="Game Jam 4" class="c-img">
+                                <img src="IMGS/gamejam/JAM_5.png" alt="Game Jam 5" class="c-img">
+                                <img src="IMGS/gamejam/JAM_6.png" alt="Game Jam 5" class="c-img">
+                                <img src="IMGS/gamejam/JAM_7.png" alt="Game Jam 5" class="c-img">
                             </div>
                             <button class="c-prev" onclick="moveSobreSlide('carousel-jam', -1)">&#10094;</button>
                             <button class="c-next" onclick="moveSobreSlide('carousel-jam', 1)">&#10095;</button>
@@ -121,15 +131,32 @@
 
                 <!-- CARD 4: MOSTRA VAM -->
                 <div class="card">
-                    <div class="media-container equipamento-video-fix">
-                        <video controls class="card-video">
-                            <source src="VIDS/mostra_vam.mp4" type="video/mp4">
-                        </video>
+                    <div class="media-container">
+                        <div class="carousel-sobre" id="carousel-mostra">
+                            <div class="carousel-track">
+                                <img src="IMGS/mostra/mostra_1.png" alt="Mostra VAM 1" class="c-img active">
+                                <img src="IMGS/mostra/mostra_2.png" alt="Mostra VAM 2" class="c-img">
+                                <img src="IMGS/mostra/mostra_3.png" alt="Mostra VAM 3" class="c-img">
+                                <img src="IMGS/mostra/mostra_4.png" alt="Mostra VAM 4" class="c-img">
+                                <img src="IMGS/mostra/mostra_5.png" alt="Mostra VAM 5" class="c-img">
+                                <img src="IMGS/mostra/mostra_6.png" alt="Mostra VAM 6" class="c-img">
+                                <img src="IMGS/mostra/mostra_7.png" alt="Mostra VAM 7" class="c-img">
+                                <img src="IMGS/mostra/mostra_8.png" alt="Mostra VAM 8" class="c-img">
+                                <img src="IMGS/mostra/mostra_9.png" alt="Mostra VAM 9" class="c-img">
+                                <img src="IMGS/mostra/mostra_10.png" alt="Mostra VAM 10" class="c-img">
+                                <img src="IMGS/mostra/mostra_11.png" alt="Mostra VAM 10" class="c-img">
+                                <img src="IMGS/mostra/mostra_12.png" alt="Mostra VAM 10" class="c-img">
+                                <img src="IMGS/mostra/mostra_13.png" alt="Mostra VAM 10" class="c-img">
+                                <img src="IMGS/mostra/mostra_14.png" alt="Mostra VAM 10" class="c-img">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-mostra', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-mostra', 1)">&#10095;</button>
+                        </div>
                     </div>
                     <div class="card-info">
                         <span class="tag-amarela">Exposição</span>
                         <h3>MOSTRA VAM</h3>
-                        <p>O culminar de cada semestre dá-se no momento em que fazemos a mostra pública dos projetos desenvolvidos pelos estudantes. É o melhor momento para testar e receber feedback de colegas, professores e profissionais. É feita também uma votação onde são escolhidos os melhores projetos do ano em várias categorias. Por vezes até nos mostramos para além da Universidade em eventos como o MEO XL GAMES ou exposições de Arte Interativa.</p>
+                        <p>O culminar de cada semestre dá-se no momento em que fazemos a mostra pública dos projetos desenvolvidos pelos estudantes. É o melhor momento para testar e receber feedback de colegas, professores e profissionais. É feita também uma votação onde são escolher os melhores projetos do ano em várias categorias. Por vezes até nos mostramos para além da Universidade em eventos como o MEO XL GAMES ou exposições de Arte Interativa.</p>
                     </div>
                 </div>
             </div>
