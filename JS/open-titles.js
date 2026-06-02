@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const elementsToReveal = document.querySelectorAll('.card, .saida-row, .parceiro-link, .titulo-seccao, .titulo-medio, .project-card, .testimonial-card, .ato-wrapper, .video-slide');
+    const elementsToReveal = document.querySelectorAll('.card, .saida-row, .parceiro-link, .titulo-seccao, .titulo-medio, .project-card, .testimonial-card, .ato-wrapper, .video-slide, .galeria-carrossel-item');
     
     elementsToReveal.forEach(el => {
         observer.observe(el);
@@ -46,6 +46,70 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    /* ==========================================================================
+       LÓGICA AVANÇADA EM LOOP COVERSIDE (VER 3-5 POSTERS COM TRANSPARÊNCIA)
+       ========================================================================== */
+    const tracks = document.querySelectorAll('.carrossel-track');
+
+    tracks.forEach(track => {
+        const pasta = track.getAttribute('data-pasta');
+        const totalImagens = parseInt(track.getAttribute('data-total'), 10);
+        
+        if (!pasta || !totalImagens) return;
+
+        // 1. Injetar as imagens na calha seguindo a árvore sequencial correta
+        for (let i = 1; i <= totalImagens; i++) {
+            const img = document.createElement('img');
+            img.src = `IMGS/hall of fame/${pasta}/${i}.png`;
+            img.alt = `Trabalho ${pasta} - ${i}`;
+            img.classList.add('carrossel-slide-img');
+            track.appendChild(img);
+        }
+
+        const slides = track.querySelectorAll('.carrossel-slide-img');
+        let currentIdx = 0;
+
+        // Função interna para limpar classes antigas e atualizar perspetiva multidirecional
+        function update3DCarousel() {
+            slides.forEach(slide => {
+                slide.classList.remove('active', 'prev', 'next', 'prev2', 'next2');
+            });
+
+            const total = slides.length;
+            if (total === 0) return;
+
+            // Atribuição de índices circulares perfeitos (Loop Infinito autónomo)
+            const prevIdx = (currentIdx - 1 + total) % total;
+            const prev2Idx = (currentIdx - 2 + total) % total;
+            const nextIdx = (currentIdx + 1) % total;
+            const next2Idx = (currentIdx + 2) % total;
+
+            slides[currentIdx].classList.add('active');
+            
+            if (total > 1) {
+                slides[prevIdx].classList.add('prev');
+                slides[nextIdx].classList.add('next');
+            }
+            if (total > 3) {
+                slides[prev2Idx].classList.add('prev2');
+                slides[next2Idx].classList.add('next2');
+            }
+        }
+
+        // Inicializa o primeiro frame visual
+        if (slides.length > 0) {
+            update3DCarousel();
+        }
+
+        // Loop automático a cada 4 segundos
+        if (slides.length > 1) {
+            setInterval(() => {
+                currentIdx = (currentIdx + 1) % slides.length;
+                update3DCarousel();
+            }, 4000);
+        }
+    });
 });
 
 /* LÓGICA DO SLIDER DE VÍDEOS (HALL OF FAME) */

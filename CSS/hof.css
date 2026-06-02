@@ -1,4 +1,6 @@
-/* ESTRUTURA DAS SECÇÕES (HALL OF FAME & TESTEMUNHOS) */
+/* ==========================================================================
+   ESTRUTURA DAS SECÇÕES
+   ========================================================================== */
 .hof-section, 
 .testimonials-section {
     max-width: 1200px;
@@ -24,7 +26,9 @@
     color: #00ff66;
 }
 
-/* SLIDER DE VÍDEOS RESPONSIVO */
+/* ==========================================================================
+   SLIDER DE VÍDEOS
+   ========================================================================== */
 .video-slider-container {
     position: relative;
     width: 100%;
@@ -133,7 +137,196 @@
     display: none;
 }
 
-/* GRELHA DE TESTEMUNHOS (GRADUADOS/ALUMNI) */
+/* ==========================================================================
+   SECÇÃO DE REVIEW DE JOGOS
+   ========================================================================== */
+.review-jogos-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 60px auto 20px auto;
+    padding: 0 20px;
+}
+
+.titulo-grande-secção {
+    font-size: clamp(32px, 6vw, 46px);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.texto-corrido-centrado {
+    color: #a0a0a0;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.botao-centrado-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-link-centrado {
+    display: inline-block;
+    background: #00ff66;
+    color: #000000;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 255, 102, 0.2);
+}
+
+.btn-link-centrado:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   CARROSSEIS AUTOMÁTICOS (EFEITO TRANSPARÊNCIA VISUAL 3-5 POSTERS)
+   ========================================================================== */
+.galerias-carrosseis-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.galeria-carrossel-item {
+    background: #1a1c23;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.galeria-carrossel-item h3 {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+}
+
+.carrossel-wrapper {
+    width: 100%;
+    height: 520px;             
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background: #0d0e12;  
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    perspective: 1200px;       
+}
+
+.carrossel-track {
+    display: block;        
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Base de todas as imagens do carrossel */
+.carrossel-slide-img {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: auto;
+    height: 90%;
+    max-width: 320px;          
+    object-fit: contain;  
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateZ(-400px);
+    /* Transição suave de movimento e opacidade, atrasando o recuo de profundidade das que saem */
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out, z-index 0.8s step-end;
+    z-index: 1;
+}
+
+/* AUMENTAR AS IMAGENS PARA O DOBRO (EXCETO OS POSTERS) */
+.carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img {
+    max-width: 640px;          
+}
+
+/* ESTADOS DE VISUALIZAÇÃO DOS 5 POSTERS EM SIMULTÂNEO */
+
+/* 1. Imagem Ativa (Centro) - Força o z-index a entrar instantaneamente (step-start) */
+.carrossel-slide-img.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateZ(0px) scale(1);
+    z-index: 10;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out, z-index 0.8s step-start;
+}
+
+/* 2. Poster Imediatamente Anterior (Esquerda) */
+.carrossel-slide-img.prev {
+    opacity: 0.55;
+    transform: translateX(-140%) translateZ(-150px) scale(0.85);
+    z-index: 5;
+}
+
+/* Ajuste de afastamento lateral para as imagens maiores (não posters) */
+.carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.prev {
+    transform: translateX(-118%) translateZ(-150px) scale(0.8);
+}
+
+/* 3. Poster Imediatamente Seguinte (Direita) */
+.carrossel-slide-img.next {
+    opacity: 0.55;
+    transform: translateX(40%) translateZ(-150px) scale(0.85);
+    z-index: 5;
+}
+
+/* Ajuste de afastamento lateral para as imagens maiores (não posters) */
+.carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.next {
+    transform: translateX(18%) translateZ(-150px) scale(0.8);
+}
+
+/* 4. Segundo Poster Anterior (Extrema Esquerda) */
+.carrossel-slide-img.prev2 {
+    opacity: 0.15;
+    transform: translateX(-220%) translateZ(-300px) scale(0.7);
+    z-index: 2;
+}
+
+/* Ajuste sutil para o segundo elemento maior à esquerda */
+.carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.prev2 {
+    transform: translateX(-165%) translateZ(-300px) scale(0.65);
+}
+
+/* 5. Segundo Poster Seguinte (Extrema Direita) */
+.carrossel-slide-img.next2 {
+    opacity: 0.15;
+    transform: translateX(120%) translateZ(-300px) scale(0.7);
+    z-index: 2;
+}
+
+/* Ajuste sutil para o segundo elemento maior à direita */
+.carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.next2 {
+    transform: translateX(65%) translateZ(-300px) scale(0.65);
+}
+
+.galeria-carrossel-item p {
+    color: #888888;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   GRELHA GRADUADOS
+   ========================================================================== */
 .testimonials-section {
     max-width: 1800px; 
     margin: 80px auto;
@@ -216,7 +409,9 @@
     display: none; 
 }
 
-/* COMPONENTE MODAL INTERATIVO */
+/* ==========================================================================
+   COMPONENTE MODAL INTERATIVO
+   ========================================================================== */
 .modal-v2 {
     display: none;
     position: fixed;
@@ -274,18 +469,20 @@
     margin-bottom: 0;
 }
 
-/* ANIMAÇÕES & KEYFRAMES */
+/* ==========================================================================
+   ANIMAÇÕES & KEYFRAMES
+   ========================================================================== */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.98); }
     to { opacity: 1; transform: scale(1); }
 }
 
-/* RESPONSIVIDADE */
-
-/* Tablets e Ecrãs Médios */
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
 @media (max-width: 900px) {
     .slider-prev, .slider-next {
-        width: 50px;           
+        width: 50px;          
         height: 50px;
         font-size: 20px;      
         bottom: 50px;          
@@ -307,9 +504,21 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
+
+    .carrossel-wrapper {
+        height: 380px;
+    }
+    .carrossel-slide-img {
+        max-width: 220px;
+    }
+    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img {
+        max-width: 400px;
+    }
+    .carrossel-slide-img.prev { transform: translateX(-120%) translateZ(-100px) scale(0.8); }
+    .carrossel-slide-img.next { transform: translateX(20%) translateZ(-100px) scale(0.8); }
+    .carrossel-slide-img.prev2, .carrossel-slide-img.next2 { display: none; } 
 }
 
-/* Telemóveis / Smartphones */
 @media (max-width: 480px) {
     .video-slider-container {
         border-radius: 16px;
@@ -333,6 +542,19 @@
     .video-slide .project-info h3 {
         font-size: 22px;
     }
+
+    .carrossel-wrapper {
+        height: 300px;
+    }
+    .carrossel-slide-img {
+        max-width: 170px;
+    }
+    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img {
+        max-width: 260px;
+    }
+    .carrossel-slide-img.prev { transform: translateX(-105%) translateZ(-80px) scale(0.75); opacity: 0.35; }
+    .carrossel-slide-img.next { transform: translateX(5%) translateZ(-80px) scale(0.75); opacity: 0.35; }
+    .carrossel-slide-img.prev2, .carrossel-slide-img.next2 { display: none; }
 
     .testimonials-section {
         padding: 0 15px; 
