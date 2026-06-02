@@ -23,7 +23,7 @@ if (!isTouchDevice) {
         });
     });
 
-    const targetSelectors = 'a, button, details summary, .lang-btn, .btn-cta, .btn-candidata, video, .saida-row, .parceiro-link';
+    const targetSelectors = 'a, button, details summary, .lang-btn, .btn-cta, .btn-candidata, video, .saida-row, .parceiro-link, .tab-btn';
 
     window.addEventListener('mouseover', (e) => {
         if (e.target.closest(targetSelectors)) {
@@ -81,7 +81,7 @@ if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js'
             },
             "move": { 
                 "enable": true, 
-                "speed": 1.0, // Velocidade milimetricamente ajustada
+                "speed": 1.0, 
                 "direction": "none",
                 "random": false,
                 "straight": false,
@@ -92,8 +92,8 @@ if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js'
         "interactivity": {
             "detect_on": "window",
             "events": {
-                "onhover": { "enable": true, "mode": "grab" }, // Cria teias quando passas com o rato
-                "onclick": { "enable": true, "mode": "push" }   // Adiciona mais formas ao clicar
+                "onhover": { "enable": true, "mode": "grab" }, 
+                "onclick": { "enable": true, "mode": "push" }   
             },
             "modes": {
                 "grab": { "distance": 160, "line_linked": { "opacity": 0.4 } },
