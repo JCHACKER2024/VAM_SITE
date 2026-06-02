@@ -47,9 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ==========================================================================
-       LÓGICA AVANÇADA EM LOOP COVERSIDE (VER 3-5 POSTERS COM TRANSPARÊNCIA)
-       ========================================================================== */
+    /* LÓGICA AVANÇADA EM LOOP COVERSIDE */
     const tracks = document.querySelectorAll('.carrossel-track');
 
     tracks.forEach(track => {
