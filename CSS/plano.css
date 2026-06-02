@@ -18,7 +18,7 @@ main {
 
 .ato-header {
     margin-bottom: 35px;
-    border-left: 4px solid #ffee00;
+    border-left: 4px solid #00ff66;
     padding-left: 25px;
     text-align: left;
 }
@@ -71,17 +71,17 @@ main {
 
 .semestre-box summary::after {
     content: '→';
-    color: #ffee00;
+    color: #00ff66;
     font-size: 18px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .semestre-box[open] {
-    border-color: rgba(255, 238, 0, 0.3);
+    border-color: rgba(0, 255, 102, 0.3);
 }
 
 .semestre-box[open] summary {
-    color: #ffee00;
+    color: #00ff66;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -154,7 +154,7 @@ main {
 }
 
 .highlight {
-    color: #ffee00;
+    color: #00ff66;
 }
 
 .docentes-lista-v2 {
@@ -177,7 +177,7 @@ main {
 }
 
 .docente-row:hover {
-    border-color: #ffee00;
+    border-color: #00ff66;
     transform: translateY(-5px);
 }
 
@@ -217,7 +217,7 @@ main {
 
 .cargo {
     display: block;
-    color: #ffee00;
+    color: #00ff66;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
@@ -265,7 +265,7 @@ main {
     content: "•";
     position: absolute;
     left: 0;
-    color: #ffee00;
+    color: #00ff66;
     font-weight: bold;
 }
 

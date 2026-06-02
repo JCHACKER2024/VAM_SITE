@@ -108,7 +108,8 @@ main {
 .header-logo-img {
     height: 40px;
     width: auto;
-    filter: invert(65%) sepia(85%) saturate(1350%) hue-rotate(95deg) brightness(100%) contrast(110%);
+    /* Filtro recalibrado para gerar a cor exata do verde néon #00ff66 em fundos escuros */
+    filter: invert(72%) sepia(85%) saturate(1400%) hue-rotate(90deg) brightness(105%) contrast(120%);
     transition: transform 0.3s ease;
 }
 
@@ -407,7 +408,7 @@ nav a.active, nav a:hover {
 }
 
 .footer-link-simple:hover { 
-    color: #00ff66; /* Mudado para Verde */
+    color: #00ff66; 
     text-decoration: underline; 
 }
 
@@ -435,7 +436,7 @@ nav a.active, nav a:hover {
 }
 
 .footer-socials a:hover { 
-    color: #00ff66; /* Mudado para Verde */
+    color: #00ff66; 
 }
 
 .footer-bottom { 
@@ -453,7 +454,7 @@ nav a.active, nav a:hover {
     bottom: 30px;
     right: 30px;
     z-index: 9999;
-    background: #00ff66; /* Mudado para Verde */
+    background: #00ff66; 
     color: #000;
     border: none;
     padding: 10px 20px;

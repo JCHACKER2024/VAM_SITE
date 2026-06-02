@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOBRE - CAM</title>
+    <title>SOBRE - VAM</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/sobre.css">
     <link rel="icon" type="image/png" href="IMGS/logo_icon.png">
@@ -16,8 +16,8 @@
         <div class="header-container">
             <a href="index.html" class="logo-link">
                 <div class="logo-header">
-                    <img src="IMGS/logo_icon.png" alt="CAM Logo" class="header-logo-img">
-                    <span class="extenso">COMUNICAÇÃO AUDIOVISUAL E MULTIMÉDIA</span>
+                    <img src="IMGS/logo_VAM.png" alt="VAM Logo" class="header-logo-img">
+                    <span class="extenso">VIDEOJOGOS E APLICAÇÕES MULTIMÉDIA</span>
                 </div>
             </a>
             <nav>
@@ -25,7 +25,7 @@
                 <a href="sobre.html" class="active">SOBRE</a>
                 <a href="plano.html">PLANO</a>
                 <a href="hof.html">HALL OF FAME</a>
-                <a href="multiplex.html">MULTIPLEX</a>
+                <a href="timeline.html">TIMELINE</a>
             </nav>
 
             <div class="language-selector">
@@ -39,16 +39,16 @@
     <main>
         <section id="hero-wrap">
             <div class="logo-animation-container">
-                <img src="IMGS/logo_icon.png" alt="Ícone CAM" class="logo-img-icon">
-                <img src="IMGS/logo_texto.png" alt="Texto CAM" class="logo-img-text">
+                <img src="IMGS/logo_icon.png" alt="Ícone VAM" class="logo-img-icon">
+                <img src="IMGS/logo_texto.png" alt="Texto VAM" class="logo-img-text">
             </div>
 
             <div id="indexvideo">
                 <div class="video-overlay">
-                    <h1 class="shadow-text reveal-video-text">VIVER NA <span class="highlight">CRIATIVIDADE</span></h1>
+                    <h1 class="shadow-text reveal-video-text">CRIAR O <span class="highlight">FUTURO</span></h1>
                 </div>
                 <video autoplay muted loop playsinline id="myVideo">
-                    <source src="VIDS/video2.mp4" type="video/mp4">
+                    <source src="VIDS/video1.mp4" type="video/mp4">
                     O teu navegador não suporta vídeo.
                 </video>
                 <button id="muteBtn" class="mute-toggle">
@@ -59,82 +59,77 @@
 
         <section class="content-wrapper">
             <p class="texto-corrido">
-                CAM é uma licenciatura que te permite ter uma multiplicidade de experiências que vão para além das próprias portas da Universidade, sendo um curso aberto à cidade e ao mundo. Queremos alargar horizontes e estar na vanguarda da imagem do futuro. Conhece os espaços e eventos que definem o nosso curso.
+                VAM é uma Licenciatura com uma componente prática intensa que te prepara para o mercado de trabalho. Não sabes se gostarias de seguir o campo da programação, da arte, sonoplastia ou game design? Estás no local certo, pois terás a oportunidade de aprender e experimentar todas essas áreas tendo uma visão abrangente dos principais processos e trabalhos no campo do desenvolvimento de Videojogos e Aplicações Multimédia. Os projetos de grupo que desenvolvemos permitirão que te especializes nas áreas que demonstres mais capacidades, desta forma, a formação de cada estudante é personalizada e em cada turma são desenvolvidos perfis distintos. As várias disciplinas do curso funcionam em grande interligação e sentirás que estás sempre a trabalhar em pequenas partes de projetos maiores.
             </p>
         </section>
 
         <section class="destaques-section reveal">
+            <h2 class="titulo-seccao" style="text-align: center; margin-bottom: 40px;">A <span class="highlight">DESTACAR</span></h2>
             <div class="destaques-grid">
+                
+                <!-- CARD 1: PITCH VAM -->
                 <div class="card">
                     <div class="media-container multiplex-video-fix">
                         <video controls class="card-video">
-                            <source src="VIDS/multiplex.mp4" type="video/mp4">
+                            <source src="VIDS/pitch_vam.mp4" type="video/mp4">
                         </video>
+                    </div>
+                    <div class="card-info">
+                        <span class="tag-amarela">Competência</span>
+                        <h3>PITCH VAM</h3>
+                        <p>Tens dificuldade em falar em público? Vamos ajudar-te a superar isso! As apresentações de trabalhos são um ponto importante do nosso curso e todos os estudantes aprenderão como apresentar as suas ideias da melhor forma. Os projetos são escolhidos pelo mérito, criatividade e exequibilidade de cada proposta apresentada e votados entre professores e estudantes.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: DISCORD VAM -->
+                <div class="card">
+                    <div class="media-container">
+                        <div class="carousel-sobre" id="carousel-discord">
+                            <div class="carousel-track">
+                                <img src="IMGS/discord/print1.jpg" alt="Discord Community 1" class="c-img active">
+                                <img src="IMGS/discord/print2.jpg" alt="Discord Community 2" class="c-img">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-discord', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-discord', 1)">&#10095;</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <span class="tag-amarela">Comunidade</span>
+                        <h3>DISCORD VAM</h3>
+                        <p>Temos uma comunidade ativa de Discord em que estudantes, licenciados, professores e profissionais podem interagir online, expor trabalhos, tirar dúvidas, ter acesso a oportunidades de emprego, falar sobre jogos, filmes, anime, cultura geek, etc. Muito para além do simples grupo de WhatsApp.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: VAM GAME JAM -->
+                <div class="card">
+                    <div class="media-container">
+                        <div class="carousel-sobre" id="carousel-jam">
+                            <div class="carousel-track">
+                                <img src="IMGS/gamejam/foto1.jpg" alt="Game Jam 1" class="c-img active">
+                                <img src="IMGS/gamejam/foto2.jpg" alt="Game Jam 2" class="c-img">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-jam', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-jam', 1)">&#10095;</button>
+                        </div>
                     </div>
                     <div class="card-info">
                         <span class="tag-amarela">Evento Anual</span>
-                        <h3>MULTIPLEX</h3>
-                        <p>O Multiplex é um evento criado pelo curso de CAM e que oferece aos estudantes e à cidade do Porto a oportunidade de usufruir de Ciclos de Cinema temáticos e Masterclasses com importantes cineastas e artistas mundiais como Ildikó Enyedi, Nan Goldin, Sara Driver e ORLAN e Manoel de Oliveira. <a href="multiplex.html" style="color: #ffee00; text-decoration: underline;">Conhece todas as edições do Multiplex aqui.</a></p>
+                        <h3>VAM GAME JAM</h3>
+                        <p>No último fim de semana de Janeiro, a Universidade Lusófona está 48h aberta em exclusivo para a VAM e seus amigos. Como um JAM Site representante do evento mundial Global Game JAM, recebemos todos os interessados em criar videojogos em 48 horas de convívio, criatividade, jogos e pizza!</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="media-container">
-                        <div class="carousel-sobre" id="carousel-bcc">
-                            <div class="carousel-track">
-                                <img src="IMGS/batalha centro de cinema/bcc1.jpg" alt="Batalha 1" class="c-img active">
-                                <img src="IMGS/batalha centro de cinema/bcc2.jpg" alt="Batalha 2" class="c-img">
-                                <img src="IMGS/batalha centro de cinema/bcc3.jpg" alt="Batalha 3" class="c-img">
-                                <img src="IMGS/batalha centro de cinema/bcc4.jpg" alt="Batalha 4" class="c-img">
-                                <img src="IMGS/batalha centro de cinema/bcc5.jpg" alt="Batalha 5" class="c-img">
-                                <img src="IMGS/batalha centro de cinema/bcc6.jpg" alt="Batalha 6" class="c-img">
-                            </div>
-                            <button class="c-prev" onclick="moveSobreSlide('carousel-bcc', -1)">&#10094;</button>
-                            <button class="c-next" onclick="moveSobreSlide('carousel-bcc', 1)">&#10095;</button>
-                        </div>
-                    </div>
-                    <div class="card-info">
-                        <span class="tag-amarela">Parceria</span>
-                        <h3>BATALHA CENTRO DE CINEMA</h3>
-                        <p>Temos o enorme privilégio de estar localizados junto a um dos mais emblemáticos Centros de Cinema da cidade, o Batalha e de poder oferecer a excelente oportunidade de visualizar, analisar, estudar e ter aulas de cinema numa verdadeira sala de cinema. Contamos também com Masterclasses semanais “Great Artists on Campus” com artistas convidados como Vhils, Mikhail Karikis, Mila Turajlić e Diana Policarpo. </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="media-container">
-                        <div class="carousel-sobre" id="carousel-mira">
-                            <div class="carousel-track">
-                                <img src="IMGS/projeto2/foto1.jpg" alt="Mira 1" class="c-img active">
-                                <img src="IMGS/projeto2/foto2.jpg" alt="Mira 2" class="c-img">
-                                <img src="IMGS/projeto2/foto3.jpg" alt="Mira 3" class="c-img">
-                                <img src="IMGS/projeto2/foto4.jpg" alt="Mira 4" class="c-img">
-                                <img src="IMGS/projeto2/foto5.jpg" alt="Mira 5" class="c-img">
-                                <img src="IMGS/projeto2/foto6.jpg" alt="Mira 6" class="c-img">
-                                <img src="IMGS/projeto2/foto7.jpg" alt="Mira 7" class="c-img">
-                                <img src="IMGS/projeto2/foto8.jpg" alt="Mira 8" class="c-img">
-                                <img src="IMGS/projeto2/foto9.jpg" alt="Mira 9" class="c-img">
-                            </div>
-                            <button class="c-prev" onclick="moveSobreSlide('carousel-mira', -1)">&#10094;</button>
-                            <button class="c-next" onclick="moveSobreSlide('carousel-mira', 1)">&#10095;</button>
-                        </div>
-                    </div>
-                    <div class="card-info">
-                        <span class="tag-amarela">Galeria</span>
-                        <h3>ESPAÇO MIRA</h3>
-                        <p>Os nossos estudantes usufruem de mais uma oportunidade única, assistindo e expondo as suas instalações multimédia no Espaço Mira, uma das galerias de Arte Contemporânea mais emblemáticas da cidade. Não o fazem apenas como estudantes, mas como artistas da cidade.</p>
-                    </div>
-                </div>
-
+                <!-- CARD 4: MOSTRA VAM -->
                 <div class="card">
                     <div class="media-container equipamento-video-fix">
                         <video controls class="card-video">
-                            <source src="VIDS/espaços e equipamentos.mp4" type="video/mp4">
+                            <source src="VIDS/mostra_vam.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="card-info">
-                        <span class="tag-amarela">Infraestrutura</span>
-                        <h3>ESPAÇOS E EQUIPAMENTOS</h3>
-                        <p>A Universidade Lusófona Centro Universitário do Porto encontra-se em plena expansão e modernização, contando num futuro próximo com uma área de estúdios totalmente dedicados à criação audiovisual e multimédia.</p>
+                        <span class="tag-amarela">Exposição</span>
+                        <h3>MOSTRA VAM</h3>
+                        <p>O culminar de cada semestre dá-se no momento em que fazemos a mostra pública dos projetos desenvolvidos pelos estudantes. É o melhor momento para testar e receber feedback de colegas, professores e profissionais. É feita também uma votação onde são escolhidos os melhores projetos do ano em várias categorias. Por vezes até nos mostramos para além da Universidade em eventos como o MEO XL GAMES ou exposições de Arte Interativa.</p>
                     </div>
                 </div>
             </div>
@@ -145,18 +140,18 @@
             <div class="saidas-tabela">
                 <div class="saida-row">
                     <div class="saida-header">
-                        <h4>Produtoras de Fotografia e Vídeo</h4>
+                        <h4>Estúdios de Videojogos</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Usa a fotografia e vídeo em diversas vertentes, das mais artísticas e cinematográficas a publicitárias, comerciais ou institucionais.</p>
+                        <p>Numa escala Indie ou numa grande equipa, nacional ou internacionalmente, estarás preparado para o mercado de trabalho.</p>
                     </div>
                 </div>
                 <div class="saida-row">
                     <div class="saida-header">
-                        <h4>Agências de Publicidade</h4>
+                        <h4>Criação de Jogos Sérios</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Aplica todos os teus conhecimentos na implementação de estratégias de Marketing e conteúdos publicitários.</p>
+                        <p>Os conceitos de gamificação são vitais para criar conteúdos apelativos de publicidade, treino, aprendizagem ou divulgação em qualquer área da sociedade.</p>
                     </div>
                 </div>
                 <div class="saida-row">
@@ -164,7 +159,7 @@
                         <h4>Estúdios de Animação Digital</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Usa os teus conhecimentos de animação para comunicar de forma criativa e impactante.</p>
+                        <p>Usa os teus conhecimentos de animação 2D e 3D para comunicar de forma criativa e impactante.</p>
                     </div>
                 </div>
                 <div class="saida-row">
@@ -177,7 +172,7 @@
                 </div>
                 <div class="saida-row">
                     <div class="saida-header">
-                        <h4>Arte Audiovisual e Multimédia e IA</h4>
+                        <h4>Arte Audiovisual, Multimédia e IA</h4>
                     </div>
                     <div class="saida-info">
                         <p>Explora o teu próprio caminho e cria novas oportunidades e os empregos do futuro.</p>
@@ -190,33 +185,33 @@
             <h2 class="titulo-seccao">OS NOSSOS <span class="highlight">PARCEIROS</span></h2>
             
             <div class="parceiros-intro">
-                <p>Ao longo dos anos temos a oportunidade de trabalhar com diversas empresas da área de desenvolvimento de conteúdos e produtos de Audiovisuais e Multimédia, sobretudo como parceiros de estágios curriculares e como parceiros na realização de eventos. Orgulhamo-nos também de poder destacar algumas das empresas criadas pelos nossos Licenciados:</p>
+                <p>Ao longo dos anos, vamos tendo a oportunidade de trabalhar com diversas empresas da área de desenvolvimento de Videojogos e Aplicações Multimédia, sobretudo como parceiros de estágios curriculares. Destacamos algumas:</p>
             </div>
 
             <div class="parceiros-grid">
-                <a href="https://www.batalhacentrodecinema.pt/" target="_blank" class="parceiro-link">
-                    <img src="IMGS/parceiros/batalha.png" alt="Batalha Centro de Cinema">
+                <a href="https://adeninteractive.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/aden.png" alt="Aden Interactive">
                 </a>
-                <a href="https://miragalerias.net/" target="_blank" class="parceiro-link">
-                    <img src="IMGS/parceiros/mira.png" alt="Espaço Mira">
+                <a href="https://astralshiftpro.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/astralshift.png" alt="Astral Shift">
                 </a>
-                <a href="https://seagmedia.com/" target="_blank" class="parceiro-link">
-                    <img src="IMGS/parceiros/seagmedia.PNG" alt="Seagmedia">
+                <a href="https://camel101.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/camel101.png" alt="Camel 101">
                 </a>
-                <a href="https://www.overall.pt/" target="_blank" class="parceiro-link">
-                    <img src="IMGS/parceiros/overall.png" alt="Overall Studio">
+                <a href="https://mindera.com" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/mindera.png" alt="Mindera Gaming">
                 </a>
-                <a href="https://ghdirector.com/" target="_blank" class="parceiro-link">
-                    <img src="IMGS/parceiros/gh.png" alt="GH">
+                <a href="http://sinkingcodfish.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/sinkingcodfish.png" alt="Sinking Codfish">
                 </a>
-                <a href="https://www.yank.pt/pt/" target="_blank" class="parceiro-link">
-                    <img src="IMGS/parceiros/Yank.png" alt="Yank">
+                <a href="https://side.inc/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/side.png" alt="Side">
                 </a>
             </div>
             
             <div class="cta-section">
                 <a href="plano.html" class="btn-cta">Plano de Curso</a>
-                <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="btn-cta highlight-btn">Candidaturas</a>
+                <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="btn-cta highlight-btn">Candidaturas</a>
             </div>
         </section>
     </main>
@@ -239,21 +234,20 @@
                     <div class="info-item"><strong>Direção:</strong> joao.alves.de.sousa@ulusofona.pt</div>
                     <div class="info-item">
                         <strong>Página Institucional:</strong> 
-                        <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="footer-link-simple">CAM</a>
+                        <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="footer-link-simple">VAM</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-socials">
                 <h4>Segue-nos</h4>
-                <a href="https://www.facebook.com/camlusofona" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/cam_lusofona/" target="_blank">Instagram</a>
-                <a href="https://www.youtube.com/@CAMLusofona" target="_blank">YouTube</a>
-                <a href="https://vimeo.com/camlusofona" target="_blank">Vimeo</a>
+                <a href="https://www.facebook.com/VAMULP" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/vam_ulp/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/channel/UC6kld1O_PUSw5Hv9Ft1knUQ" target="_blank">YouTube</a>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 CAM - ULusófona Porto
+            &copy; 2026 VAM - ULusófona Porto
         </div>
     </footer>
 
