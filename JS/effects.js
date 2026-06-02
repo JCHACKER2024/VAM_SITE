@@ -28,7 +28,7 @@ if (!isTouchDevice) {
     window.addEventListener('mouseover', (e) => {
         if (e.target.closest(targetSelectors)) {
             cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
-            cursor.style.backgroundColor = 'rgba(255, 238, 0, 0.5)';
+            cursor.style.backgroundColor = 'rgba(0, 255, 102, 0.4)'; 
             cursor.style.borderColor = '#ffffff';
         }
     });
@@ -36,8 +36,8 @@ if (!isTouchDevice) {
     window.addEventListener('mouseout', (e) => {
         if (e.target.closest(targetSelectors)) {
             cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.backgroundColor = 'rgba(255, 238, 0, 0.1)';
-            cursor.style.borderColor = '#ffee00';
+            cursor.style.backgroundColor = 'rgba(0, 255, 102, 0.1)'; 
+            cursor.style.borderColor = '#00ff66'; 
         }
     });
 
@@ -50,37 +50,56 @@ if (!isTouchDevice) {
     });
 }
 
-/* PARTÍCULAS GEOMÉTRICAS (particles.js) */
+/* PARTÍCULAS GEOMÉTRICAS */
 
 if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
     particlesJS("particles-js", {
         "particles": {
             "number": { 
-                "value": 80, 
+                "value": 70, 
                 "density": { "enable": true, "value_area": 800 } 
             },
-            "color": { "value": "#ffee00" },
-            "shape": { "type": "circle" },
-            "opacity": { "value": 0.5 },
-            "size": { "value": 2 },
+            "color": { "value": "#00ff66" },
+            "shape": { 
+                "type": ["triangle", "edge"],
+                "stroke": { "width": 0, "color": "#000000" }
+            },
+            "opacity": { 
+                "value": 0.4,
+                "random": true 
+            },
+            "size": { 
+                "value": 10, 
+                "random": true 
+            },
             "line_linked": {
                 "enable": true,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.2,
+                "distance": 140,
+                "color": "#00ff66", 
+                "opacity": 0.15,
                 "width": 1
             },
             "move": { 
                 "enable": true, 
-                "speed": 0.8 
+                "speed": 1.0, // Velocidade milimetricamente ajustada
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
             }
         },
         "interactivity": {
             "detect_on": "window",
             "events": {
-                "onhover": { "enable": true, "mode": "grab" },
-                "onclick": { "enable": true, "mode": "push" }
+                "onhover": { "enable": true, "mode": "grab" }, // Cria teias quando passas com o rato
+                "onclick": { "enable": true, "mode": "push" }   // Adiciona mais formas ao clicar
+            },
+            "modes": {
+                "grab": { "distance": 160, "line_linked": { "opacity": 0.4 } },
+                "push": { "particles_nb": 3 }
             }
-        }
+        },
+        "retina_detect": true
     });
 }
