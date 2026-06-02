@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT - CAM</title>
+    <title>ABOUT - VAM</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/sobre.css">
-    <link rel="icon" type="image/png" href="IMGS/logo_icon.png">
+    <link rel="icon" type="image/png" href="IMGS/logo_VAM_favicon.png">
 </head>
 <body>
 
@@ -16,8 +16,8 @@
         <div class="header-container">
             <a href="index_en.html" class="logo-link">
                 <div class="logo-header">
-                    <img src="IMGS/logo_icon.png" alt="CAM Logo" class="header-logo-img">
-                    <span class="extenso">AUDIOVISUAL COMMUNICATION AND MULTIMEDIA</span>
+                    <img src="IMGS/logo_VAM.png" alt="VAM Logo" class="header-logo-img">
+                    <span class="extenso">VIDEO GAMES AND MULTIMEDIA APPLICATIONS</span>
                 </div>
             </a>
             <nav>
@@ -25,7 +25,7 @@
                 <a href="sobre_en.html" class="active">ABOUT</a>
                 <a href="plano_en.html">STUDY PLAN</a>
                 <a href="hof_en.html">HALL OF FAME</a>
-                <a href="multiplex_en.html">MULTIPLEX</a>
+                <a href="timeline_en.html">TIMELINE</a>
             </nav>
 
             <div class="language-selector">
@@ -39,16 +39,15 @@
     <main>
         <section id="hero-wrap">
             <div class="logo-animation-container">
-                <img src="IMGS/logo_icon.png" alt="CAM Icon" class="logo-img-icon">
-                <img src="IMGS/logo_texto.png" alt="CAM Text" class="logo-img-text">
+                <img src="IMGS/logo_VAM_branco.png" alt="VAM Icon" class="logo-img-icon">
             </div>
 
             <div id="indexvideo">
                 <div class="video-overlay">
-                    <h1 class="shadow-text reveal-video-text">LIVING IN <span class="highlight">CREATIVITY</span></h1>
+                    <h1 class="shadow-text reveal-video-text">CREATING THE <span class="highlight">FUTURE</span></h1>
                 </div>
                 <video autoplay muted loop playsinline id="myVideo">
-                    <source src="VIDS/video2.mp4" type="video/mp4">
+                    <source src="VIDS/VAM_2.mp4" type="video/mp4">
                     Your browser does not support video.
                 </video>
                 <button id="muteBtn" class="mute-toggle">
@@ -59,135 +58,187 @@
 
         <section class="content-wrapper">
             <p class="texto-corrido">
-                CAM is a Bachelor's degree that offers a multiplicity of experiences that go beyond the university walls, being a course open to the city and the world. We want to broaden horizons and be at the forefront of the image of the future. Discover the spaces and events that define our course.
+                VAM is a Bachelor's degree with an intense practical component that prepares you directly for the job market. Not sure if you would like to follow the path of programming, art, sound design, or game design? You are in the right place, as you will have the opportunity to learn and experiment in all of these fields, gaining a comprehensive vision of the main workflows and tasks in Video Games and Multimedia Applications development. The group projects we develop will allow you to specialize in the areas where you show the most skill; this way, each student's path is personalized, and distinct profiles are built within each class. The course's multiple modules are highly interconnected, making you feel like you are always working on smaller pieces of a larger project.
             </p>
         </section>
 
-        <section class="destaques-section">
+        <section class="destaques-section reveal">
+            <h2 class="titulo-seccao" style="text-align: center; margin-bottom: 40px;">HIGHLIGHTED <span class="highlight">FEATURES</span></h2>
             <div class="destaques-grid">
                 
-                <!-- MULTIPLEX -->
+                <!-- CARD 1: PITCH VAM -->
                 <div class="card">
-                    <div class="media-container multiplex-video-fix">
-                        <video controls class="card-video">
-                            <source src="VIDS/multiplex.mp4" type="video/mp4">
-                        </video>
+                    <div class="media-container">
+                        <div class="carousel-sobre" id="carousel-pitch">
+                            <div class="carousel-track">
+                                <img src="IMGS/picth/pitch0.png" alt="Pitch VAM 1" class="c-img active">
+                                <img src="IMGS/picth/pitch1.png" alt="Pitch VAM 2" class="c-img">
+                                <img src="IMGS/picth/pitch2.png" alt="Pitch VAM 3" class="c-img">
+                                <img src="IMGS/picth/pitch3.png" alt="Pitch VAM 4" class="c-img">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-pitch', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-pitch', 1)">&#10095;</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <span class="tag-amarela">Skill</span>
+                        <h3>PITCH VAM</h3>
+                        <p>Do you find it hard to speak in public? We are here to help you overcome that! Work presentations are a key component of our course, and all students will learn how to pitch their ideas in the best possible way. Projects are chosen based on merit, creativity, and feasibility, and are voted on by both professors and students.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: DISCORD VAM -->
+                <div class="card">
+                    <div class="media-container">
+                        <div class="carousel-sobre" id="carousel-discord">
+                            <div class="carousel-track">
+                                <img src="IMGS/discord/discord.png" alt="Discord Community 1" class="c-img active">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-discord', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-discord', 1)">&#10095;</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <span class="tag-amarela">Community</span>
+                        <h3>DISCORD VAM</h3>
+                        <p>We have an active Discord community where students, alumni, professors, and industry professionals can interact online, showcase their work, ask questions, access job opportunities, and discuss games, movies, anime, geek culture, and more. It goes way beyond a simple WhatsApp group.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: VAM GAME JAM -->
+                <div class="card">
+                    <div class="media-container">
+                        <div class="carousel-sobre" id="carousel-jam">
+                            <div class="carousel-track">
+                                <img src="IMGS/gamejam/JAM_1.png" alt="Game Jam 1" class="c-img active">
+                                <img src="IMGS/gamejam/JAM_2.png" alt="Game Jam 2" class="c-img">
+                                <img src="IMGS/gamejam/JAM_3.png" alt="Game Jam 3" class="c-img">
+                                <img src="IMGS/gamejam/JAM_4.png" alt="Game Jam 4" class="c-img">
+                                <img src="IMGS/gamejam/JAM_5.png" alt="Game Jam 5" class="c-img">
+                                <img src="IMGS/gamejam/JAM_6.png" alt="Game Jam 6" class="c-img">
+                                <img src="IMGS/gamejam/JAM_7.png" alt="Game Jam 7" class="c-img">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-jam', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-jam', 1)">&#10095;</button>
+                        </div>
                     </div>
                     <div class="card-info">
                         <span class="tag-amarela">Annual Event</span>
-                        <h3>MULTIPLEX</h3>
-                        <p>Multiplex is an event created by the CAM course that offers students and the city of Porto the opportunity to enjoy thematic Film Cycles and Masterclasses with major world filmmakers and artists such as Ildikó Enyedi, Nan Goldin, Sara Driver, ORLAN, and Manoel de Oliveira. <a href="multiplex_en.html" style="color: #ffee00; text-decoration: underline;">Explore all editions here</a>.</p>
+                        <h3>VAM GAME JAM</h3>
+                        <p>On the last weekend of January, Lusófona University opens its doors for 48 hours exclusively for VAM and friends. As an official JAM Site representing the global event Global Game JAM, we welcome everyone interested in building video games in a 48-hour marathon of collaboration, creativity, gaming, and pizza!</p>
                     </div>
                 </div>
 
-                <!-- BATALHA -->
+                <!-- CARD 4: MOSTRA VAM -->
                 <div class="card">
                     <div class="media-container">
-                        <div class="carousel-sobre" id="carousel-bcc">
-                            <img src="IMGS/batalha centro de cinema/bcc1.jpg" alt="Batalha 1" class="c-img active">
-                            <img src="IMGS/batalha centro de cinema/bcc2.jpg" alt="Batalha 2" class="c-img">
-                            <img src="IMGS/batalha centro de cinema/bcc3.jpg" alt="Batalha 3" class="c-img">
-                            <img src="IMGS/batalha centro de cinema/bcc4.jpg" alt="Batalha 4" class="c-img">
-                            <img src="IMGS/batalha centro de cinema/bcc5.jpg" alt="Batalha 5" class="c-img">
-                            <img src="IMGS/batalha centro de cinema/bcc6.jpg" alt="Batalha 6" class="c-img">
-                            
-                            <button class="c-prev" onclick="moveSobreSlide('carousel-bcc', -1)">&#10094;</button>
-                            <button class="c-next" onclick="moveSobreSlide('carousel-bcc', 1)">&#10095;</button>
+                        <div class="carousel-sobre" id="carousel-mostra">
+                            <div class="carousel-track">
+                                <img src="IMGS/mostra/mostra_1.png" alt="Mostra VAM 1" class="c-img active">
+                                <img src="IMGS/mostra/mostra_2.png" alt="Mostra VAM 2" class="c-img">
+                                <img src="IMGS/mostra/mostra_3.png" alt="Mostra VAM 3" class="c-img">
+                                <img src="IMGS/mostra/mostra_4.png" alt="Mostra VAM 4" class="c-img">
+                                <img src="IMGS/mostra/mostra_5.png" alt="Mostra VAM 5" class="c-img">
+                                <img src="IMGS/mostra/mostra_6.png" alt="Mostra VAM 6" class="c-img">
+                                <img src="IMGS/mostra/mostra_7.png" alt="Mostra VAM 6" class="c-img">
+                                <img src="IMGS/mostra/mostra_8.png" alt="Mostra VAM 8" class="c-img">
+                                <img src="IMGS/mostra/mostra_9.png" alt="Mostra VAM 9" class="c-img">
+                                <img src="IMGS/mostra/mostra_10.png" alt="Mostra VAM 10" class="c-img">
+                                <img src="IMGS/mostra/mostra_11.png" alt="Mostra VAM 11" class="c-img">
+                                <img src="IMGS/mostra/mostra_12.png" alt="Mostra VAM 12" class="c-img">
+                                <img src="IMGS/mostra/mostra_13.png" alt="Mostra VAM 13" class="c-img">
+                                <img src="IMGS/mostra/mostra_14.png" alt="Mostra VAM 14" class="c-img">
+                            </div>
+                            <button class="c-prev" onclick="moveSobreSlide('carousel-mostra', -1)">&#10094;</button>
+                            <button class="c-next" onclick="moveSobreSlide('carousel-mostra', 1)">&#10095;</button>
                         </div>
                     </div>
                     <div class="card-info">
-                        <span class="tag-amarela">Partnership</span>
-                        <h3>BATALHA FILM CENTER</h3>
-                        <p>We are privileged to be located next to Batalha, one of the city's most iconic film centers. This offers students the unique opportunity to attend classes and analyze cinema in a real movie theater environment. We also host weekly "Great Artists on Campus" Masterclasses with guests like Vhils, Mikhail Karikis, and Mila Turajlić.</p>
-                    </div>
-                </div>
-
-                <!-- ESPAÇO MIRA -->
-                <div class="card">
-                    <div class="media-container">
-                        <div class="carousel-sobre" id="carousel-mira">
-                            <img src="IMGS/projeto2/foto1.jpg" alt="Mira 1" class="c-img active">
-                            <img src="IMGS/projeto2/foto2.jpg" alt="Mira 2" class="c-img">
-                            <img src="IMGS/projeto2/foto3.jpg" alt="Mira 3" class="c-img">
-                            <img src="IMGS/projeto2/foto4.jpg" alt="Mira 4" class="c-img">
-                            <img src="IMGS/projeto2/foto5.jpg" alt="Mira 5" class="c-img">
-                            <img src="IMGS/projeto2/foto6.jpg" alt="Mira 6" class="c-img">
-                            <img src="IMGS/projeto2/foto7.jpg" alt="Mira 7" class="c-img">
-                            <img src="IMGS/projeto2/foto8.jpg" alt="Mira 8" class="c-img">
-                            <img src="IMGS/projeto2/foto9.jpg" alt="Mira 9" class="c-img">
-
-                            <button class="c-prev" onclick="moveSobreSlide('carousel-mira', -1)">&#10094;</button>
-                            <button class="c-next" onclick="moveSobreSlide('carousel-mira', 1)">&#10095;</button>
-                        </div>
-                    </div>
-                    <div class="card-info">
-                        <span class="tag-amarela">Gallery</span>
-                        <h3>ESPAÇO MIRA</h3>
-                        <p>Our students exhibit their multimedia installations at Espaço Mira, a flagship contemporary art gallery in Porto. This experience allows them to engage with the public not just as students, but as active artists in the city's cultural scene.</p>
-                    </div>
-                </div>
-
-                <!-- EQUIPAMENTO -->
-                <div class="card">
-                    <div class="media-container equipamento-video-fix">
-                        <video controls class="card-video">
-                            <source src="VIDS/espaços e equipamentos.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-info">
-                        <span class="tag-amarela">Infrastructure</span>
-                        <h3>SPACES AND EQUIPMENT</h3>
-                        <p>The Porto Regional Centre of Lusófona University is undergoing a major expansion and modernization, featuring a dedicated studio area designed specifically for high-end audiovisual and multimedia production.</p>
+                        <span class="tag-amarela">Exhibition</span>
+                        <h3>MOSTRA VAM</h3>
+                        <p>The culmination of each semester takes place during our public showcase of student-developed projects. It is the perfect environment to playtest and gather feedback from peers, professors, and industry experts. Attendees also vote to elect the best projects of the year across several categories. At times, we expand beyond the university walls, exhibiting at events like MEO XL GAMES or interactive art showcases.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CAREER OPPORTUNITIES -->
-        <section class="saidas-section">
+        <section class="saidas-section reveal">
             <h2 class="titulo-seccao">CAREER <span class="highlight">OPPORTUNITIES</span></h2>
             <div class="saidas-tabela">
                 <div class="saida-row">
-                    <div class="saida-header"><h4>Photography and Video Production</h4></div>
-                    <div class="saida-info"><p>Professional practice in artistic, cinematographic, advertising, or institutional fields.</p></div>
+                    <div class="saida-header">
+                        <h4>Video Game Studios</h4>
+                    </div>
+                    <div class="saida-info">
+                        <p>Whether in an Indie studio setup or inside a large team, locally or internationally, you will be fully prepared for the demands of the industry.</p>
+                    </div>
                 </div>
                 <div class="saida-row">
-                    <div class="saida-header"><h4>Advertising Agencies</h4></div>
-                    <div class="saida-info"><p>Implementation of marketing strategies and creative advertising content.</p></div>
+                    <div class="saida-header">
+                        <h4>Serious Games Development</h4>
+                    </div>
+                    <div class="saida-info">
+                        <p>Gamification principles are vital for creating engaging content for advertising, simulation training, educational environments, or public awareness across any sector of society.</p>
+                    </div>
                 </div>
                 <div class="saida-row">
-                    <div class="saida-header"><h4>Digital Animation Studios</h4></div>
-                    <div class="saida-info"><p>Creating impactful visual narratives through motion design and 2D/3D animation.</p></div>
+                    <div class="saida-header">
+                        <h4>Digital Animation Studios</h4>
+                    </div>
+                    <div class="saida-info">
+                        <p>Apply your 2D and 3D animation knowledge to communicate ideas in highly creative, high-impact formats.</p>
+                    </div>
                 </div>
                 <div class="saida-row">
-                    <div class="saida-header"><h4>Web and Multimedia Content</h4></div>
-                    <div class="saida-info"><p>Design and management of digital platforms, social media, and interactive apps.</p></div>
+                    <div class="saida-header">
+                        <h4>Web and Multimedia Content Creation & Management</h4>
+                    </div>
+                    <div class="saida-info">
+                        <p>Build custom websites and coordinate the complete content production pipeline for social media and interactive multimedia applications.</p>
+                    </div>
                 </div>
                 <div class="saida-row">
-                    <div class="saida-header"><h4>Audiovisual Art, Multimedia and AI</h4></div>
-                    <div class="saida-info"><p>Exploring new frontiers in generative art and the technology-driven jobs of the future.</p></div>
+                    <div class="saida-header">
+                        <h4>Audiovisual Art, Multimedia and AI</h4>
+                    </div>
+                    <div class="saida-info">
+                        <p>Blaze your own trail, explore new technologies, and shape the creative career paths and tech-driven roles of tomorrow.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- PARTNERS -->
-        <section class="parceiros-section">
-            <h2 class="titulo-medio">OUR <span class="highlight">PARTNERS</span></h2>
+        <section class="parceiros-section reveal">
+            <h2 class="titulo-seccao">OUR <span class="highlight">PARTNERS</span></h2>
+            
             <div class="parceiros-intro">
-                <p>We work closely with leading companies in the creative industries, providing internship opportunities and collaborative projects. We are also proud of the companies founded by our alumni:</p>
+                <p>Over the years, we have had the privilege of collaborating with several companies within the Video Games and Multimedia Applications sector, primarily through curricular internship opportunities. Here are some of our notable partners:</p>
             </div>
 
             <div class="parceiros-grid">
-                <a href="https://miragalerias.net/" target="_blank" class="parceiro-link"><img src="IMGS/parceiros/mira.png" alt="Espaço Mira"></a>
-                <a href="https://www.batalhacentrodecinema.pt/" target="_blank" class="parceiro-link"><img src="IMGS/parceiros/batalha.png" alt="Batalha"></a>
-                <a href="https://www.overall.pt/" target="_blank" class="parceiro-link"><img src="IMGS/parceiros/overall.png" alt="Overall Studio"></a>
-                <a href="https://seagmedia.com/" target="_blank" class="parceiro-link"><img src="IMGS/parceiros/seagmedia.PNG" alt="Seagmedia"></a>
-                <a href="https://ghdirector.com/" target="_blank" class="parceiro-link"><img src="IMGS/parceiros/gh.png" alt="GH"></a>
+                <a href="https://adeninteractive.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/Aden.png" alt="Aden Interactive">
+                </a>
+                <a href="https://astralshiftpro.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/Astral_shift.png" alt="Astral Shift">
+                </a>
+                <a href="https://camel101.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/Camel101.png" alt="Camel 101">
+                </a>
+                <a href="https://mindera.com" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/Mindera.png" alt="Mindera Gaming">
+                </a>
+                <a href="http://sinkingcodfish.com/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/Sinking_Codfish.png" alt="Sinking Codfish">
+                </a>
+                <a href="https://side.inc/" target="_blank" class="parceiro-link">
+                    <img src="IMGS/parceiros/Side.png" alt="Side">
+                </a>
             </div>
             
             <div class="cta-section">
-                <a href="plano_en.html" class="btn-cta">Course Plan</a>
-                <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="btn-cta highlight-btn">Apply Now</a>
+                <a href="plano_en.html" class="btn-cta">Study Plan</a>
+                <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="btn-cta highlight-btn">Applications</a>
             </div>
         </section>
     </main>
@@ -210,20 +261,21 @@
                     <div class="info-item"><strong>Director:</strong> joao.alves.de.sousa@ulusofona.pt</div>
                     <div class="info-item">
                         <strong>Institutional Page:</strong> 
-                        <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="footer-link-simple">CAM</a>
+                        <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="footer-link-simple">VAM</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-socials">
                 <h4>Follow us</h4>
-                <a href="https://www.facebook.com/camlusofona" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/cam_lusofona/" target="_blank">Instagram</a>
-                <a href="https://www.youtube.com/@CAMLusofona" target="_blank">YouTube</a>
-                <a href="https://vimeo.com/camlusofona" target="_blank">Vimeo</a>
+                <a href="https://www.facebook.com/VAMULP" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/vam_ulp/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/channel/UC6kld1O_PUSw5Hv9Ft1knUQ" target="_blank">YouTube</a>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2024 CAM - ULusófona Porto</div>
+        <div class="footer-bottom">
+            &copy; 2026 VAM - ULusófona Porto
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
