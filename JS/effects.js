@@ -27,17 +27,17 @@ if (!isTouchDevice) {
 
     window.addEventListener('mouseover', (e) => {
         if (e.target.closest(targetSelectors)) {
-            cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
-            cursor.style.backgroundColor = 'rgba(0, 255, 102, 0.4)'; 
-            cursor.style.borderColor = '#ffffff';
+            // Apenas faz scale(1.6), sem o translate, mantendo a ponta no sítio do clique
+            cursor.style.transform = 'scale(1.6)';
+            cursor.style.backgroundColor = '#ffffff'; 
         }
     });
 
     window.addEventListener('mouseout', (e) => {
         if (e.target.closest(targetSelectors)) {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.backgroundColor = 'rgba(0, 255, 102, 0.1)'; 
-            cursor.style.borderColor = '#00ff66'; 
+            // Volta ao tamanho normal mantendo a ponta correta
+            cursor.style.transform = 'scale(1)';
+            cursor.style.backgroundColor = '#00ff66'; 
         }
     });
 
