@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALL OF FAME - CAM</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/hof.css">
+    <link rel="icon" type="image/png" href="IMGS/logo_icon.png">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header id="header">
+        <div class="header-container">
+            <a href="index_en.html" class="logo-link">
+                <div class="logo-header">
+                    <img src="IMGS/logo_icon.png" alt="CAM Logo" class="header-logo-img">
+                    <span class="extenso">AUDIOVISUAL COMMUNICATION AND MULTIMEDIA</span>
+                </div>
+            </a>
+            <nav>
+                <a href="index_en.html">HOME</a>
+                <a href="sobre_en.html">ABOUT</a>
+                <a href="plano_en.html">STUDY PLAN</a>
+                <a href="hof_en.html" class="active">HALL OF FAME</a>
+                <a href="multiplex_en.html">MULTIPLEX</a>
+            </nav>
+
+            <div class="language-selector">
+                <a href="hof.html" class="lang-btn">PT</a>
+                <span class="divider">|</span>
+                <a href="hof_en.html" class="lang-btn active">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-wrap">
+            <div class="logo-animation-container">
+                <img src="IMGS/logo_icon.png" alt="CAM Icon" class="logo-img-icon">
+                <img src="IMGS/logo_texto.png" alt="CAM Text" class="logo-img-text">
+            </div>
+
+            <div id="indexvideo">
+                <div class="video-overlay">
+                    <h1 class="shadow-text reveal-video-text">
+                        <span>HALL OF</span> 
+                        <span class="highlight">FAME</span>
+                    </h1>
+                </div>
+                <video autoplay muted loop playsinline id="myVideo">
+                    <source src="VIDS/video4.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+                <button id="muteBtn" class="mute-toggle">
+                    SOUND: <span id="statusSom">OFF</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <p class="texto-corrido">
+                For over 15 years, our students have created dozens of films, photographs, web and multimedia applications, and exhibitions. We highlight just a few of the many interesting projects created at CAM throughout our history.
+            </p>
+        </section>
+
+        <!-- FEATURED VIDEOS SLIDER -->
+        <section class="hof-section">
+            <h2 class="titulo-medio">
+                <span>FEATURED</span> 
+                <span class="highlight">PROJECTS</span>
+            </h2>
+            
+            <div class="video-slider-container">
+                <div class="video-slider" id="video-slider">
+                    
+                    <!-- Video 1: Alice -->
+                    <div class="video-slide active">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/BmKvaDQguzY" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Alice</h3>
+                            <p class="author">by Nika Ferreira</p>
+                            <p class="description">Based on the film "Alice" by Marco Martins</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 2: Costa dos Murmúrios -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/W2AY9Dc6eAc" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Costa dos Murmúrios</h3>
+                            <p class="author">by Sara Campos</p>
+                            <p class="description">Based on the film "The Murmuring Coast" by Margarida Cardoso</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 3: Gaivota -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/sDmJzil3dCk" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Gaivota</h3>
+                            <p class="author">by Ana Gomes</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 4: I’m not Dead -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/lHozE4NUMx4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>I’m not Dead</h3>
+                            <p class="author">by Ana Sá, Filipa Vieira, Francisco Caetano, Inês Oliveira, Ricardo Garcês</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 5: O Cerco -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/2RzghhVbkWo" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>O Cerco</h3>
+                            <p class="author">Diogo Sá and Inês Xará</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 6: Surpresa -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/DbKKoOCi2UQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Surpresa</h3>
+                            <p class="author">by Diogo Sá</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 7: Tabu -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/qVNxf6QxaLk" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Tabu</h3>
+                            <p class="author">by Beatriz Correira, Ana Santos, Pedro Machado, António Morais and Joana Teixeira</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 8: Turbilhão -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/FKnnVy7oxY0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Turbilhão</h3>
+                            <p class="author">by Fausto Silva</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 9: Korist -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/4QCMkV5-gAM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Korist</h3>
+                            <p class="author">by Ana Gomes</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 10: Vermelha -->
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/bfYJbZVWw8M" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Vermelha</h3>
+                            <p class="author">by Ema Leal</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Slider Navigation Buttons -->
+                <button class="slider-prev" onclick="changeVideoSlide(-1)">&#10094;</button>
+                <button class="slider-next" onclick="changeVideoSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- GRADUATES SECTION WITH MODAL SYSTEM -->
+        <section class="testimonials-section">
+            <h2 class="titulo-medio">
+                <span>OUR</span> 
+                <span class="highlight">ALUMNI</span>
+            </h2>
+            <div class="testimonials-container">
+                
+                <div class="testimonial-card reveal" onclick="openAlumniModal('eliabe')">
+                    <div class="alumni-info">
+                        <div class="alumni-photo">
+                            <img src="IMGS/graduados/CAM_alumni_eliabe_campos.png" alt="Eliabe Campos">
+                        </div>
+                        <h3>Eliabe Campos</h3>
+                        <span class="cargo">CEO Overall Studio</span>
+                    </div>
+                    <p class="depoimento-preview">“The CAM program didn't just prepare me to enter the 'traditional' job market...”</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-eliabe" class="hidden-text">“The CAM program didn't just prepare me to enter the 'traditional' job market, with a fixed schedule and the routine of waiting until the end of the month to get paid. On the contrary, it gave me the tools and a mindset that helped me carve out my own path. Looking back, I realize that CAM wasn’t just an academic program, but the launching pad for everything I have built so far.”</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('francisco')">
+                    <div class="alumni-info">
+                        <div class="alumni-photo">
+                            <img src="IMGS/graduados/CAM_alumni_eliabe_francisco_miranda.png" alt="Francisco Miranda">
+                        </div>
+                        <h3>Francisco Miranda</h3>
+                        <span class="cargo">CEO Yank CREATIVE MEDIA</span>
+                    </div>
+                    <p class="depoimento-preview">“During the CAM program, I discovered my passion for sound and image...”</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-francisco" class="hidden-text">“During the CAM program, I discovered my passion for sound and image, acquiring the core foundations to grow and establish myself in the audiovisual field. This later allowed me to set up my own photo and video production company focused on advertising work.”</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('monique')">
+                    <div class="alumni-info">
+                        <div class="alumni-photo">
+                            <img src="IMGS/graduados/CAM_alumni_monique_moreira.png" alt="Monique Moreira">
+                        </div>
+                        <h3>Monique Moreira</h3>
+                        <span class="cargo">UI Designer</span>
+                    </div>
+                    <p class="depoimento-preview">“My background in CAM provided me with an important foundation in visual culture...”</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-monique" class="hidden-text">“My background in CAM provided me with an important foundation in visual culture, communication, and critical thinking about imagery. Even though my career path naturally shifted towards UI Design, those references continue to shape how I observe, analyze, and craft digital solutions in my day-to-day work.”</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('joao')">
+                    <div class="alumni-info">
+                        <div class="alumni-photo">
+                            <img src="IMGS/graduados/CAM_alumni_joao_rodrigues.png" alt="João Rodrigues">
+                        </div>
+                        <h3>João Rodrigues</h3>
+                        <span class="cargo">CEO Seagmedia</span>
+                    </div>
+                    <p class="depoimento-preview">“About 14 years ago, I was just a freelancer eager to grow...”</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-joao" class="hidden-text">“About 14 years ago, I was just a freelancer eager to grow, learn, and make things happen. I never imagined what I would build years later with SEAGMEDIA. But if today I lead an audiovisual production company that works with major brands and national and international projects, I know that this journey wasn't made alone. Universidade Lusófona do Porto was an essential part of that path. Not just for the technical knowledge, but for how it helped consolidate a broader vision of the creative industry and what it means to turn creativity into projects with real impact. Looking back and acknowledging that is, above all, a token of gratitude.”</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('jacinta')">
+                    <div class="alumni-info">
+                        <div class="alumni-photo">
+                            <img src="IMGS/graduados/CAM_alumni_jacinta_barreto.png" alt="Jacinta Barreto">
+                        </div>
+                        <h3>Jacinta Barreto</h3>
+                        <span class="cargo">Producer / Business Developer</span>
+                    </div>
+                    <p class="depoimento-preview">“For 11 years I worked in film and television production...”</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-jacinta" class="hidden-text">“For 11 years I worked in film and television production, an experience that gave me a huge capacity for adaptation, people management, and problem-solving in highly dynamic environments. Currently, I work as a Business Developer at Ideaspaces, where I remain closely connected to building relationships, community development, and project management. Despite being different sectors, I find many similarities between them: the importance of communication, teamwork, coordinating multiple stakeholders, and the ability to turn ideas into real and impactful experiences—skills I acquired throughout my professional life, but which had their true beginning in my CAM degree!”</div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="alumniModal" class="modal-v2">
+        <div class="modal-content-v2">
+            <span class="close-modal" onclick="closeAlumniModal()">&times;</span>
+            <div id="modal-body-v2"></div>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <p class="footer-university">Lusófona University - Porto</p>
+                <a href="https://www.ulusofona.pt/en/" target="_blank">
+                    <img src="IMGS/logo_lusofona.png" alt="Lusófona" class="lusofona-logo">
+                </a>
+                <p class="footer-address">Rua Augusto Rosa, nº 24<br>4000-098 Porto - Portugal</p>
+            </div>
+
+            <div class="footer-info">
+                <h4>Contacts</h4>
+                <div class="info-content">
+                    <div class="info-item"><strong>Tel:</strong> 222 073 230</div>
+                    <div class="info-item"><strong>Email:</strong> info.cup@ulusofona.pt</div>
+                    <div class="info-item"><strong>Direction:</strong> joao.alves.de.sousa@ulusofona.pt</div>
+                    <div class="info-item">
+                        <strong>Institutional Page:</strong> 
+                        <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="footer-link-simple">CAM</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Follow us</h4>
+                <a href="https://www.facebook.com/camlusofona" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/cam_lusofona/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@CAMLusofona" target="_blank">YouTube</a>
+                <a href="https://vimeo.com/camlusofona" target="_blank">Vimeo</a>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 CAM - ULusófona Porto</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="JS/soundvideo.js"></script>
+    <script src="JS/effects.js"></script>
+    <script src="JS/open-titles.js"></script>
+</body>
+</html>

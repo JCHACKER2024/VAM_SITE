@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - CAM</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" type="image/png" href="IMGS/logo_icon.png">
+</head>
+<body class="is-home">   
+    
+    <div id="particles-js"></div>
+    
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-header">
+                    <img src="IMGS/logo_icon.png" alt="CAM Logo" class="header-logo-img">
+                    <span class="extenso">COMUNICAÇÃO AUDIOVISUAL E MULTIMÉDIA</span>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html" class="active">HOME</a>
+                <a href="sobre.html">SOBRE</a>
+                <a href="plano.html">PLANO</a>
+                <a href="hof.html">HALL OF FAME</a>
+                <a href="multiplex.html">MULTIPLEX</a>
+            </nav>
+
+            <div class="language-selector">
+                <a href="index.html" class="lang-btn active">PT</a> <span class="divider">|</span>
+                <a href="index_en.html" class="lang-btn">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-wrap">
+            <div class="logo-animation-container">
+                <img src="IMGS/logo_icon.png" alt="Ícone CAM" class="logo-img-icon">
+                <img src="IMGS/logo_texto.png" alt="Texto CAM" class="logo-img-text">
+            </div>
+
+            <div id="indexvideo">
+                <div class="video-overlay"></div>
+                <video autoplay muted loop playsinline id="myVideo">
+                    <source src="VIDS/video1.mp4" type="video/mp4">
+                    O teu navegador não suporta vídeo.
+                </video>
+                
+                <button id="muteBtn" class="mute-toggle">
+                    SOM: <span id="statusSom">OFF</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="titulo-seccao">
+            <h1 class="shadow-text">A IMAGEM DO <span class="highlight">FUTURO!</span></h1>
+        </section>
+
+        <section class="content-wrapper">
+            <p class="texto-corrido">
+                A Licenciatura em Comunicação Audiovisual e Multimédia tem dado provas de grande dinamismo, oferecendo um percurso académico que alia uma componente de aprendizagem teórico-prática estimulante assente no Cinema e no Vídeo, com uma formação interdisciplinar na área da criação audiovisual e multimédia e das tecnologias associadas aos novos media. Em constante atualização, tal como a área o exige, explora-se o trabalho individual e em equipa em projetos práticos nas áreas da fotografia, do vídeo e da curta metragem, da criação web, sonoplastia, guionismo e direção de atores, das instalações multimédia e vídeo mapping. O curso é responsável pelo evento MULTIPLEX, Ciclo Anual de Imagens em Movimento, realizado em parceria com o BATALHA Centro de Cinema.
+            </p>
+            <div class="cta-home-wrapper">
+                <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="btn-candidata">CANDIDATA-TE!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <p class="footer-university">Universidade Lusófona - Porto</p>
+                <a href="https://www.ulusofona.pt/" target="_blank">
+                    <img src="IMGS/logo_lusofona.png" alt="Lusófona" class="lusofona-logo">
+                </a>
+                <p class="footer-address">Rua Augusto Rosa, nº 24<br>4000-098 Porto - Portugal</p>
+            </div>
+
+            <div class="footer-info">
+                <h4>Contactos</h4>
+                <div class="info-content">
+                    <div class="info-item"><strong>Tel:</strong> 222 073 230</div>
+                    <div class="info-item"><strong>Email:</strong> info.cup@ulusofona.pt</div>
+                    <div class="info-item"><strong>Direção:</strong> joao.alves.de.sousa@ulusofona.pt</div>
+                    <div class="info-item">
+                        <strong>Página Institucional:</strong> 
+                        <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="footer-link-simple">CAM</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Segue-nos</h4>
+                <a href="https://www.facebook.com/camlusofona" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/cam_lusofona/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@CAMLusofona" target="_blank">YouTube</a>
+                <a href="https://vimeo.com/camlusofona" target="_blank">Vimeo</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 CAM - ULusófona Porto
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="JS/soundvideo.js"></script>
+    <script src="JS/effects.js"></script>
+</body>
+</html>
