@@ -109,7 +109,6 @@ main {
 .header-logo-img {
     height: 40px;
     width: auto;
-    filter: invert(72%) sepia(85%) saturate(1400%) hue-rotate(90deg) brightness(105%) contrast(120%);
     transition: transform 0.3s ease;
 }
 
