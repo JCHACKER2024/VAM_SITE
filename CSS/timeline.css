@@ -120,10 +120,88 @@
 
 .tl-link-btn:hover { background: #00ff66; color: #050505; }
 
+/* --- RESPONSIVIDADE TIMELINE --- */
+
+/* 1. Tablets e Ecrãs Médios (até 1024px) */
+@media (max-width: 1024px) {
+    #timeline-wrapper { 
+        max-width: 800px; 
+        padding: 40px; 
+    }
+    
+    .tl-ano { font-size: 1.8rem; }
+    .tl-card { padding: 25px; }
+}
+
+/* 2. Tablets Verticais e Telemóveis (até 768px) */
 @media (max-width: 768px) {
-    #timeline-wrapper { padding: 25px; margin: 20px 15px; }
+    #timeline-wrapper { 
+        padding: 25px; 
+        margin: 20px 15px; 
+    }
+
     #timeline-content::before { display: none; }
-    .tl-item { flex-direction: column; gap: 15px; }
-    .tl-card { border-left: none; border-top: 4px solid #00ff66; }
-    .card-right { width: 100%; }
+
+    .tl-item { 
+        flex-direction: column; 
+        gap: 15px; 
+        margin-bottom: 30px;
+    }
+
+    .tl-ano { 
+        text-align: center; /* Centralizado para melhor leitura vertical */
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+
+    .tl-card { 
+        border-left: none; 
+        border-top: 4px solid #00ff66; 
+        flex-direction: column; /* Empilha texto e imagem */
+        text-align: center;     /* Força centralização de texto */
+    }
+
+    .card-left { 
+        padding-right: 0; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza botões e texto */
+    }
+
+    .card-right { 
+        width: 100%; 
+        height: auto; 
+        margin-top: 15px;
+        display: flex; 
+        justify-content: center;
+    }
+
+    .tl-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+    }
+}
+
+/* 3. Telemóveis e Ecrãs Pequenos (até 480px) */
+@media (max-width: 480px) {
+    .tl-card { 
+        padding: 20px; 
+    }
+
+    .tl-card h4 { 
+        font-size: 1.1rem; 
+    }
+
+    .tl-card p { 
+        font-size: 0.85rem; 
+        line-height: 1.5; 
+    }
+
+    .tl-link-btn { 
+        padding: 6px 14px; 
+        font-size: 0.75rem; 
+    }
 }
