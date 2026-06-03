@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. GESTÃO DA TIMELINE ---
     const timelineContainer = document.getElementById('timeline-content');
     if (timelineContainer) {
+        // [Mantive os teus dados intactos]
         const timelineData = [
             { ano: "2026", items: [
                 { titulo: "Hell Maiden - Astral Shift", desc: "Demo lançada com colab. de André Rufo e licenciados VAM.", links: [{url: "https://www.youtube.com/watch?v=90EaQ4buCC8"}, {url: "https://store.steampowered.com/app/3372060/Hell_Maiden/"}] },
@@ -86,21 +87,27 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         timelineData.forEach(periodo => {
-            // Criamos um card por ano
             let itemsHTML = "";
-            periodo.items.forEach(item => {
+            periodo.items.forEach((item, index) => {
                 let linksHTML = "";
                 if (item.links) {
-                    item.links.forEach((l, idx) => {
+                    item.links.forEach((l) => {
                         let label = l.url.toLowerCase().includes("youtube") ? "Trailer" : "Link";
                         linksHTML += `<a href="${l.url}" target="_blank" class="tl-link-btn">${label}</a>`;
                     });
                 }
+                
+                // Agora o tl-card é gerado individualmente por item
                 itemsHTML += `
-                    <div class="tl-sub-item">
-                        <h4>${item.titulo}</h4>
-                        <p>${item.desc}</p>
-                        <div class="tl-links">${linksHTML}</div>
+                    <div class="tl-card">
+                        <div class="card-left">
+                            <h4>${item.titulo}</h4>
+                            <p>${item.desc}</p>
+                            <div class="tl-links">${linksHTML}</div>
+                        </div>
+                        <div class="card-right">
+                            <img src="IMGS/timeline/${periodo.ano}_${index + 1}.png" alt="${item.titulo}" onerror="this.style.display='none'">
+                        </div>
                     </div>
                 `;
             });
@@ -108,12 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timelineContainer.innerHTML += `
                 <div class="tl-item">
                     <div class="tl-ano">${periodo.ano}</div>
-                    <div class="tl-card">
-                        <div class="card-left">${itemsHTML}</div>
-                        <div class="card-right">
-                            <img src="IMGS/timeline/${periodo.ano}.png" alt="Evento ${periodo.ano}" onerror="this.style.display='none'">
-                        </div>
-                    </div>
+                    <div class="tl-items-group">${itemsHTML}</div>
                 </div>
             `;
         });

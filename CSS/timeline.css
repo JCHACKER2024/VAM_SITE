@@ -1,3 +1,20 @@
+/* 1. TÍTULO DO HERO (Igual ao Sobre) */
+.shadow-text {
+    font-size: clamp(35px, 8vw, 70px); 
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.reveal-video-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 2. ESTRUTURA DA TIMELINE */
 #timeline-wrapper { 
     max-width: 900px; 
     margin: 50px auto; 
@@ -6,8 +23,6 @@
     border: 1px solid #333742; 
     border-radius: 24px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    opacity: 0; 
-    animation: fadeInGeneral 1s forwards 0.5s;
 }
 
 #timeline-content { 
@@ -17,6 +32,7 @@
     position: relative; 
 }
 
+/* Linha da Timeline */
 #timeline-content::before {
     content: '';
     position: absolute;
@@ -47,7 +63,7 @@
 }
 
 .tl-card { 
-    display: flex;        /* Ativa o lado a lado */
+    display: flex; 
     align-items: flex-start;
     justify-content: space-between;
     background: #23262e; 
@@ -58,36 +74,6 @@
     transition: all 0.3s ease;
 }
 
-.card-left {
-    flex: 1; 
-    padding-right: 20px;
-}
-
-.card-right {
-    width: 250px; 
-    height: 200px; 
-    display: flex;
-    align-items: center; /* Centraliza a imagem verticalmente */
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    background: rgba(0, 0, 0, 0.2); /* Fundo sutil se a imagem não ocupar tudo */
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.card-right img {
-    max-width: 100%;
-    max-height: 100%;
-    /* 'contain' garante que a imagem inteira é mostrada sem cortes */
-    object-fit: contain; 
-    transition: transform 0.3s ease;
-}
-
-.tl-sub-item {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #333;
-}
-
 .tl-card:hover { 
     transform: translateY(-5px); 
     background: #2a2e38; 
@@ -95,28 +81,30 @@
     box-shadow: 0 12px 24px rgba(0,0,0,0.4);
 }
 
-.tl-card h3 { 
-    color: #fff; 
-    margin-bottom: 12px; 
-    text-transform: uppercase; 
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
-}
+.card-left { flex: 1; padding-right: 20px; }
+.card-left h3 { color: #fff; margin-bottom: 12px; text-transform: uppercase; font-size: 1.3rem; }
+.card-left p { color: #b0b0b0; line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px; }
 
-.tl-card p { 
-    color: #b0b0b0; 
-    line-height: 1.7; 
-    font-size: 0.95rem; 
-    margin-bottom: 20px;
-}
-
-/* Estilo dos Botões */
-.tl-links {
+.card-right {
+    width: 250px; 
+    height: 200px; 
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
+.card-right img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* 3. BOTÕES E RESPONSIVIDADE */
 .tl-link-btn {
     padding: 8px 18px;
     background: transparent;
@@ -128,37 +116,14 @@
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
-.tl-link-btn:hover {
-    background: #00ff66;
-    color: #050505;
-    box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
-}
+.tl-link-btn:hover { background: #00ff66; color: #050505; }
 
 @media (max-width: 768px) {
-    #timeline-wrapper { 
-        padding: 25px; 
-        margin: 20px 15px;
-        border-radius: 15px;
-    }
-    
+    #timeline-wrapper { padding: 25px; margin: 20px 15px; }
     #timeline-content::before { display: none; }
-    
-    .tl-item { 
-        flex-direction: column; 
-        gap: 15px; 
-    }
-    
-    .tl-ano { 
-        text-align: left; 
-        font-size: 1.8rem; 
-    }
-    
-    .tl-card { 
-        border-left: none; 
-        border-top: 4px solid #00ff66; 
-        border-radius: 0 0 15px 15px;
-    }
+    .tl-item { flex-direction: column; gap: 15px; }
+    .tl-card { border-left: none; border-top: 4px solid #00ff66; }
+    .card-right { width: 100%; }
 }
