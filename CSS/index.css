@@ -155,21 +155,77 @@ nav a.active, nav a:hover { color: #00ff66; }
 @keyframes revealVideo { to { opacity: 1; transform: scale(1); } }
 @keyframes fadeInGeneral { to { opacity: 1; } }
 
+/* --- RESPONSIVIDADE --- */
+
+/* 1. Tablets e Ecrãs Médios (até 1024px) */
+@media (max-width: 1024px) {
+    #hero-wrap { height: 50vh; }
+    .shadow-text { font-size: 2.5rem; }
+    #indexvideo { width: 85%; height: 50%; }
+}
+
+/* 2. Tablets Verticais e Telemóveis em Horizontal (até 768px) */
 @media (max-width: 768px) {
-    body { padding-top: 95px; }
+    body { padding-top: 85px; }
+    
     #header { padding: 10px 15px; }
     .header-container { flex-wrap: wrap; justify-content: space-between; gap: 5px; }
     .logo-header { gap: 8px; }
     .header-logo-img { height: 22px; }
-    .extenso { display: inline-block; font-size: 8px; max-width: none; white-space: nowrap; line-height: 1; letter-spacing: 0.5px; } 
-    nav { order: 3; width: 100%; justify-content: center; margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px; }
+    .extenso { 
+        display: inline-block; 
+        font-size: 8px; 
+        white-space: nowrap; 
+        line-height: 1; 
+    } 
+    
+    nav { 
+        order: 3; 
+        width: 100%; 
+        justify-content: center; 
+        margin-top: 10px; 
+        border-top: 1px solid rgba(255,255,255,0.1); 
+        padding-top: 8px; 
+    }
     nav a { margin: 0 8px; font-size: 10px; }
+    
     .language-selector { font-size: 10px; margin-left: auto; }
-    #hero-wrap { height: 65vh; }
+    
+    #hero-wrap { height: 60vh; }
     .shadow-text { font-size: clamp(22px, 6vw, 30px); } 
     .shadow-text.reveal-video-text { margin-top: -30px; }
-    #indexvideo { width: 92%; height: 60%; margin-top: 15px; }
+    
+    #indexvideo { width: 92%; height: 50%; margin-top: 15px; }
+    
     .mute-toggle { bottom: 15px; right: 15px; padding: 6px 12px; font-size: 9px; }
+    
     .texto-corrido { font-size: 15px; padding: 0 20px; text-align: justify; }
-    .footer-container { flex-direction: column; text-align: center; align-items: center; gap: 25px; }
+    
+    .footer-container { 
+        flex-direction: column; 
+        text-align: center; 
+        align-items: center; 
+        gap: 25px; 
+    }
+}
+
+/* 3. Telemóveis e Ecrãs Pequenos (até 480px) */
+@media (max-width: 480px) {
+    #hero-wrap { height: 50vh; }
+    
+    .shadow-text { 
+        font-size: 20px; 
+        padding: 0 10px;
+    }
+
+    #indexvideo { 
+        width: 95%; 
+        height: 40%; 
+    }
+
+    .texto-corrido { 
+        font-size: 14px; 
+        line-height: 1.5; 
+        padding: 0 15px;
+    }
 }

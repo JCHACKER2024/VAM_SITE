@@ -445,34 +445,67 @@
     to { opacity: 1; transform: scale(1); }
 }
 
-@media (max-width: 900px) {
-    .slider-prev, .slider-next {
-        width: 50px;          
-        height: 50px;
-        font-size: 20px;      
-        bottom: 50px;          
-    }
-    .slider-prev { left: 15px; }  
-    .slider-next { right: 15px; }
-    .video-slide .project-info { padding: 35px 75px 30px; }
-    .testimonials-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .carrossel-wrapper { height: 380px; }
-    .carrossel-slide-img { max-width: 220px; }
-    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 400px; }
-    .carrossel-slide-img.prev { transform: translateX(-120%) translateZ(-100px) scale(0.8); }
-    .carrossel-slide-img.next { transform: translateX(20%) translateZ(-100px) scale(0.8); }
-    .carrossel-slide-img.prev2, .carrossel-slide-img.next2 { display: none; } 
+/* --- RESPONSIVIDADE --- */
+
+/* 1. Tablets e Ecrãs Médios (até 1024px) */
+@media (max-width: 1024px) {
+    .video-slide .project-info { padding: 40px 60px 40px; }
+    .carrossel-wrapper { height: 400px; }
 }
 
-@media (max-width: 480px) {
-    .slider-prev, .slider-next { bottom: 20px; width: 42px; height: 42px; font-size: 16px; }
-    .video-slide .project-info { padding: 30px 15px 75px; }
-    .carrossel-wrapper { height: 300px; }
-    .carrossel-slide-img { max-width: 170px; }
-    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 260px; }
-    .carrossel-slide-img.prev { transform: translateX(-105%) translateZ(-80px) scale(0.75); opacity: 0.35; }
-    .carrossel-slide-img.next { transform: translateX(5%) translateZ(-80px) scale(0.75); opacity: 0.35; }
+/* 2. Tablets Verticais e Telemóveis em Horizontal (até 900px) */
+@media (max-width: 900px) {
+    .slider-prev, .slider-next {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 50px;
+    }
+    .slider-prev { left: 15px; }
+    .slider-next { right: 15px; }
+    
+    .video-slide .project-info { padding: 35px 75px 30px; }
+    
+    .testimonials-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    
+    .carrossel-wrapper { height: 350px; }
+    .carrossel-slide-img { max-width: 220px; }
+    
+    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 350px; }
+    
+    .carrossel-slide-img.prev { transform: translateX(-120%) translateZ(-100px) scale(0.8); }
+    .carrossel-slide-img.next { transform: translateX(20%) translateZ(-100px) scale(0.8); }
     .carrossel-slide-img.prev2, .carrossel-slide-img.next2 { display: none; }
+}
+
+/* 3. Telemóveis e Ecrãs Pequenos (até 480px) */
+@media (max-width: 480px) {
+    .slider-prev, .slider-next { 
+        bottom: 20px; 
+        width: 42px; 
+        height: 42px; 
+        font-size: 16px; 
+    }
+    
+    .video-slide .project-info { 
+        padding: 30px 15px 75px; 
+        text-align: center;
+    }
+    
+    .carrossel-wrapper { height: 280px; }
+    
+    .carrossel-slide-img { max-width: 160px; }
+    
+    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 240px; }
+    
+    .carrossel-slide-img.prev { transform: translateX(-110%) translateZ(-80px) scale(0.7); opacity: 0.3; }
+    .carrossel-slide-img.next { transform: translateX(10%) translateZ(-80px) scale(0.7); opacity: 0.3; }
+    
     .testimonials-container { grid-template-columns: 1fr; }
-    .testimonial-card { padding: 30px 20px; width: 100%; max-width: 380px; }
+    .testimonial-card { 
+        padding: 25px 20px; 
+        width: 90%; 
+        max-width: 380px; 
+        margin: 0 auto;
+    }
 }
