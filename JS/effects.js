@@ -1,4 +1,4 @@
-/* --- EFEITOS GLOBAIS: CURSOR E 4 INSTÂNCIAS DE PARTICULAS (FINAL) --- */
+/* --- EFEITOS GLOBAIS: CURSOR E PARTICULAS INDEPENDENTES --- */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -38,48 +38,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* 2. LÓGICA DAS 4 INSTÂNCIAS DE PARTICULAS (COM IMAGENS) */
-    function initParticles(id, imagePath) {
-        if (typeof particlesJS !== 'undefined' && document.getElementById(id)) {
-            particlesJS(id, {
-                "particles": {
-                    "number": { "value": 10, "density": { "enable": true, "value_area": 800 } },
-                    "shape": {
-                        "type": "image",
-                        "image": {
-                            "src": imagePath,
-                            "width": 100, 
-                            "height": 100
-                        }
-                    },
-                    "opacity": { "value": 0.8, "random": false },
-                    "size": { 
-                        "value": 25, 
-                        "random": true,
-                        "anim": { "enable": true, "speed_min": 15, "size_max": 35, "sync": false }
-                    },
-                    // Desativar fios explicitamente
-                    "line_linked": { 
-                        "enable": false 
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 0.4,
-                        "direction": "none",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out"
-                    }
-                },
-                "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false } } },
-                "retina_detect": true
-            });
-        }
+    /* 2. NOVA LÓGICA DE PARTÍCULAS (ELEMENTOS HTML INDIVIDUAIS) */
+    function createParticles() {
+        const container = document.createElement('div');
+        container.id = 'particles-container';
+        document.body.appendChild(container);
+
+        const shapes = [
+            { src: "IMGS/Triangle.png", count: 6, class: "p-tri" },
+            { src: "IMGS/Square.png", count: 6, class: "p-sq" },
+            { src: "IMGS/Circle.png", count: 6, class: "p-circ" },
+            { src: "IMGS/X.png", count: 6, class: "p-x" }
+        ];
+
+        shapes.forEach(shape => {
+            for (let i = 0; i < shape.count; i++) {
+                const img = document.createElement('img');
+                img.src = shape.src;
+                img.className = `floating-particle ${shape.class}`;
+                
+                // Posição aleatória na tela
+                img.style.left = Math.random() * 95 + "vw";
+                img.style.top = Math.random() * 95 + "vh";
+                
+                // Velocidades aleatórias
+                img.style.animationDuration = (Math.random() * 20 + 15) + "s";
+                
+                container.appendChild(img);
+            }
+        });
     }
 
-    // Inicialização apontando para a tua pasta IMGS
-    initParticles("particles-tri", "IMGS/Triangle.png");
-    initParticles("particles-sq", "IMGS/Square.png");
-    initParticles("particles-circ", "IMGS/Circle.png");
-    initParticles("particles-x", "IMGS/X.png");
+    createParticles();
 });
