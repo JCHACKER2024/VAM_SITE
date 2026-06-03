@@ -26,63 +26,63 @@ document.addEventListener('DOMContentLoaded', () => {
                 { titulo: "4ª Conferência Internacional Playful by Design", desc: "Realizada na Universidad Rey Juan Carlos (Madrid).", img: "conferencia.png" }
             ]},
             { ano: "2025", items: [
-                { titulo: "Mostra VAM", desc: "Premiados 1º Semestre (2025-2026).", img: "mostra_2025_1.png" },
+                { titulo: "Mostra VAM", desc: "Premiados 1º Semestre (2025-2026).", img: "mostra_vam_1.png" },
                 { titulo: "Exposição de Artes Digitais", desc: "Controladores alternativos no átrio central da Universidade Lusófona.", img: "exposicao_2025.png" },
                 { titulo: "Masterclass - Pedro Nunes", desc: "Senior Games Testing da Miniclip sobre QA.", img: "masterclass_2025.png" },
                 { titulo: "Phased - Arboresis Studio", desc: "Jogo criado pelo licenciado Gonçalo de Jesus.", img: "phased.png", links: [{url: "https://play.google.com/store/apps/details?id=com.arboresis.phased"}] },
                 { titulo: "Mostra VAM", desc: "Premiados 2º Semestre (2024-2025).", img: "mostra_2025_2.png" }
             ]},
             { ano: "2024", items: [
-                { titulo: "Mostra VAM", desc: "Premiados 1º Semestre (2024-2025).", img: "mostra_2024_1.png" },
-                { titulo: "3ª Conferência Internacional Playful by Design", desc: "Realizada na University of Illinois (EUA).", img: "conferencia_2024_usa.png" },
-                { titulo: "Oktoberfest The Official VR Game", desc: "Lançamento com Prof. Eduardo Magalhães e licenciados VAM.", img: "oktoberfest_vr.png", links: [{url: "https://www.youtube.com/watch?v=qiBSQxVGRio"}, {url: "https://www.oktoberfest.game/en"}] },
-                { titulo: "Bergolis", desc: "Vence o 2º Prémio no Play Your Idea 2024.", img: "bergolis.png" },
-                { titulo: "2ª Conferência Internacional Playful by Design", desc: "Realizada na Universidade Lusófona (Lisboa).", img: "conferencia_2024_lx.png" },
-                { titulo: "Dodge Game", desc: "Desenvolvido por Hugo Barbosa e Leonardo Figueiredo.", img: "dodge_game.png", links: [{url: "https://nothukie.itch.io/dodge-game"}] },
-                { titulo: "Mostra VAM", desc: "Premiados 2º Semestre (2023-2024).", img: "mostra_2024_2.png" }
+                { titulo: "Mostra VAM", desc: "Premiados 1º Semestre (2024-2025).", img: "mostra_vam_1.png" },
+                { titulo: "3ª Conferência Internacional Playful by Design", desc: "Realizada na University of Illinois (EUA).", img: "3conf_pbd.png" },
+                { titulo: "Oktoberfest The Official VR Game", desc: "Lançamento com Prof. Eduardo Magalhães e licenciados VAM.", img: "oktoberfest.png", links: [{url: "https://www.youtube.com/watch?v=qiBSQxVGRio"}, {url: "https://www.oktoberfest.game/en"}] },
+                { titulo: "Bergolis", desc: "Vence o 2º Prémio no Play Your Idea 2024.", img: "bergolis_premio.png" },
+                { titulo: "2ª Conferência Internacional Playful by Design", desc: "Realizada na Universidade Lusófona (Lisboa).", img: "2conf_pbd.png" },
+                { titulo: "Dodge Game", desc: "Desenvolvido por Hugo Barbosa e Leonardo Figueiredo.", img: "dodgegame.png", links: [{url: "https://nothukie.itch.io/dodge-game"}] },
+                { titulo: "Mostra VAM", desc: "Premiados 2º Semestre (2023-2024).", img: "mostra_vam_2.png" }
             ]},
             { ano: "2023", items: [
-                { titulo: "Mostra VAM", desc: "Premiados 1º Semestre (2023-2024).", img: "mostra_2023_1.png" },
-                { titulo: "1ª Conferência Internacional Playful by Design", desc: "Em parceria com University of Illinois.", img: "conferencia_2023.png", links: [{url: "https://playfulbydesign.illinois.edu/conference/"}] },
-                { titulo: "Meo XL Games", desc: "Serviço educativo e co-autoria da Mostra de Jogos Indie.", img: "meo_xl.png" },
+                { titulo: "Mostra VAM", desc: "Premiados 1º Semestre (2023-2024).", img: "+jogo.png" },
+                { titulo: "1ª Conferência Internacional Playful by Design", desc: "Em parceria com University of Illinois.", img: "conferencia_pbd.jpg", links: [{url: "https://playfulbydesign.illinois.edu/conference/"}] },
+                { titulo: "Meo XL Games", desc: "Serviço educativo e co-autoria da Mostra de Jogos Indie.", img: "meoxl.png" },
                 { titulo: "Campus Conundrum", desc: "Finalista da 9ª edição dos Prémios Playstation Portugal.", img: "campus_conundrum.png" },
-                { titulo: "Play Design Document", desc: "Prof. João Alves de Sousa lança a agenda PBD.", img: "pbd_agenda.png" },
-                { titulo: "A Visão Crítica do Estudante", desc: "Lançamento do primeiro Livro Compilação de artigos.", img: "livro_critica.png" },
-                { titulo: "Exposição My Plan for Japan", desc: "Em exibição no Hillside Fórum Tóquio.", img: "my_plan_japan.png" },
-                { titulo: "Little Goody Two Shoes", desc: "Colaboração com Prof. André Rufo e licenciados VAM.", img: "lgts.png", links: [{url: "https://www.youtube.com/watch?v=8eaEgrgh8vg"}, {url: "https://store.steampowered.com/app/1812370/Little_Goody_Two_Shoes/"}] },
+                { titulo: "Play Design Document", desc: "Prof. João Alves de Sousa lança a agenda PBD.", img: "playdesigndocument.png" },
+                { titulo: "A Visão Crítica do Estudante", desc: "Lançamento do primeiro Livro Compilação de artigos.", img: "avisaocriticadoestudante.png" },
+                { titulo: "Exposição My Plan for Japan", desc: "Em exibição no Hillside Fórum Tóquio.", img: "myplanforjapan.png" },
+                { titulo: "Little Goody Two Shoes", desc: "Colaboração com Prof. André Rufo e licenciados VAM.", img: "littlegoodietwoshoes.png", links: [{url: "https://www.youtube.com/watch?v=8eaEgrgh8vg"}, {url: "https://store.steampowered.com/app/1812370/Little_Goody_Two_Shoes/"}] },
                 { titulo: "Beneath", desc: "Colaboração com Prof. Eduardo Magalhães e licenciados VAM.", img: "beneath.png", links: [{url: "https://www.beneathgame.net"}, {url: "https://store.steampowered.com/app/1593230/Beneath/"}] },
-                { titulo: "A Fotografia nos Videojogos", desc: "Lançamento do Livro / Ensaio Fotográfico ao The Last of Us Part II.", img: "livro_foto.png" }
+                { titulo: "A Fotografia nos Videojogos", desc: "Lançamento do Livro / Ensaio Fotográfico ao The Last of Us Part II.", img: "livrocarita.png" }
             ]},
             { ano: "2022", items: [
-                { titulo: "Mostra VAM", desc: "Premiados 2º Semestre (2021-2022).", img: "mostra_2022.png" },
-                { titulo: "Exposição No Plan for Japan", desc: "Exibição no Museu do Oriente, Lisboa.", img: "no_plan_japan.png" },
-                { titulo: "Bolsa de Mérito Future Games", desc: "Carolina Costa selecionada em Estocolmo.", img: "bolsa_fg.png" },
+                { titulo: "Mostra VAM", desc: "Premiados 2º Semestre (2021-2022).", img: "+jogo.jpg" },
+                { titulo: "Exposição No Plan for Japan", desc: "Exibição no Museu do Oriente, Lisboa.", img: "noplanforjapan.png" },
+                { titulo: "Bolsa de Mérito Future Games", desc: "Carolina Costa selecionada em Estocolmo.", img: "bolsamerito.png" },
                 { titulo: "Ink - Arboresis Studio", desc: "Primeiro jogo do licenciado Gonçalo de Jesus.", img: "ink.png", links: [{url: "https://play.google.com/store/apps/details?id=com.arboresis.ink"}] },
-                { titulo: "Devil’s License", desc: "Projeto de estágio na Exaud.", img: "devils_license.png", links: [{url: "https://exaud.com/blog/exaudlab-internship"}] }
+                { titulo: "Devil’s License", desc: "Projeto de estágio na Exaud.", img: "devilslicense.png", links: [{url: "https://exaud.com/blog/exaudlab-internship"}] }
             ]},
             { ano: "2021", items: [
-                { titulo: "Melhor Prática Pedagógica Inovadora", desc: "Prémio Fazer + atribuído ao curso VAM.", img: "premio_fazer.png" },
-                { titulo: "Thunder Tier One - Krafton", desc: "Com a participação do Prof. Ricardo Mota.", img: "tto.png", links: [{url: "https://www.youtube.com/watch?v=wLjji6Jox80"}, {url: "https://store.steampowered.com/app/377300/Thunder_Tier_One/"}] },
-                { titulo: "Exposição Francis Bacon", desc: "Colaboração artística na WOW, Gaia.", img: "bacon_wow.png", links: [{url: "https://www.youtube.com/watch?v=rj-M_YQJ62Y"}] },
+                { titulo: "Melhor Prática Pedagógica Inovadora", desc: "Prémio Fazer + atribuído ao curso VAM.", img: "premio_vam.png" },
+                { titulo: "Thunder Tier One - Krafton", desc: "Com a participação do Prof. Ricardo Mota.", img: "thundertierone.png", links: [{url: "https://www.youtube.com/watch?v=wLjji6Jox80"}, {url: "https://store.steampowered.com/app/377300/Thunder_Tier_One/"}] },
+                { titulo: "Exposição Francis Bacon", desc: "Colaboração artística na WOW, Gaia.", img: "exposicao_francis.png", links: [{url: "https://www.youtube.com/watch?v=rj-M_YQJ62Y"}] },
                 { titulo: "GlowFall", desc: "TOP 3 Novos Talentos FNAC - Menção Honrosa.", img: "glowfall.png", links: [{url: "https://simaogoncalves.itch.io/glowfall"}] },
                 { titulo: "Morbus", desc: "Prémio melhor arte na IPCA Game Jam.", img: "morbus.png", links: [{url: "https://marcos-engelhard.itch.io/mo"}] }
             ]},
             { ano: "2020", items: [
                 { titulo: "Little Girl", desc: "Primeiro projeto final da primeira turma de VAM.", img: "little_girl.png" },
-                { titulo: "Those who Remain", desc: "Com a participação do Prof. Eduardo Magalhães.", img: "twr.png", links: [{url: "https://www.youtube.com/watch?v=6MBcG5koRHc"}, {url: "https://store.steampowered.com/app/715380/Those_Who_Remain/"}] },
-                { titulo: "Game Creators Odyssey", desc: "Curso online em parceria com Ubisoft.", img: "gco.png", links: [{url: "https://gamecreatorodyssey.com/"}] }
+                { titulo: "Those who Remain", desc: "Com a participação do Prof. Eduardo Magalhães.", img: "those_who_remain.png", links: [{url: "https://www.youtube.com/watch?v=6MBcG5koRHc"}, {url: "https://store.steampowered.com/app/715380/Those_Who_Remain/"}] },
+                { titulo: "Game Creators Odyssey", desc: "Curso online em parceria com Ubisoft.", img: "gamecreatorodissey.png", links: [{url: "https://gamecreatorodyssey.com/"}] }
             ]},
             { ano: "2019", items: [
-                { titulo: "1ª Mostra VAM", desc: "Primeira exibição pública com André Constantino (Amplify Creations).", img: "mostra_2019.png" },
-                { titulo: "1º Pitch VAM", desc: "Seleção de projetos para o 2º ano.", img: "pitch_2019.png" },
-                { titulo: "Global Game JAM", desc: "Primeira edição organizada pelo curso VAM.", img: "ggj_2019.png" },
-                { titulo: "Entrevista a Daniel Pesina (Mortal Kombat)", desc: "Realizada pelos estudantes VAM.", img: "pesina.png", links: [{url: "https://www.youtube.com/watch?v=xsTmWLK119Q"}] }
+                { titulo: "1ª Mostra VAM", desc: "Primeira exibição pública com André Constantino (Amplify Creations).", img: "mostra_vam.png" },
+                { titulo: "1º Pitch VAM", desc: "Seleção de projetos para o 2º ano.", img: "pitch1.png" },
+                { titulo: "Global Game JAM", desc: "Primeira edição organizada pelo curso VAM.", img: "globalgamejam.png" },
+                { titulo: "Entrevista a Daniel Pesina (Mortal Kombat)", desc: "Realizada pelos estudantes VAM.", img: "entrevista.png", links: [{url: "https://www.youtube.com/watch?v=xsTmWLK119Q"}] }
             ]},
             { ano: "2018", items: [
-                { titulo: "Dakar 18 - Big Moon Entertainment", desc: "Colaboração dos Profs. Ricardo Mota e Henrique Basto.", img: "dakar18.png", links: [{url: "https://www.youtube.com/watch?v=85xUvllbW10"}, {url: "https://store.steampowered.com/app/767390/Dakar_18/"}] }
+                { titulo: "Dakar 18 - Big Moon Entertainment", desc: "Colaboração dos Profs. Ricardo Mota e Henrique Basto.", img: "dakar.png", links: [{url: "https://www.youtube.com/watch?v=85xUvllbW10"}, {url: "https://store.steampowered.com/app/767390/Dakar_18/"}] }
             ]},
             { ano: "2017", items: [
-                { titulo: "Hello World!", desc: "Abertura do curso e chegada da primeira turma de VAM.", img: "hello_world.png" }
+                { titulo: "Hello World!", desc: "Abertura do curso e chegada da primeira turma de VAM.", img: "hello.png" }
             ]}
         ];
 
