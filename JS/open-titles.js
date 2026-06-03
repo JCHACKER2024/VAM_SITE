@@ -86,25 +86,36 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         timelineData.forEach(periodo => {
+            // Criamos um card por ano
+            let itemsHTML = "";
             periodo.items.forEach(item => {
                 let linksHTML = "";
                 if (item.links) {
                     item.links.forEach((l, idx) => {
-                        let label = l.url.toLowerCase().includes("youtube") ? "Trailer" : (l.url.toLowerCase().includes("steam") ? "Steam" : (idx === 0 ? "Link 1" : "Link 2"));
+                        let label = l.url.toLowerCase().includes("youtube") ? "Trailer" : "Link";
                         linksHTML += `<a href="${l.url}" target="_blank" class="tl-link-btn">${label}</a>`;
                     });
                 }
-                timelineContainer.innerHTML += `
-                    <div class="tl-item">
-                        <div class="tl-ano">${periodo.ano}</div>
-                        <div class="tl-card">
-                            <h3>${item.titulo}</h3>
-                            <p>${item.desc}</p>
-                            <div class="tl-links">${linksHTML}</div>
-                        </div>
+                itemsHTML += `
+                    <div class="tl-sub-item">
+                        <h4>${item.titulo}</h4>
+                        <p>${item.desc}</p>
+                        <div class="tl-links">${linksHTML}</div>
                     </div>
                 `;
             });
+
+            timelineContainer.innerHTML += `
+                <div class="tl-item">
+                    <div class="tl-ano">${periodo.ano}</div>
+                    <div class="tl-card">
+                        <div class="card-left">${itemsHTML}</div>
+                        <div class="card-right">
+                            <img src="IMGS/timeline/${periodo.ano}.png" alt="Evento ${periodo.ano}" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                </div>
+            `;
         });
     }
 
