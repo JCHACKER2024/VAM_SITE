@@ -41,7 +41,6 @@
 
     <main>
         <section id="hero-wrap">
-
             <div id="indexvideo">
                 <div class="video-overlay">
                     <h1 class="shadow-text reveal-video-text">
@@ -65,7 +64,6 @@
             </p>
         </section>
 
-        <!-- PROJETOS EM DESTAQUE (SLIDER DE VÍDEOS / PLAYLISTS) -->
         <section class="hof-section">
             <h2 class="titulo-medio">
                 <span>PROJETOS EM</span> 
@@ -74,8 +72,6 @@
             
             <div class="video-slider-container">
                 <div class="video-slider" id="video-slider">
-                    
-                    <!-- Playlist de Jogos -->
                     <div class="video-slide active">
                         <div class="iframe-wrapper">
                             <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAlPuOJDelKDy6bDtxV-O667" frameborder="0" allowfullscreen></iframe>
@@ -86,8 +82,6 @@
                             <p class="description">Assiste aos trailers dos jogos desenvolvidos pelos nossos estudantes.</p>
                         </div>
                     </div>
-
-                    <!-- Animação 2D -->
                     <div class="video-slide">
                         <div class="iframe-wrapper">
                             <iframe src="https://www.youtube.com/embed/hCz3j0ZKrqo" frameborder="0" allowfullscreen></iframe>
@@ -95,24 +89,19 @@
                         <div class="project-info">
                             <h3>Animação 2D</h3>
                             <p class="author">Estudantes VAM</p>
-                            <p class="description">Showreel de sets de animações em bones e frame by frame criados pelos estudantes na UC de Animação 2D.</p>
+                            <p class="description">Showreel de sets de animações em bones e frame by frame.</p>
                         </div>
                     </div>
-
-                    <!-- Animação 3D -->
                     <div class="video-slide">
                         <div class="iframe-wrapper">
-                            <!-- Nota: Substituir o ID do vídeo abaixo quando o link final em embed do YouTube estiver disponível -->
                             <iframe src="https://www.youtube.com/embed?list=PLWJrkjjbyJAnReelAnimacao3D" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="project-info">
                             <h3>Animação 3D</h3>
                             <p class="author">Estudantes VAM</p>
-                            <p class="description">Nesta Unidade Curricular criarás sets de animação para os teus jogos 3D. Reel Animação Digital 3D (2025-26).</p>
+                            <p class="description">Nesta Unidade Curricular criarás sets de animação para os teus jogos 3D.</p>
                         </div>
                     </div>
-
-                    <!-- Pitches -->
                     <div class="video-slide">
                         <div class="iframe-wrapper">
                             <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAmAx0AOpIVNhXYFoMFUsrS0" frameborder="0" allowfullscreen></iframe>
@@ -120,11 +109,9 @@
                         <div class="project-info">
                             <h3>Pitches</h3>
                             <p class="author">Estudantes VAM</p>
-                            <p class="description">Antes de criar qualquer jogo, é preciso saber vender a ideia e juntar uma equipa. Assiste a alguns dos nossos pitches mais memoráveis.</p>
+                            <p class="description">Assiste a alguns dos nossos pitches mais memoráveis.</p>
                         </div>
                     </div>
-
-                    <!-- Controladores Alternativos -->
                     <div class="video-slide">
                         <div class="iframe-wrapper">
                             <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAleVd3CYgrktpyCtHYw_QjQ" frameborder="0" allowfullscreen></iframe>
@@ -132,11 +119,9 @@
                         <div class="project-info">
                             <h3>Controladores Alternativos</h3>
                             <p class="author">Estudantes VAM</p>
-                            <p class="description">Na disciplina de Artes Digitais aprenderás a trabalhar com sensores e criar as tuas próprias formas de interagir e jogar.</p>
+                            <p class="description">Aprenderás a trabalhar com sensores e criar formas próprias de interagir.</p>
                         </div>
                     </div>
-
-                    <!-- Críticas Video -->
                     <div class="video-slide">
                         <div class="iframe-wrapper">
                             <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAl084e-5Ym9k4evZKTIQGLp" frameborder="0" allowfullscreen></iframe>
@@ -144,10 +129,9 @@
                         <div class="project-info">
                             <h3>Críticas Vídeo</h3>
                             <p class="author">Estudantes VAM</p>
-                            <p class="description">Assiste às video reviews criadas pelos nossos estudantes nesta playlist.</p>
+                            <p class="description">Assiste às video reviews criadas pelos nossos estudantes.</p>
                         </div>
                     </div>
-
                 </div>
 
                 <button class="slider-prev" onclick="changeVideoSlide(-1)">&#10094;</button>
@@ -155,9 +139,7 @@
             </div>
         </section>
 
-        <!-- SECÇÃO DE REVIEW DE JOGOS E GALERIAS VISUAIS -->
         <section class="content-wrapper">
-            
             <div class="review-jogos-container reveal">
                 <h2 class="titulo-grande-secção">
                     <span>REVIEW DE</span> 
@@ -176,144 +158,108 @@
                 <span class="highlight">TRABALHOS</span>
             </h2>
 
-            <!-- CONTENTOR DAS NOVAS GALERIAS COM CARROSSEIS AUTOMÁTICOS -->
             <div class="galerias-carrosseis-container">
-                
-                <!-- 1. POSTERS (19 Imagens) -->
                 <div class="galeria-carrossel-item reveal">
                     <h3>Posters</h3>
                     <div class="carrossel-wrapper">
-                        <div class="carrossel-track" id="track-posters" data-pasta="posters" data-total="19">
-                        </div>
+                        <button class="arrow arrow-left" onclick="moveManual('track-posters', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-posters" data-pasta="posters" data-total="19"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-posters', 1)">&#10095;</button>
                     </div>
-                    <p>Galeria de posters criados pelos nossos estudantes para os seus jogos preferidos e também para os seus próprios projetos!</p>
+                    <p>Galeria de posters criados pelos nossos estudantes.</p>
                 </div>
 
-                <!-- 2. CONCEPT ART (20 Imagens) -->
                 <div class="galeria-carrossel-item reveal">
                     <h3>Concept Art</h3>
                     <div class="carrossel-wrapper">
-                        <div class="carrossel-track" id="track-concepts" data-pasta="concepts" data-total="20">
-                        </div>
+                        <button class="arrow arrow-left" onclick="moveManual('track-concepts', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-concepts" data-pasta="concepts" data-total="20"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-concepts', 1)">&#10095;</button>
                     </div>
-                    <p>Galeria de ilustrações concept art para jogos, criadas pelos estudantes de VAM.</p>
+                    <p>Galeria de ilustrações concept art para jogos.</p>
                 </div>
 
-                <!-- 3. MOCKUPS (17 Imagens) -->
                 <div class="galeria-carrossel-item reveal">
                     <h3>Mockups</h3>
                     <div class="carrossel-wrapper">
-                        <div class="carrossel-track" id="track-mockups" data-pasta="mockups" data-total="17">
-                        </div>
+                        <button class="arrow arrow-left" onclick="moveManual('track-mockups', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-mockups" data-pasta="mockups" data-total="17"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-mockups', 1)">&#10095;</button>
                     </div>
-                    <p>Galeria de ilustrações, mockups e restyling de jogos existentes, criadas pelos estudantes de VAM.</p>
+                    <p>Galeria de ilustrações, mockups e restyling de jogos existentes.</p>
                 </div>
 
-                <!-- 4. MODELAÇÃO 3D (12 Imagens) -->
                 <div class="galeria-carrossel-item reveal">
                     <h3>Modelação 3D</h3>
                     <div class="carrossel-wrapper">
-                        <div class="carrossel-track" id="track-3d" data-pasta="3d" data-total="12">
-                        </div>
+                        <button class="arrow arrow-left" onclick="moveManual('track-3d', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-3d" data-pasta="3d" data-total="12"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-3d', 1)">&#10095;</button>
                     </div>
-                    <p>Galeria de exercícios de modelação e texturização 3D para criares mundos e personagens ainda mais fantásticos.</p>
+                    <p>Galeria de exercícios de modelação e texturização 3D.</p>
                 </div>
-
             </div>
         </section>
 
-        <!-- OS NOSSOS GRADUADOS (ALUMNI) -->
         <section class="testimonials-section">
             <h2 class="titulo-medio">
                 <span>OS NOSSOS</span> 
                 <span class="highlight">GRADUADOS</span>
             </h2>
             <div class="testimonials-container">
-                
-                <!-- Bruno Costa -->
                 <div class="testimonial-card reveal" onclick="openAlumniModal('bruno')">
-                    <div class="alumni-info">
-                        <div class="alumni-photo">
-                            <img src="IMGS/graduados/VAM_vitor_bruno_costa.png" alt="Bruno Costa">
-                        </div>
-                        <h3>Bruno Costa</h3>
-                        <span class="cargo">Sinking Codfish (Produtor e Game Designer)</span>
-                    </div>
-                    <p class="depoimento-preview">“Este curso foi uma porta que se abriu na minha vida depois de terminar...”</p>
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_vitor_bruno_costa.png" alt="Bruno Costa"></div>
+                    <h3>Bruno Costa</h3>
+                    <span class="cargo">Sinking Codfish (Produtor e Game Designer)</span>
+                    <p class="depoimento-preview">“Este curso foi uma porta que se abriu na minha vida...”</p>
                     <span class="ler-mais">VER DEPOIMENTO</span>
                     <div id="text-bruno" class="hidden-text">“Este curso foi uma porta que se abriu na minha vida depois de terminar a licenciatura em enfermagem, para poder aliar a paixão dos videojogos à minha criatividade e curiosidade pelo processo de criação dos mesmos. Na minha perspetiva como aluno, ensinou-me essencialmente a ser independente, proativo e a lidar com personalidades muito distintas. Esta licenciatura é uma boa forma de aprendermos as bases das várias vertentes criativas de um videojogo e de conhecermos profissionais da área que nos introduzem ao mercado. Foquei-me em game design ao longo do curso e estive encarregue também do papel de produtor ao longo dos projetos, sendo que neste momento trabalho como game director e game designer.”</div>
                 </div>
 
-                <!-- João Azevedo -->
                 <div class="testimonial-card reveal" onclick="openAlumniModal('joao_azevedo')">
-                    <div class="alumni-info">
-                        <div class="alumni-photo">
-                            <img src="IMGS/graduados/VAM_joao_azevedo.png" alt="João Azevedo">
-                        </div>
-                        <h3>João Azevedo</h3>
-                        <span class="cargo">Astral Shift (Programador)</span>
-                    </div>
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_joao_azevedo.png" alt="João Azevedo"></div>
+                    <h3>João Azevedo</h3>
+                    <span class="cargo">Astral Shift (Programador)</span>
                     <p class="depoimento-preview">“O curso de Videojogos e Aplicações Multimédia da Universidade Lusófona...”</p>
                     <span class="ler-mais">VER DEPOIMENTO</span>
                     <div id="text-joao_azevedo" class="hidden-text">“O curso de Videojogos e Aplicações Multimédia da Universidade Lusófona do Porto deu‑me uma visão completa de todo o processo de criação de jogos desde o game design e prototipagem até à programação e produção final. O ambiente colaborativo, os projetos práticos e o contacto constante com ferramentas reais da indústria prepararam‑me verdadeiramente para entrar no mercado de trabalho. Hoje trabalho como programador na área, apoiado pelas competências sólidas, pensamento crítico e confiança que desenvolvi ao longo do curso.”</div>
                 </div>
 
-                <!-- Vasco Rocha -->
                 <div class="testimonial-card reveal" onclick="openAlumniModal('vasco')">
-                    <div class="alumni-info">
-                        <div class="alumni-photo">
-                            <img src="IMGS/graduados/VAM_vasco_rocha.png" alt="Vasco Rocha">
-                        </div>
-                        <h3>Vasco Rocha</h3>
-                        <span class="cargo">Mindera (Artista 2D/3D)</span>
-                    </div>
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_vasco_rocha.png" alt="Vasco Rocha"></div>
+                    <h3>Vasco Rocha</h3>
+                    <span class="cargo">Mindera (Artista 2D/3D)</span>
                     <p class="depoimento-preview">“O curso de Videojogos e Aplicações Multimédia teve um impacto importante...”</p>
                     <span class="ler-mais">VER DEPOIMENTO</span>
                     <div id="text-vasco" class="hidden-text">“O curso de Videojogos e Aplicações Multimédia teve um impacto importante no meu percurso, tanto académico como profissional, porque foi lá que consegui desenvolver as minhas competências na área da arte para videojogos e perceber melhor aquilo que queria seguir profissionalmente. Para além da componente técnica, o curso também me deu experiência em trabalho de equipa e desenvolvimento de projetos, algo que acabou por ser muito importante para a minha entrada na indústria. Atualmente trabalho na área de desenvolvimento de videojogos, focado principalmente em arte 3D e 2D, environment art, enquanto continuo também a desenvolver projetos pessoais.”</div>
                 </div>
 
-                <!-- Carolina Ribeiro -->
                 <div class="testimonial-card reveal" onclick="openAlumniModal('carolina')">
-                    <div class="alumni-info">
-                        <div class="alumni-photo">
-                            <img src="IMGS/graduados/VAM_carolina_ribeiro.png" alt="Carolina Ribeiro">
-                        </div>
-                        <h3>Carolina Ribeiro</h3>
-                        <span class="cargo">Environment Artist, Game/Level Designer</span>
-                    </div>
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_carolina_ribeiro.png" alt="Carolina Ribeiro"></div>
+                    <h3>Carolina Ribeiro</h3>
+                    <span class="cargo">Environment Artist, Game/Level Designer</span>
                     <p class="depoimento-preview">“O curso de Videojogos e Aplicações Multimédia foi essencial para construir...”</p>
                     <span class="ler-mais">VER DEPOIMENTO</span>
                     <div id="text-carolina" class="hidden-text">“O curso de Videojogos e Aplicações Multimédia foi essencial para construir a base técnica e criativa que me abriu portas na indústria dos jogos. O estágio profissional e o projeto final fortaleceram meu currículo e portfólio. A formação abrangente me tornou uma profissional mais versátil. Graças a essa preparação, tive a oportunidade de atuar como Environment Artist e Game/Level Designer em projetos para grandes marcas, como Prime Video, Nickelodeon e Miraculous.”</div>
                 </div>
 
-                <!-- Romeu Neto -->
                 <div class="testimonial-card reveal" onclick="openAlumniModal('romeu')">
-                    <div class="alumni-info">
-                        <div class="alumni-photo">
-                            <img src="IMGS/graduados/VAM_romeu_neto.png" alt="Romeu Neto">
-                        </div>
-                        <h3>Romeu Neto</h3>
-                        <span class="cargo">Sinking Codfish (2D/3D Artist)</span>
-                    </div>
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_romeu_neto.png" alt="Romeu Neto"></div>
+                    <h3>Romeu Neto</h3>
+                    <span class="cargo">Sinking Codfish (2D/3D Artist)</span>
                     <p class="depoimento-preview">“Para mim este curso foi uma porta para conhecer e trabalhar com...”</p>
                     <span class="ler-mais">VER DEPOIMENTO</span>
                     <div id="text-romeu" class="hidden-text">“Para mim este curso foi uma porta para conhecer e trabalhar com outros criativos. A ênfase em projetos e a liberdade no seu conteúdo tornam-se uma motivação muito forte para os alunos que têm fome de criar e se expressar através dos videojogos. Para realizar essa visão foram-nos fornecidos os básicos para qualquer área relacionada aos videojogos; e por isso é especialmente adequado para quem ainda não sabe muito bem a sua vertente e principalmente para quem procura fazer solodev.”</div>
                 </div>
 
-                <!-- Melissa Cébola -->
                 <div class="testimonial-card reveal" onclick="openAlumniModal('melissa')">
-                    <div class="alumni-info">
-                        <div class="alumni-photo">
-                            <img src="IMGS/graduados/VAM_melissa_cebola.png" alt="Melissa Cébola">
-                        </div>
-                        <h3>Melissa Cébola</h3>
-                        <span class="cargo">2D/UI Artist</span>
-                    </div>
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_melissa_cebola.png" alt="Melissa Cébola"></div>
+                    <h3>Melissa Cébola</h3>
+                    <span class="cargo">2D/UI Artist</span>
                     <p class="depoimento-preview">“Fazer o curso de VAM foi, sem dúvida, uma das melhores decisões que tomei...”</p>
                     <span class="ler-mais">VER DEPOIMENTO</span>
                     <div id="text-melissa" class="hidden-text">“Fazer o curso de VAM foi, sem dúvida, uma das melhores decisões que tomei. Encontrei colegas e professores que vou levar para a vida e que me ajudaram a reencontrar a paixão pelos videojogos que tinha desde infância. Tive ainda a oportunidade de participar em projetos profissionais que nunca imaginei serem possíveis, experiências que me fizeram crescer tanto a nível pessoal como profissional. Só posso agradecer por todas as oportunidades que este curso me proporcionou.”</div>
                 </div>
-
             </div>
         </section>
     </main>

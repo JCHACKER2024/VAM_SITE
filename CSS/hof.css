@@ -1,6 +1,3 @@
-/* ==========================================================================
-   ESTRUTURA DAS SECÇÕES
-   ========================================================================== */
 .hof-section, 
 .testimonials-section {
     max-width: 1200px;
@@ -26,9 +23,6 @@
     color: #00ff66;
 }
 
-/* ==========================================================================
-   SLIDER DE VÍDEOS
-   ========================================================================== */
 .video-slider-container {
     position: relative;
     width: 100%;
@@ -67,16 +61,15 @@
     border: none;
 }
 
-/* Controles de Navegação do Slider */
 .slider-prev, 
 .slider-next {
     position: absolute;
-    top: auto;             
+    top: auto;            
     bottom: 45px;          
     background: rgba(0, 255, 102, 0.9); 
-    color: #000000;                     
+    color: #000000;                 
     border: none;
-    width: 65px;           
+    width: 65px;          
     height: 65px;          
     border-radius: 50%;
     cursor: pointer;
@@ -99,7 +92,6 @@
 .slider-prev { left: 30px; }  
 .slider-next { right: 30px; }
 
-/* Bloco Informativo Inferior do Slide */
 .video-slide .project-info {
     padding: 45px 20px 40px; 
     background: #1a1c23;
@@ -133,13 +125,6 @@
     margin: 0 auto;
 }
 
-.video-slide .category {
-    display: none;
-}
-
-/* ==========================================================================
-   SECÇÃO DE REVIEW DE JOGOS
-   ========================================================================== */
 .review-jogos-container {
     text-align: center;
     max-width: 800px;
@@ -190,9 +175,6 @@
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
-/* ==========================================================================
-   CARROSSEIS AUTOMÁTICOS (EFEITO TRANSPARÊNCIA VISUAL 3-5 POSTERS)
-   ========================================================================== */
 .galerias-carrosseis-container {
     display: flex;
     flex-direction: column;
@@ -220,14 +202,34 @@
 
 .carrossel-wrapper {
     width: 100%;
-    height: 520px;             
+    height: 520px;            
     border-radius: 16px;
     overflow: hidden;
     position: relative;
     background: #0d0e12;  
     border: 1px solid rgba(255, 255, 255, 0.03);
-    perspective: 1200px;       
+    perspective: 1200px;        
 }
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 255, 102, 0.9);
+    color: #000;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.arrow:hover { background: #fff; }
+.arrow-left { left: 20px; }
+.arrow-right { right: 20px; }
 
 .carrossel-track {
     display: block;        
@@ -236,7 +238,6 @@
     position: relative;
 }
 
-/* Base de todas as imagens do carrossel */
 .carrossel-slide-img {
     position: absolute;
     top: 5%;
@@ -248,19 +249,14 @@
     opacity: 0;
     pointer-events: none;
     transform: translateX(-50%) translateZ(-400px);
-    /* Transição suave de movimento e opacidade, atrasando o recuo de profundidade das que saem */
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out, z-index 0.8s step-end;
     z-index: 1;
 }
 
-/* AUMENTAR AS IMAGENS PARA O DOBRO (EXCETO OS POSTERS) */
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img {
     max-width: 640px;          
 }
 
-/* ESTADOS DE VISUALIZAÇÃO DOS 5 POSTERS EM SIMULTÂNEO */
-
-/* 1. Imagem Ativa (Centro) - Força o z-index a entrar instantaneamente (step-start) */
 .carrossel-slide-img.active {
     opacity: 1;
     pointer-events: auto;
@@ -269,64 +265,46 @@
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out, z-index 0.8s step-start;
 }
 
-/* 2. Poster Imediatamente Anterior (Esquerda) */
 .carrossel-slide-img.prev {
     opacity: 0.55;
     transform: translateX(-140%) translateZ(-150px) scale(0.85);
     z-index: 5;
 }
 
-/* Ajuste de afastamento lateral para as imagens maiores (não posters) */
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.prev {
     transform: translateX(-118%) translateZ(-150px) scale(0.8);
 }
 
-/* 3. Poster Imediatamente Seguinte (Direita) */
 .carrossel-slide-img.next {
     opacity: 0.55;
     transform: translateX(40%) translateZ(-150px) scale(0.85);
     z-index: 5;
 }
 
-/* Ajuste de afastamento lateral para as imagens maiores (não posters) */
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.next {
     transform: translateX(18%) translateZ(-150px) scale(0.8);
 }
 
-/* 4. Segundo Poster Anterior (Extrema Esquerda) */
 .carrossel-slide-img.prev2 {
     opacity: 0.15;
     transform: translateX(-220%) translateZ(-300px) scale(0.7);
     z-index: 2;
 }
 
-/* Ajuste sutil para o segundo elemento maior à esquerda */
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.prev2 {
     transform: translateX(-165%) translateZ(-300px) scale(0.65);
 }
 
-/* 5. Segundo Poster Seguinte (Extrema Direita) */
 .carrossel-slide-img.next2 {
     opacity: 0.15;
     transform: translateX(120%) translateZ(-300px) scale(0.7);
     z-index: 2;
 }
 
-/* Ajuste sutil para o segundo elemento maior à direita */
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.next2 {
     transform: translateX(65%) translateZ(-300px) scale(0.65);
 }
 
-.galeria-carrossel-item p {
-    color: #888888;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* ==========================================================================
-   GRELHA GRADUADOS
-   ========================================================================== */
 .testimonials-section {
     max-width: 1800px; 
     margin: 80px auto;
@@ -409,9 +387,6 @@
     display: none; 
 }
 
-/* ==========================================================================
-   COMPONENTE MODAL INTERATIVO
-   ========================================================================== */
 .modal-v2 {
     display: none;
     position: fixed;
@@ -465,21 +440,11 @@
     margin-bottom: 15px;
 }
 
-#modal-body-v2 p:last-child {
-    margin-bottom: 0;
-}
-
-/* ==========================================================================
-   ANIMAÇÕES & KEYFRAMES
-   ========================================================================== */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.98); }
     to { opacity: 1; transform: scale(1); }
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE
-   ========================================================================== */
 @media (max-width: 900px) {
     .slider-prev, .slider-next {
         width: 50px;          
@@ -487,94 +452,27 @@
         font-size: 20px;      
         bottom: 50px;          
     }
-    
     .slider-prev { left: 15px; }  
     .slider-next { right: 15px; }
-    
-    .video-slide .project-info { 
-        padding: 35px 75px 30px; 
-        min-height: auto;        
-    }
-
-    .testimonials-section {
-        padding: 0 20px; 
-    }
-
-    .testimonials-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-    }
-
-    .carrossel-wrapper {
-        height: 380px;
-    }
-    .carrossel-slide-img {
-        max-width: 220px;
-    }
-    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img {
-        max-width: 400px;
-    }
+    .video-slide .project-info { padding: 35px 75px 30px; }
+    .testimonials-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .carrossel-wrapper { height: 380px; }
+    .carrossel-slide-img { max-width: 220px; }
+    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 400px; }
     .carrossel-slide-img.prev { transform: translateX(-120%) translateZ(-100px) scale(0.8); }
     .carrossel-slide-img.next { transform: translateX(20%) translateZ(-100px) scale(0.8); }
     .carrossel-slide-img.prev2, .carrossel-slide-img.next2 { display: none; } 
 }
 
 @media (max-width: 480px) {
-    .video-slider-container {
-        border-radius: 16px;
-    }
-
-    .slider-prev, .slider-next {
-        top: auto;           
-        bottom: 20px;          
-        width: 42px;           
-        height: 42px;
-        font-size: 16px;
-    }
-
-    .slider-prev { left: 15px; }
-    .slider-next { right: 15px; }
-
-    .video-slide .project-info {
-        padding: 30px 15px 75px; 
-    }
-
-    .video-slide .project-info h3 {
-        font-size: 22px;
-    }
-
-    .carrossel-wrapper {
-        height: 300px;
-    }
-    .carrossel-slide-img {
-        max-width: 170px;
-    }
-    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img {
-        max-width: 260px;
-    }
+    .slider-prev, .slider-next { bottom: 20px; width: 42px; height: 42px; font-size: 16px; }
+    .video-slide .project-info { padding: 30px 15px 75px; }
+    .carrossel-wrapper { height: 300px; }
+    .carrossel-slide-img { max-width: 170px; }
+    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 260px; }
     .carrossel-slide-img.prev { transform: translateX(-105%) translateZ(-80px) scale(0.75); opacity: 0.35; }
     .carrossel-slide-img.next { transform: translateX(5%) translateZ(-80px) scale(0.75); opacity: 0.35; }
     .carrossel-slide-img.prev2, .carrossel-slide-img.next2 { display: none; }
-
-    .testimonials-section {
-        padding: 0 15px; 
-    }
-
-    .testimonials-container {
-        grid-template-columns: 1fr; 
-        gap: 25px;
-        justify-content: center;
-        justify-items: center; 
-    }
-
-    .testimonial-card { 
-        padding: 30px 20px; 
-        width: 100%; 
-        max-width: 380px;
-    }
-    
-    .modal-content-v2 {
-        padding: 40px 20px 30px 20px;
-        border-radius: 20px;
-    }
+    .testimonials-container { grid-template-columns: 1fr; }
+    .testimonial-card { padding: 30px 20px; width: 100%; max-width: 380px; }
 }

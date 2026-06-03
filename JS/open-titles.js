@@ -1,9 +1,6 @@
+// --- 1. CONFIGURAÇÃO DE ANIMAÇÕES DE ENTRADA ---
 document.addEventListener('DOMContentLoaded', () => {
-
-    const observerOptions = {
-        threshold: 0.15
-    };
-
+    const observerOptions = { threshold: 0.15 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -14,12 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     const elementsToReveal = document.querySelectorAll('.card, .saida-row, .parceiro-link, .titulo-seccao, .titulo-medio, .project-card, .testimonial-card, .ato-wrapper, .video-slide, .galeria-carrossel-item, .tl-card');
-    
-    elementsToReveal.forEach(el => {
-        observer.observe(el);
-    });
+    elementsToReveal.forEach(el => observer.observe(el));
 
-    /* --- TIMELINE RENDER LOGIC --- */
+    // --- 2. GESTÃO DA TIMELINE ---
     const timelineContainer = document.getElementById('timeline-content');
     if (timelineContainer) {
         const timelineData = [
@@ -96,10 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let linksHTML = "";
                 if (item.links) {
                     item.links.forEach((l, idx) => {
-                        let label = "";
-                        if (l.url.toLowerCase().includes("youtube")) label = "Trailer";
-                        else if (l.url.toLowerCase().includes("steam")) label = "Steam";
-                        else label = (idx === 0) ? "Link 1" : "Link 2";
+                        let label = l.url.toLowerCase().includes("youtube") ? "Trailer" : (l.url.toLowerCase().includes("steam") ? "Steam" : (idx === 0 ? "Link 1" : "Link 2"));
                         linksHTML += `<a href="${l.url}" target="_blank" class="tl-link-btn">${label}</a>`;
                     });
                 }
@@ -117,36 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ... (restante das funções: saidaRows, heroVideo, modal, carrossel, etc.)
-    const saidaRows = document.querySelectorAll('.saida-row');
-    saidaRows.forEach(row => {
-        row.addEventListener('click', () => {
-            saidaRows.forEach(otherRow => {
-                if (otherRow !== row) otherRow.classList.remove('active');
-            });
-            row.classList.toggle('active');
-        });
-    });
-
-    const heroVideo = document.getElementById('hero-video');
-    if (heroVideo) {
-        heroVideo.play().catch(() => {});
-    }
-
-    const modal = document.getElementById('alumniModal');
-    if (modal) {
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeAlumniModal();
-            }
-        });
-    }
-
+    // --- 3. CARROSSEL DE IMAGENS (HALL OF FAME) ---
     const tracks = document.querySelectorAll('.carrossel-track');
     tracks.forEach(track => {
         const pasta = track.getAttribute('data-pasta');
         const totalImagens = parseInt(track.getAttribute('data-total'), 10);
         if (!pasta || !totalImagens) return;
+        
         for (let i = 1; i <= totalImagens; i++) {
             const img = document.createElement('img');
             img.src = `IMGS/hall of fame/${pasta}/${i}.png`;
@@ -154,30 +122,61 @@ document.addEventListener('DOMContentLoaded', () => {
             img.classList.add('carrossel-slide-img');
             track.appendChild(img);
         }
+        
         const slides = track.querySelectorAll('.carrossel-slide-img');
-        let currentIdx = 0;
-        function update3DCarousel() {
-            slides.forEach(slide => slide.classList.remove('active', 'prev', 'next', 'prev2', 'next2'));
-            const total = slides.length;
-            if (total === 0) return;
-            const prevIdx = (currentIdx - 1 + total) % total;
-            const prev2Idx = (currentIdx - 2 + total) % total;
-            const nextIdx = (currentIdx + 1) % total;
-            const next2Idx = (currentIdx + 2) % total;
-            slides[currentIdx].classList.add('active');
-            if (total > 1) { slides[prevIdx].classList.add('prev'); slides[nextIdx].classList.add('next'); }
-            if (total > 3) { slides[prev2Idx].classList.add('prev2'); slides[next2Idx].classList.add('next2'); }
-        }
-        if (slides.length > 0) update3DCarousel();
-        if (slides.length > 1) {
-            setInterval(() => {
-                currentIdx = (currentIdx + 1) % slides.length;
-                update3DCarousel();
-            }, 4000);
+        if (slides.length > 0) {
+            slides[0].classList.add('active');
+            updateCarouselClasses(slides, 0);
+            
+            // Loop automático
+            setInterval(() => moveManual(track.id, 1), 5000);
         }
     });
+
+    // --- 4. EVENTOS E MODAIS ---
+    const saidaRows = document.querySelectorAll('.saida-row');
+    saidaRows.forEach(row => {
+        row.addEventListener('click', () => {
+            saidaRows.forEach(otherRow => { if (otherRow !== row) otherRow.classList.remove('active'); });
+            row.classList.toggle('active');
+        });
+    });
+
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) heroVideo.play().catch(() => {});
 });
 
+// --- 5. FUNÇÕES DE MOVIMENTAÇÃO E INTERAÇÃO ---
+
+// Atualiza classes CSS para efeitos visuais do carrossel
+function updateCarouselClasses(slides, currentIdx) {
+    slides.forEach(slide => slide.classList.remove('active', 'prev', 'next', 'prev2', 'next2'));
+    const total = slides.length;
+    
+    slides[currentIdx].classList.add('active');
+    if (total > 1) {
+        slides[(currentIdx - 1 + total) % total].classList.add('prev');
+        slides[(currentIdx + 1) % total].classList.add('next');
+    }
+    if (total > 3) {
+        slides[(currentIdx - 2 + total) % total].classList.add('prev2');
+        slides[(currentIdx + 2) % total].classList.add('next2');
+    }
+}
+
+// Movimento manual para as setas
+function moveManual(trackId, step) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    const slides = Array.from(track.querySelectorAll('.carrossel-slide-img'));
+    let currentIdx = slides.findIndex(s => s.classList.contains('active'));
+    
+    currentIdx = (currentIdx + step + slides.length) % slides.length;
+    updateCarouselClasses(slides, currentIdx);
+}
+
+// Slider de Vídeos
+let currentVideoSlide = 0;
 function changeVideoSlide(direction) {
     const slides = document.querySelectorAll('.video-slide');
     if (slides.length === 0) return;
@@ -192,6 +191,7 @@ function changeVideoSlide(direction) {
     slides[currentVideoSlide].classList.add('active');
 }
 
+// Modal de Alumni
 function openAlumniModal(id) {
     const modal = document.getElementById('alumniModal');
     const modalBody = document.getElementById('modal-body-v2');
@@ -207,7 +207,7 @@ function openAlumniModal(id) {
         <div class="modal-header-alumni" style="text-align: center; margin-bottom: 25px;">
             <div class="alumni-photo" style="margin: 0 auto 15px auto; width: 130px; height: 130px;">${fotoHTML}</div>
             <h3 style="color: #fff; font-size: 26px; margin-bottom: 5px;">${nome}</h3>
-            <span class="cargo" style="color: #ffee00; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">${cargo}</span>
+            <span class="cargo" style="color: #00ff66; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">${cargo}</span>
         </div>
         <div class="modal-text-alumni">${hiddenTextEl.innerHTML}</div>
     `;
@@ -221,21 +221,4 @@ function closeAlumniModal() {
         modal.style.display = "none";
         document.body.style.overflow = "auto"; 
     }
-}
-
-function moveSlide(id, step, imgClass = '.c-img') {
-    const container = document.getElementById(id);
-    if (!container) return;
-    let slides = container.querySelectorAll(imgClass);
-    if (slides.length === 0) slides = container.querySelectorAll('.carousel-img');
-    if (slides.length === 0) return;
-    let activeIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
-    if (activeIndex === -1) activeIndex = 0;
-    slides[activeIndex].classList.remove('active');
-    activeIndex = (activeIndex + step + slides.length) % slides.length;
-    slides[activeIndex].classList.add('active');
-}
-
-function moveSobreSlide(id, step) {
-    moveSlide(id, step, '.c-img');
 }
