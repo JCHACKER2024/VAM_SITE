@@ -222,3 +222,21 @@ function closeAlumniModal() {
         document.body.style.overflow = "auto"; 
     }
 }
+
+// --- FUNÇÃO PARA AS SETAS DO SOBRE ---
+function moveSobreSlide(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll('.c-img'));
+    let currentIdx = slides.findIndex(s => s.classList.contains('active'));
+    
+    // Remove a classe active do atual
+    slides[currentIdx].classList.remove('active');
+    
+    // Calcula o novo índice
+    currentIdx = (currentIdx + direction + slides.length) % slides.length;
+    
+    // Adiciona a classe active ao novo
+    slides[currentIdx].classList.add('active');
+}
