@@ -18,41 +18,46 @@ document.addEventListener('DOMContentLoaded', () => {
             if (timelineContainer) {
                 // [Mantive os teus dados intactos]
                 const timelineData = [
-            { ano: "2026", items: [
+                    { ano: "2026", items: [
+                { 
+                    titulo: "Mostra VAM", 
+                    desc: "Premiados 25-26.", 
+                    img: "mostra_vam_1.png" 
+                },
                 { 
                     titulo: "Hell Maiden - Astral Shift", 
-                    desc: "Demo lançada com colab. de André Rufo e licenciados VAM.", 
+                    desc: "É lançada a demo do jogo com a colaboração André Rufo (antigo prof de VAM) e de Gustavo Maldonado, Bernardo Santos e João Azevedo (Licenciados VAM).", 
                     img: "hellmaiden.png", 
                     links: [{url: "https://www.youtube.com/watch?v=90EaQ4buCC8"}, {url: "https://store.steampowered.com/app/3372060/Hell_Maiden/"}] 
                 },
                 { 
-                    titulo: "Whatta Frogs? - Sinking Codfish", 
-                    desc: "Demo com o Prof. Filipe Coelho e equipa de licenciados.", 
+                    titulo: "Whatta Frogs? - Sinking Codfish Studios", 
+                    desc: "É lançada a demo do jogo que conta com a colaboração do Professor Filipe Coelho e de uma equipa de licenciados em VAM.", 
                     img: "whatta_frogs.png", 
                     links: [{url: "https://www.youtube.com/watch?v=D3QMSe3bG2s"}, {url: "https://store.steampowered.com/app/3762800/Whatta_Frogs/"}] 
                 },
                 { 
-                    titulo: "PUBG - Black Budget", 
-                    desc: "Closed Alpha com participação do Prof. Ricardo Mota.", 
+                    titulo: "PUBG - Black Budget - Krafton", 
+                    desc: "É lançado a Closed Alpha Demo do novo jogo da franquia PUBG, desenvolvido em Portugal pelo estúdio Krafton, com a participação do Professor Ricardo Mota.", 
                     img: "PUBG.PNG", 
                     links: [{url: "https://www.youtube.com/watch?v=LQuXszqAnYE"}, {url: "https://steamcommunity.com/app/4077740"}] 
                 },
                 { 
                     titulo: "Oktoberfest VR", 
-                    desc: "Vence os AUREA Awards 2026 na categoria “Imersão”.", 
+                    desc: "Jogo oficial do famoso festival, realizado com a participação do Professor Eduardo Magalhães vence os AUREA Awards 2026 na categoria “Imersão”.", 
                     img: "oktoberfest_2.PNG", 
                     links: [{url: "https://www.youtube.com/watch?v=DdRSPWD0TT0"}, {url: "https://www.oktoberfest.game/en"}] 
                 },
                 { 
                     titulo: "4ª Conferência Internacional Playful by Design", 
-                    desc: "Realizada na Universidad Rey Juan Carlos (Madrid).", 
+                    desc: "Realizada na Universidad Rey Juan Carlos (Madrid), em parceria com a University of Illinois e Universidad Complutense, com a presença dos Professores João Alves de Sousa e José Raimundo.", 
                     img: "conferencia.png" 
                 }
             ]},
             { ano: "2025", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 2024-2025.", 
+                    desc: "Premiados 24-25.", 
                     img: "mostra_vam_1.png" 
                 },
                 { 
@@ -73,40 +78,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 2º Semestre (2024-2025).", 
-                    img: "mostra_vam_2.png" 
+                    desc: "Premiados 2º Sem (2024-2025).", 
+                    img: "mostra_2025_2.png" 
                 }
             ]},
             { ano: "2024", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 1º Semestre (2024-2025).", 
+                    desc: "Premiados 23-24.", 
                     img: "mostra_vam_1.png" 
                 },
                 { 
                     titulo: "3ª Conferência Internacional Playful by Design", 
-                    desc: "Realizada na University of Illinois (EUA).", 
+                    desc: "Realizada na University of Illinois (EUA), em parceria entre a Universidade Lusófona e a University of Illinois, com a presença do Professor João Alves de Sousa.", 
                     img: "3conf_pbd.png" 
                 },
                 { 
                     titulo: "Oktoberfest The Official VR Game", 
-                    desc: "Lançamento com Prof. Eduardo Magalhães e licenciados VAM.", 
+                    desc: "Lançamento do jogo com a colaboração do Professor Eduardo Magalhães e dos licenciados Vitor Costa e Romeu Neto.", 
                     img: "oktoberfest.png", 
                     links: [{url: "https://www.youtube.com/watch?v=qiBSQxVGRio"}, {url: "https://www.oktoberfest.game/en"}] 
                 },
                 { 
                     titulo: "Bergolis", 
-                    desc: "Vence o 2º Prémio no Play Your Idea 2024.", 
+                    desc: "Vence o 2º Prémio no Play Your Idea 2024, para o estúdio Serenitheal dos 5 finalistas VAM, um jogo sério desenvolvido para dispositivos de Realidade Virtual.", 
                     img: "bergolis_premio.png" 
                 },
                 { 
                     titulo: "2ª Conferência Internacional Playful by Design", 
-                    desc: "Realizada na Universidade Lusófona (Lisboa).", 
+                    desc: "Organizada pelo Professor João Alves de Sousa em parceria com a University of Illinois e Uppsala University, realizada na Universidade Lusófona (Lisboa).", 
                     img: "2conf_pbd.png" 
                 },
                 { 
                     titulo: "Dodge Game", 
-                    desc: "Desenvolvido por Hugo Barbosa e Leonardo Figueiredo.", 
+                    desc: "Jogo começado na licenciatura e continuado pelos licenciados em VAM Hugo Barbosa e Leonardo Figueiredo.", 
                     img: "dodgegame.png", 
                     links: [{url: "https://nothukie.itch.io/dodge-game"}] 
                 },
@@ -124,50 +129,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 { 
                     titulo: "1ª Conferência Internacional Playful by Design", 
-                    desc: "Em parceria com University of Illinois.", 
+                    desc: "Parceria com a University of Illinois para discutir o ensino e indústria dos videojogos e playful media.", 
                     img: "conferencia_pbd.jpg", 
                     links: [{url: "https://playfulbydesign.illinois.edu/conference/"}] 
                 },
                 { 
                     titulo: "Meo XL Games", 
-                    desc: "Serviço educativo e co-autoria da Mostra de Jogos Indie.", 
+                    desc: "VAM responsável pelo serviço educativo do evento e co-autora da Mostra de Jogos Indie.", 
                     img: "meoxl.png" 
                 },
                 { 
                     titulo: "Campus Conundrum", 
-                    desc: "Finalista da 9ª edição dos Prémios Playstation Portugal.", 
+                    desc: "Jogo dos estudantes de 2º ano, finalista da 9ª edição dos Prémios Playstation Portugal.", 
                     img: "campus_conundrum.png" 
                 },
                 { 
                     titulo: "Play Design Document", 
-                    desc: "Prof. João Alves de Sousa lança a agenda PBD.", 
+                    desc: "O Professor João Alves de Sousa lança a agenda PBD, aliando gamificação à planificação.", 
                     img: "playdesigndocument.png" 
                 },
                 { 
                     titulo: "A Visão Crítica do Estudante", 
-                    desc: "Lançamento do primeiro Livro Compilação de artigos.", 
+                    desc: "Primeiro Livro Compilação de artigos críticos escritos pelos estudantes de 1º ano.", 
                     img: "avisaocriticadoestudante.png" 
                 },
                 { 
                     titulo: "Exposição My Plan for Japan", 
-                    desc: "Em exibição no Hillside Fórum Tóquio.", 
+                    desc: "Ilustrações de Ana Aragão em realidade aumentada pelos estudantes de VAM, exibição no Hillside Fórum Tóquio.", 
                     img: "myplanforjapan.png" 
                 },
                 { 
                     titulo: "Little Goody Two Shoes", 
-                    desc: "Colaboração com Prof. André Rufo e licenciados VAM.", 
+                    desc: "Colaboração com o Professor André Rufo e licenciados VAM.", 
                     img: "littlegoodietwoshoes.png", 
                     links: [{url: "https://www.youtube.com/watch?v=8eaEgrgh8vg"}, {url: "https://store.steampowered.com/app/1812370/Little_Goody_Two_Shoes/"}] 
                 },
                 { 
                     titulo: "Beneath", 
-                    desc: "Colaboração com Prof. Eduardo Magalhães e licenciados VAM.", 
+                    desc: "Colaboração com o Professor Eduardo Magalhães e licenciados VAM.", 
                     img: "beneath.png", 
                     links: [{url: "https://www.beneathgame.net"}, {url: "https://store.steampowered.com/app/1593230/Beneath/"}] 
                 },
                 { 
                     titulo: "A Fotografia nos Videojogos", 
-                    desc: "Lançamento do Livro / Ensaio Fotográfico ao The Last of Us Part II.", 
+                    desc: "Lançamento do Livro / Ensaio Fotográfico ao The Last of Us Part II, do Professor André Carita.", 
                     img: "livrocarita.png" 
                 }
             ]},
@@ -179,23 +184,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 { 
                     titulo: "Exposição No Plan for Japan", 
-                    desc: "Exibição no Museu do Oriente, Lisboa.", 
+                    desc: "Animações em Realidade Aumentada produzidas pelos estudantes de VAM, em exibição no Museu do Oriente.", 
                     img: "noplanforjapan.png" 
                 },
                 { 
                     titulo: "Bolsa de Mérito Future Games", 
-                    desc: "Carolina Costa selecionada em Estocolmo.", 
+                    desc: "Carolina Costa, licenciada em VAM, vencedora de bolsa de mérito em Estocolmo.", 
                     img: "bolsamerito.png" 
                 },
                 { 
                     titulo: "Ink - Arboresis Studio", 
-                    desc: "Primeiro jogo do licenciado Gonçalo de Jesus.", 
+                    desc: "Primeiro jogo criado pelo nosso licenciado em VAM Gonçalo de Jesus.", 
                     img: "ink.png", 
                     links: [{url: "https://play.google.com/store/apps/details?id=com.arboresis.ink"}] 
                 },
                 { 
                     titulo: "Devil’s License", 
-                    desc: "Projeto de estágio na Exaud.", 
+                    desc: "Projeto iniciado no 2º ano e desenvolvido como estágio na Exaud pelos estudantes Melissa Cébola e José Fonseca.", 
                     img: "devilslicense.png", 
                     links: [{url: "https://exaud.com/blog/exaudlab-internship"}] 
                 }
@@ -203,30 +208,30 @@ document.addEventListener('DOMContentLoaded', () => {
             { ano: "2021", items: [
                 { 
                     titulo: "Melhor Prática Pedagógica Inovadora", 
-                    desc: "Prémio Fazer + atribuído ao curso VAM.", 
+                    desc: "Prémio Fazer + atribuído ao curso VAM pela metodologia de Project Based Learning.", 
                     img: "premio_vam.png" 
                 },
                 { 
                     titulo: "Thunder Tier One - Krafton", 
-                    desc: "Com a participação do Prof. Ricardo Mota.", 
+                    desc: "Lançamento com a participação do Professor Ricardo Mota.", 
                     img: "thundertierone.png", 
                     links: [{url: "https://www.youtube.com/watch?v=wLjji6Jox80"}, {url: "https://store.steampowered.com/app/377300/Thunder_Tier_One/"}] 
                 },
                 { 
                     titulo: "Exposição Francis Bacon", 
-                    desc: "Colaboração artística na WOW, Gaia.", 
+                    desc: "Colaboração artística na WOW, Gaia, com animações produzidas pelos estudantes de VAM.", 
                     img: "exposicao_francis.png", 
                     links: [{url: "https://www.youtube.com/watch?v=rj-M_YQJ62Y"}] 
                 },
                 { 
                     titulo: "GlowFall", 
-                    desc: "TOP 3 Novos Talentos FNAC - Menção Honrosa.", 
+                    desc: "Jogo criado pelo finalista Simão Gonçalves, TOP 3 Novos Talentos FNAC - Menção Honrosa.", 
                     img: "glowfall.png", 
                     links: [{url: "https://simaogoncalves.itch.io/glowfall"}] 
                 },
                 { 
                     titulo: "Morbus", 
-                    desc: "Prémio melhor arte na IPCA Game Jam.", 
+                    desc: "Prémio melhor arte na IPCA Game Jam, equipa de estudantes VAM.", 
                     img: "morbus.png", 
                     links: [{url: "https://marcos-engelhard.itch.io/mo"}] 
                 }
@@ -238,15 +243,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     img: "little_girl.png" 
                 },
                 { 
-                    titulo: "Those who Remain", 
-                    desc: "Com a participação do Prof. Eduardo Magalhães.", 
+                    titulo: "Those who Remain - Camel 101", 
+                    desc: "Lançamento do jogo com a colaboração do Professor Eduardo Magalhães no Design de Som.", 
                     img: "those_who_remain.png", 
                     links: [{url: "https://www.youtube.com/watch?v=6MBcG5koRHc"}, {url: "https://store.steampowered.com/app/715380/Those_Who_Remain/"}] 
                 },
                 { 
                     titulo: "Game Creators Odyssey", 
-                    desc: "Curso online em parceria com Ubisoft.", 
-                    img: "gamecreatorodissey.png", 
+                    desc: "Curso online em parceria entre a Universidade Lusófona e a Ubisoft.", 
+                    img: "gamecreatorsodissey.png", 
                     links: [{url: "https://gamecreatorodyssey.com/"}] 
                 }
             ]},
@@ -268,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 { 
                     titulo: "Entrevista a Daniel Pesina (Mortal Kombat)", 
-                    desc: "Realizada pelos estudantes VAM.", 
+                    desc: "Realizada pelos estudantes VAM para um trabalho de História dos Videojogos.", 
                     img: "entrevista.png", 
                     links: [{url: "https://www.youtube.com/watch?v=xsTmWLK119Q"}] 
                 }
@@ -276,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { ano: "2018", items: [
                 { 
                     titulo: "Dakar 18 - Big Moon Entertainment", 
-                    desc: "Colaboração dos Profs. Ricardo Mota e Henrique Basto.", 
+                    desc: "Lançamento do jogo com a colaboração dos Professores Ricardo Mota e Henrique Basto.", 
                     img: "dakar.png", 
                     links: [{url: "https://www.youtube.com/watch?v=85xUvllbW10"}, {url: "https://store.steampowered.com/app/767390/Dakar_18/"}] 
                 }
