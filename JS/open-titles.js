@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         for (let i = 1; i <= totalImagens; i++) {
             const img = document.createElement('img');
-            img.src = `IMGS/hall of fame/${pasta}/${i}.png`;
+            img.src = `IMGS/hall_of_fame/${pasta}/${i}.png`;
             img.alt = `Trabalho ${pasta} - ${i}`;
             img.classList.add('carrossel-slide-img');
             track.appendChild(img);
