@@ -570,7 +570,7 @@ nav a:hover {
     .language-selector { font-size: 10px; margin-left: auto; }
     #hero-wrap { height: 60vh; }
     .shadow-text { font-size: clamp(22px, 6vw, 30px); } 
-    .shadow-text.reveal-video-text { margin-top: -30px; }
+    .shadow-text.reveal-video-text { margin-top: -60px; }
     #indexvideo { width: 92%; height: 50%; margin-top: 15px; }
     .mute-toggle { bottom: 15px; right: 15px; padding: 6px 12px; font-size: 9px; }
     .texto-corrido { font-size: 15px; padding: 0 20px; text-align: justify; }

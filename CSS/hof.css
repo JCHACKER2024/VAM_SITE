@@ -464,6 +464,16 @@
     .slider-next { right: 15px; }
     
     .video-slide .project-info { padding: 35px 75px 30px; }
+
+    .galeria-carrossel-item {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .galeria-carrossel-item h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
     
     .testimonials-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     
@@ -490,7 +500,16 @@
         padding: 30px 15px 75px; 
         text-align: center;
     }
+
+    .galeria-carrossel-item {
+        align-items: center;
+        padding: 20px 15px;
+    }
     
+    .galeria-carrossel-item h3 {
+        font-size: 20px; 
+    }
+
     .carrossel-wrapper { height: 280px; }
     
     .carrossel-slide-img { max-width: 160px; }
