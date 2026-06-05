@@ -490,40 +490,59 @@
 /* 3. Telemóveis e Ecrãs Pequenos (até 480px) */
 @media (max-width: 480px) {
     .slider-prev, .slider-next { 
-        bottom: 20px; 
-        width: 42px; 
-        height: 42px; 
-        font-size: 16px; 
+        bottom: 10px;
+        width: 36px; 
+        height: 36px; 
+        font-size: 14px; 
+        background: rgba(0,0,0,0.5);
     }
     
     .video-slide .project-info { 
-        padding: 30px 15px 75px; 
+        padding: 20px 15px 60px; 
         text-align: center;
     }
 
     .galeria-carrossel-item {
         align-items: center;
-        padding: 20px 15px;
+        padding: 20px 10px;
     }
     
     .galeria-carrossel-item h3 {
-        font-size: 20px; 
+        font-size: 1.2rem; 
+        margin-bottom: 15px;
     }
 
-    .carrossel-wrapper { height: 280px; }
+    .carrossel-wrapper { height: 240px; }
     
-    .carrossel-slide-img { max-width: 160px; }
+    .carrossel-slide-img { 
+        max-width: 140px; 
+        object-fit: contain; 
+    }
     
-    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 240px; }
+    .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { 
+        max-width: 200px; 
+    }
     
-    .carrossel-slide-img.prev { transform: translateX(-110%) translateZ(-80px) scale(0.7); opacity: 0.3; }
-    .carrossel-slide-img.next { transform: translateX(10%) translateZ(-80px) scale(0.7); opacity: 0.3; }
+    .carrossel-slide-img.prev { transform: translateX(-120%) translateZ(-50px) scale(0.6); opacity: 0.2; }
+    .carrossel-slide-img.next { transform: translateX(20%) translateZ(-50px) scale(0.6); opacity: 0.2; }
     
-    .testimonials-container { grid-template-columns: 1fr; }
+    .testimonials-container { 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
     .testimonial-card { 
-        padding: 25px 20px; 
-        width: 90%; 
-        max-width: 380px; 
+        padding: 20px; 
+        width: 100%; 
+        max-width: 100%; 
+        box-sizing: border-box; 
         margin: 0 auto;
+    }
+    
+    .alumni-photo img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
     }
 }

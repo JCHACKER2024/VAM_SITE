@@ -578,8 +578,37 @@ nav a:hover {
 }
 
 @media (max-width: 480px) {
-    #hero-wrap { height: 50vh; }
-    .shadow-text { font-size: 20px; padding: 0 10px; }
-    #indexvideo { width: 95%; height: 40%; }
-    .texto-corrido { font-size: 14px; line-height: 1.5; padding: 0 15px; }
+    #hero-wrap { 
+        height: auto; 
+        min-height: 60vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #indexvideo { 
+        width: 100%; 
+        height: auto; 
+        max-height: 300px; 
+    }
+
+    .shadow-text { 
+        font-size: 1.5rem; 
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .texto-corrido { 
+        font-size: 1rem; 
+        line-height: 1.6; 
+        padding: 0 20px;
+        text-align: justify; 
+    }
+
+    .mute-toggle {
+        font-size: 10px;
+        padding: 5px;
+        bottom: 10px;
+        right: 10px;
+    }
 }

@@ -153,9 +153,46 @@
 
 /* 3. Telemóveis (até 480px) */
 @media (max-width: 480px) {
-    .shadow-text { font-size: 20px; letter-spacing: 0; }
-    .tl-card { padding: 15px; }
-    .tl-card h4 { font-size: 1rem; }
-    .tl-card p { font-size: 0.85rem; }
-    .tl-link-btn { padding: 5px 12px; font-size: 0.7rem; }
+    .shadow-text { 
+        font-size: 1.5rem; 
+        letter-spacing: 0; 
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    #timeline-content {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tl-card { 
+        padding: 15px; 
+        width: 92%; 
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .tl-card h4 { 
+        font-size: 1.1rem; 
+        margin-bottom: 10px;
+    }
+
+    .tl-card p { 
+        font-size: 0.9rem; 
+        line-height: 1.5;
+        text-align: justify; 
+    }
+
+    .tl-link-btn { 
+        display: inline-block;
+        padding: 8px 15px; 
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+
+    .timeline-line {
+        display: none; 
+    }
 }
