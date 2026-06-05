@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timeline of the history of the VAM course - Videogames and Multimedia Applications at Universidade Lusófona Porto.">
+    <title>HISTORY | VAM - ULusófona Porto</title>
+    
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/timeline.css">
+    <link rel="icon" type="image/png" href="IMGS/logo_VAM_favicon.png">
+</head>
+<body> 
+
+    <div id="particles-container"></div>
+    
+    <header id="header">
+        <div class="header-container">
+            <a href="index_en.html" class="logo-link">
+                <div class="logo-header">
+                    <img src="IMGS/logo_VAM.png" alt="VAM Logo" class="header-logo-img">
+                    <span class="extenso">VIDEOGAMES AND MULTIMEDIA APPLICATIONS</span>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="sobre.html">ABOUT</a>
+                <a href="plano.html">CURRICULUM</a>
+                <a href="hof.html">HALL OF FAME</a>
+                <a href="timeline_en.html" class="active">TIMELINE</a>
+            </nav>
+            <div class="language-selector">
+                <a href="timeline.html" class="lang-btn">PT</a> <span class="divider">|</span>
+                <a href="timeline_en.html" class="lang-btn active">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero-wrap">
+            <div id="indexvideo">
+                <div class="video-overlay">
+                    <h1 class="shadow-text reveal-video-text">VAM <span class="highlight">HISTORY</span></h1>
+                </div>
+                <video autoplay muted loop playsinline id="myVideo">
+                    <source src="VIDS/VAM_5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="muteBtn" class="mute-toggle">
+                    SOUND: <span id="statusSom">OFF</span>
+                </button>
+            </div>
+    </section>
+      
+    <main>
+        <section id="timeline-wrapper" class="content-wrapper">
+            <div id="timeline-content">
+                </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="https://www.ulusofona.pt/" target="_blank">
+                    <img src="IMGS/logo_lusofona.png" alt="Lusófona" class="lusofona-logo">
+                </a>
+                <p class="footer-address">Rua Augusto Rosa, nº 24<br>4000-098 Porto - Portugal</p>
+            </div>
+
+            <div class="footer-info">
+                <h4>Contacts</h4>
+                <div class="info-content">
+                    <div class="info-item"><strong>Phone:</strong> 222 073 230</div>
+                    <div class="info-item"><strong>Email:</strong> info.cup@ulusofona.pt</div>
+                    <div class="info-item"><strong>Management:</strong> joao.alves.de.sousa@ulusofona.pt</div> 
+                    <div class="info-item">
+                        <strong>Institutional Page:</strong> 
+                        <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="footer-link-simple">VAM</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Follow us</h4>
+                <a href="https://www.facebook.com/VAMULP" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/vam_ulp/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/channel/UC6kld1O_PUSw5Hv9Ft1knUQ" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 VAM - ULusófona Porto
+        </div>
+    </footer>
+    
+    <script src="JS/soundvideo.js"></script>
+    <script src="JS/effects.js"></script>
+    <script src="JS/open-titles.js"></script>
+</body>
+</html>

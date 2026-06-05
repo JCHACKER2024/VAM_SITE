@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDY PLAN - VAM</title>
+    <title>PLAN - VAM</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/plano.css">
     <link rel="icon" type="image/png" href="IMGS/logo_VAM_favicon.png">
 </head>
 <body>
 
-    <div id="particles-js"></div>
+    <div id="particles-container"></div>
 
     <header id="header">
         <div class="header-container">
@@ -23,7 +23,7 @@
             <nav>
                 <a href="index_en.html">HOME</a>
                 <a href="sobre_en.html">ABOUT</a>
-                <a href="plano_en.html" class="active">STUDY PLAN</a>
+                <a href="plano_en.html" class="active">PLAN</a>
                 <a href="hof_en.html">HALL OF FAME</a>
                 <a href="timeline_en.html">TIMELINE</a>
             </nav>
@@ -38,7 +38,7 @@
 
     <main>
         <section id="hero-wrap">
-            
+
             <div id="indexvideo">
                 <div class="video-overlay">
                     <h1 class="shadow-text reveal-video-text">STUDY <span class="highlight">PLAN</span></h1>
@@ -47,6 +47,7 @@
                     <source src="VIDS/VAM_3.mp4" type="video/mp4">
                     Your browser does not support video.
                 </video>
+                
                 <button id="muteBtn" class="mute-toggle">
                     SOUND: <span id="statusSom">OFF</span>
                 </button>
@@ -55,11 +56,12 @@
 
         <section class="content-wrapper">
             <p class="texto-corrido">
-                The Bachelor's degree in Video Games and Multimedia Applications focuses on a comprehensive training, allowing students to discover the main areas within game creation and multimedia applications. Discover more about the three levels of your degree's game that will help you find your own path and specialization.
+                The Bachelor's degree in Video Games and Multimedia Applications focuses on comprehensive training, allowing students to learn about the main areas within video game and multimedia application development. Learn more about the three levels of your degree's game that will allow you to find your own path and area of specialization.
             </p>
         </section>
 
         <section class="plano-container">
+            <!-- LEVEL 1 -->
             <div class="ato-wrapper reveal">
                 <div class="ato-header">
                     <h2>LEVEL 1: <span class="highlight">TUTORIAL</span></h2>
@@ -69,28 +71,65 @@
                 <details class="semestre-box">
                     <summary>1st Semester - Level 1.1</summary>
                     <div class="uc-list">
-                        <details class="uc-item"><summary>Game Analysis and Criticism</summary><p>You know how to play, but do you really know how to analyze a game?</p></details>
-                        <details class="uc-item"><summary>History of Video Games</summary><p>Discover the history of game development, decade by decade.</p></details>
-                        <details class="uc-item"><summary>Introduction to Digital Imaging</summary><p>Learn basic tools for image creation (even if you don't know how to draw!).</p></details>
-                        <details class="uc-item"><summary>Communication Design</summary><p>Understand concepts of design, color, balance, and readability (you want to make beautiful games, right?).</p></details>
-                        <details class="uc-item"><summary>Foundations of Programming</summary><p>Learn the basics and fundamentals of programming.</p></details>
-                        <details class="uc-item"><summary>Creative Programming</summary><p>Apply programming to concrete situations in a practical and creative way using Godot.</p></details>
+                        <details class="uc-item">
+                            <summary>Video Game Criticism and Analysis</summary>
+                            <p>You know how to play, but do you really know how to analyze a game?</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>History of Video Games</summary>
+                            <p>Learn the history of game development, decade by decade.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Introduction to Digital Imaging</summary>
+                            <p>Learn basic image creation tools (even if you don't know how to draw!).</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Communication Design</summary>
+                            <p>Understand notions of design, color, balance, and legibility (you want to make beautiful games, right?).</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Programming Fundamentals</summary>
+                            <p>Learn the bases and fundamentals of programming.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Creative Programming</summary>
+                            <p>Apply programming to concrete situations in a practical and creative way using Godot.</p>
+                        </details>
                     </div>
                 </details>
 
                 <details class="semestre-box">
                     <summary>2nd Semester - Level 1.2</summary>
                     <div class="uc-list">
-                        <details class="uc-item"><summary>Screenplay and Interactive Narratives</summary><p>Learn how to create non-linear stories and narratives.</p></details>
-                        <details class="uc-item"><summary>Interaction Design</summary><p>For others to understand your creations, you must learn the concepts of interaction and usability.</p></details>
-                        <details class="uc-item"><summary>2D Digital Animation</summary><p>Bring your characters to life by creating animation sets for games, either frame-by-frame or using bones.</p></details>
-                        <details class="uc-item"><summary>Digital Illustration I</summary><p>Learn to create backgrounds, characters, and sprites using various techniques.</p></details>
-                        <details class="uc-item"><summary>Computer Graphics</summary><p>Understand how computer graphics work and create your first 3D models.</p></details>
-                        <details class="uc-item"><summary>Programming Languages I</summary><p>Develop skills in programming and C# using Unity 3D.</p></details>
+                        <details class="uc-item">
+                            <summary>Script and Interactive Narratives</summary>
+                            <p>Learn how to create non-linear stories and narratives.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Interaction Design</summary>
+                            <p>For someone to understand your creations, you must learn the notions of interaction and usability.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>2D Digital Animation</summary>
+                            <p>Bring your characters to life by creating animation sets for games, frame-by-frame or using bones.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Digital Illustration I</summary>
+                            <p>Learn to create backgrounds, characters, and sprites using various techniques.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Computer Graphics</summary>
+                            <p>Understand how computer graphics work and create your first 3D models.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Programming Languages I</summary>
+                            <p>Develop knowledge of programming and C# using Unity 3D.</p>
+                        </details>
                     </div>
                 </details>
             </div>
 
+            <!-- LEVEL 2 -->
             <div class="ato-wrapper reveal">
                 <div class="ato-header">
                     <h2>LEVEL 2: <span class="highlight">MAIN QUEST</span></h2>
@@ -100,83 +139,141 @@
                 <details class="semestre-box">
                     <summary>1st Semester - Level 2.1</summary>
                     <div class="uc-list">
-                        <details class="uc-item"><summary>Multimedia Applications Development</summary><p>Discover the huge variety and potential of multimedia applications.</p></details>
-                        <details class="uc-item"><summary>Digital Illustration II</summary><p>Develop your own style and explore the creation of unique visual art styles.</p></details>
-                        <details class="uc-item"><summary>Game Systems and Engines</summary><p>Understand different systems and engines by creating a series of micro-games.</p></details>
-                        <details class="uc-item"><summary>3D Modeling</summary><p>Practice modeling and texturing props, environments, and characters.</p></details>
-                        <details class="uc-item"><summary>Programming Languages II</summary><p>Deepen your game programming knowledge.</p></details>
-                        <details class="uc-item"><summary>Game Design Project I</summary><p>Make a pitch, work in a team, and create your first 2D game.</p></details>
+                        <details class="uc-item">
+                            <summary>Multimedia Application Development</summary>
+                            <p>Discover the huge variety and potential of multimedia applications.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Digital Illustration II</summary>
+                            <p>Develop your own style and explore the creation of unique graphic styles.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Game Systems and Engines</summary>
+                            <p>Understand different systems and engines by creating a series of micro-games.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>3D Modeling</summary>
+                            <p>Practice modeling and texturing props, environments, and characters.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Programming Languages II</summary>
+                            <p>Deepen your knowledge of programming for games.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Game Design Project I</summary>
+                            <p>Pitch an idea, work in a team, and create your first 2D game.</p>
+                        </details>
                     </div>
                 </details>
 
                 <details class="semestre-box">
                     <summary>2nd Semester - Level 2.2</summary>
                     <div class="uc-list">
-                        <details class="uc-item"><summary>Contemporary Media</summary><p>Understand media in its various forms, from games to movies and even memes!</p></details>
-                        <details class="uc-item"><summary>Multimedia and Web Production Studio</summary><p>Explore all the potential and creativity of the web.</p></details>
-                        <details class="uc-item"><summary>Introduction to Sound Design</summary><p>Learn to create immersive sound environments.</p></details>
-                        <details class="uc-item"><summary>3D Digital Animation</summary><p>Bring your 3D models to life and animate your heroes and NPCs.</p></details>
-                        <details class="uc-item"><summary>Programming Languages III</summary><p>Develop complex systems and learn to use Unreal Engine.</p></details>
-                        <details class="uc-item"><summary>Game Design Project II</summary><p>Got a taste for making games? The challenge is even bigger now: build your 3D game.</p></details>
+                        <details class="uc-item">
+                            <summary>Contemporary Media</summary>
+                            <p>Understand media in its various forms, from games to movies and even memes!</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Multimedia and Web Production Workshop</summary>
+                            <p>Explore all the possibilities and creativity of the web.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Introduction to Sound Design</summary>
+                            <p>Learn to create immersive sound environments.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>3D Digital Animation</summary>
+                            <p>Bring your 3D models to life and animate your heroes and NPCs.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Programming Languages III</summary>
+                            <p>Develop complex systems and learn to use Unreal Engine.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Game Design Project II</summary>
+                            <p>Did you enjoy creating games? The challenge is now even greater, make your 3D game.</p>
+                        </details>
                     </div>
                 </details>
             </div>
 
+            <!-- LEVEL 3 -->
             <div class="ato-wrapper reveal">
                 <div class="ato-header">
                     <h2>LEVEL 3: <span class="highlight">FINAL BOSS</span></h2>
-                    <p>The End - You have leveled up your skills, it's time to face the final boss.</p>
+                    <p>The End - You've developed your skills, it's time to face the final boss.</p>
                 </div>
 
                 <details class="semestre-box">
                     <summary>1st Semester - Level 3.1</summary>
                     <div class="uc-list">
-                        <details class="uc-item"><summary>Digital Arts Studio</summary><p>Explore computer vision, sensors, and alternative ways to produce digital art.</p></details>
-                        <details class="uc-item"><summary>Video Games and Multimedia Applications Production Studio I</summary><p>Start your final course project.</p></details>
-                        <details class="uc-item"><summary>Audiovisual Technologies</summary><p>Learn audiovisual language to create games that are even more cinematic.</p></details>
+                        <details class="uc-item">
+                            <summary>Digital Arts Workshop</summary>
+                            <p>Explore computer vision, sensors, and alternative ways to produce digital art.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Video Game and Multimedia Application Production Workshop I</summary>
+                            <p>Start your final course project.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Audiovisual Technologies</summary>
+                            <p>Learn audiovisual language to create even more cinematic games.</p>
+                        </details>
                     </div>
                 </details>
 
                 <details class="semestre-box">
                     <summary>2nd Semester - Level 3.2</summary>
                     <div class="uc-list">
-                        <details class="uc-item"><summary>Video Games and Multimedia Applications Production Studio II</summary><p>Finish the course with your most ambitious project.</p></details>
-                        <details class="uc-item"><summary>Marketing and Advertising Studio</summary><p>Create a marketing strategy and make everyone talk about your project.</p></details>
-                        <details class="uc-item"><summary>Internship and Professional Integration</summary><p>You are ready to face professional life, show what you are worth in your internship!</p></details>
+                        <details class="uc-item">
+                            <summary>Video Game and Multimedia Application Production Workshop II</summary>
+                            <p>Finish the course with your most ambitious project.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Marketing and Advertising Workshop</summary>
+                            <p>Create a marketing strategy and make everyone talk about your project.</p>
+                        </details>
+                        <details class="uc-item">
+                            <summary>Internship and Professional Integration</summary>
+                            <p>You are ready to face professional life, show what you are worth in your internship!</p>
+                        </details>
                     </div>
                 </details>
             </div>
         </section>
 
+        <!-- FACULTY -->
         <section class="docentes-section reveal">
             <div class="titulo-wrapper">
                 <h2 class="titulo-medio">FACULTY <span class="highlight">MEMBERS</span></h2>
             </div>
             
             <div class="docentes-lista-v2">
+                <!-- João Alves de Sousa -->
                 <div class="docente-row">
                     <div class="docente-img"><img src="IMGS/docentes/joao_alves_de_sousa.png" alt="João Alves de Sousa"></div>
                     <div class="docente-info">
                         <h3>João Alves de Sousa</h3>
-                        <span class="cargo">Head of Program - PhD in Interactive Art, Specialist in Digital Imaging, Game Design, and Animation</span>
+                        <span class="cargo">Course Director - PhD in Interactive Art, Specialist in Digital Imaging, Game Design, and Animation</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
-                                <li>Free that Fish (video game showcased at Comic Con Portugal, Lisbon Games Week, and The Very Big Indie Pitch - Pocket Gamer Connects London, 2015).</li>
-                                <li>Lots of Guts (Winner of Most Innovative Game at the PlayStation Awards Portugal 2015).</li>
-                                <li>Porquê (Animation Winner of the Young Portuguese Filmmaker Award – Cinanima 2006).</li>
+                                <li>Free that Fish (video game presented at Comic Con Portugal, Lisbon Games Week, and The Very Big Indie Pitch - Pocket Gamer Connects London, 2015).</li>
+                                <li>Lots of Guts (Winner of Most Innovative Game at the Playstation Portugal Awards 2015).</li>
+                                <li>Porquê (Animation winner of the Young Portuguese Filmmaker Award – Cinanima 2006).</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- André Carita -->
                 <div class="docente-row reverse">
                     <div class="docente-img"><img src="IMGS/docentes/andre_carita.png" alt="André Carita"></div>
                     <div class="docente-info">
                         <h3>André Carita</h3>
-                        <span class="cargo">Deputy Head of Program - Specialist in History, Theory, and Game Design</span>
+                        <span class="cargo">Course Co-director - Specialist in History, Theory, and Game Design</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
                                 <li>Author of the book "A Fotografia nos Videojogos - Um ensaio Fotográfico ao The Last of Us Part II" (2023).</li>
                                 <li>Co-author of the book "A Visão Crítica do Estudante: Videojogos Independentes" (2023).</li>
@@ -186,29 +283,31 @@
                     </div>
                 </div>
 
+                <!-- Ricardo Mota -->
                 <div class="docente-row">
                     <div class="docente-img"><img src="IMGS/docentes/ricardo_mota.png" alt="Ricardo Mota"></div>
                     <div class="docente-info">
                         <h3>Ricardo Mota</h3>
                         <span class="cargo">Specialist in Design, Production, Team Management, and Game Marketing</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
                                 <li>Communications & Studio Manager at Krafton (PUBG Studios).</li>
                                 <li>Thunder Tier One, PUBG Black Budget.</li>
-                                <li>Co-founder of the Indie X Game Festival, Editor at Rubber Chicken Games.</li>
+                                <li>Co-founder of the Indie X game festival, Editor at Rubber Chicken Games.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Rodrigo Carvalho -->
                 <div class="docente-row reverse">
                     <div class="docente-img"><img src="IMGS/docentes/rodrigo_carvalho.png" alt="Rodrigo Carvalho"></div>
                     <div class="docente-info">
                         <h3>Rodrigo Carvalho</h3>
                         <span class="cargo">PhD in Digital Media - Specialist in Digital Art and Motion Graphics</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
                                 <li>30xN - Audiovisual Performance (SÓNAR, Istanbul; GNRATION, Braga; SERRALVES, Porto; CONVENTO SÃO FRANCISCO, Coimbra; 2024-2026).</li>
                                 <li>Vanishing Quasars - Audiovisual Performance (ELECTROALTERNATIVE, Toulouse; FOTONICA, Rome; CRIATECH, Aveiro; 948MERKABA, Pamplona; MAPPING FESTIVAL, Geneva; VOLUMENS DAY, Valencia; SÓNAR, Lisbon; 2019-2023).</li>
@@ -218,45 +317,48 @@
                     </div>
                 </div>
 
+                <!-- José Raimundo -->
                 <div class="docente-row">
                     <div class="docente-img"><img src="IMGS/docentes/jose_raimundo.png" alt="José Raimundo"></div>
                     <div class="docente-info">
                         <h3>José Raimundo</h3>
                         <span class="cargo">PhD in Digital Media - Specialist in Illustration and 3D</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
-                                <li>Coordinator of the international project Virtual Production Studio Networks.</li>
-                                <li>The case of See, Hear, Touch no Evil and Bully Who?. Board/digital games (DIGICOM 2018 and 2019).</li>
+                                <li>Coordinator of the international project "Virtual Production Studio Networks".</li>
+                                <li>"The case of See, Hear, Touch no Evil" and "Bully Who?". Board/digital games (DIGICOM 2018 and 2019).</li>
                                 <li>Second place at the 4th International Illustration Competition, Treviso, Italy (2016).</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Eduardo Magalhães -->
                 <div class="docente-row reverse">
                     <div class="docente-img"><img src="IMGS/docentes/eduardo_magalhaes.png" alt="Eduardo Magalhães"></div>
                     <div class="docente-info">
                         <h3>Eduardo Magalhães</h3>
                         <span class="cargo">Lecturer and Researcher - Specialist in Sound Design and Multimedia Technologies</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
-                                <li>Oktoberfest VR (Winner of the AUREA AWARDS 2026 in the Immersion category).</li>
-                                <li>Oktoberfest VR (Finalist at the XR Awards - AIXR 2026 for Best Game of the Year).</li>
-                                <li>Beneath (Notable nomination for Game of the Year at the Spotlight Awards 2025 and highlighted at the Horror Game Awards 2025).</li>
+                                <li>Oktoberfest VR (Winner of AUREA AWARDS 2026 in the immersion category).</li>
+                                <li>Oktoberfest VR (Finalist of XR Awards - AIXR 2026 for best game of the year).</li>
+                                <li>Beneath (Notable nomination for Game of the Year at the Spotlight Awards 2025 and featured at the Horror Game Awards 2025).</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Filipe Coelho -->
                 <div class="docente-row">
                     <div class="docente-img"><img src="IMGS/docentes/filipe_coelho.png" alt="Filipe Coelho"></div>
                     <div class="docente-info">
                         <h3>Filipe Coelho</h3>
                         <span class="cargo">Specialist in Programming and Game Engines</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
                                 <li>Flat Fat Fartfest (3D Platformer, PC, 2024).</li>
                                 <li>Whatta Frogs (Social Multiplayer, PC, 2026).</li>
@@ -266,65 +368,69 @@
                     </div>
                 </div>
 
+                <!-- Henrique Basto -->
                 <div class="docente-row reverse">
                     <div class="docente-img"><img src="IMGS/docentes/henrique_basto.png" alt="Henrique Basto"></div>
                     <div class="docente-info">
                         <h3>Henrique Basto</h3>
                         <span class="cargo">Specialist in Programming and Game Engines</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
                                 <li>Dakar 18 (Bigmoon Games) - PS4, XBox One.</li>
-                                <li>Super Nanny Sleepytime (awarded by Gamejolt and showcased at GDC 2016).</li>
+                                <li>Super Nanny Sleepytime (awarded by Gamejolt and exhibited at GDC 2016).</li>
                                 <li>Programmer at Mindera Gaming.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Hugo Barbosa -->
                 <div class="docente-row">
                     <div class="docente-img"><img src="IMGS/docentes/hugo_barbosa.png" alt="Hugo Barbosa"></div>
                     <div class="docente-info">
                         <h3>Hugo Barbosa</h3>
-                        <span class="cargo">Specialist in Multimedia and Web Technologies</span>
+                        <span class="cargo">Specialist in Multimedia Technologies and Web</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
                                 <li>Systems Administrator (Microsoft Windows, Linux, and Mac OS X networks).</li>
-                                <li>Database Analyst and Manager: MySql, Oracle, Microsoft SQL Server.</li>
-                                <li>Researcher in the area of Serious Games, Virtual Reality, Simulation, Player Adaptivity, Cybersecurity, and Computer Networks.</li>
+                                <li>Analyst and Database Manager: MySql, Oracle, Microsoft SQL Server.</li>
+                                <li>Researcher in the field of Serious Games, Virtual Reality, Simulation, Player Adaptivity, Cybersecurity, and Computer Networks.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Vanessa Rodrigues -->
                 <div class="docente-row reverse">
                     <div class="docente-img"><img src="IMGS/docentes/vanessa_rodrigues.png" alt="Vanessa Rodrigues"></div>
                     <div class="docente-info">
                         <h3>Vanessa Rodrigues</h3>
                         <span class="cargo">PhD and Specialist in Audiovisual Production</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
-                                <li>Director and Screenwriter: O Feitiço de Areia (82', Portugal/Mozambique, 2025), documentary film: in distribution (2026).</li>
-                                <li>Director, Producer, and Screenwriter: Baptismo de Terra (90', Portugal/Brazil, 2015), documentary film (Special Mention at the Avanca Film Festival, 2017; Terres/Spain Award for Best Soundtrack, 2018; Best Cinematography Award - Hollywood Women's Film Festival, 2019).</li>
-                                <li>Director and Screenwriter: Palestina, Diários de um lugar incerto (37', West Bank/Jordan, 2013), TSF audio-documentary (Honorable Mention, UNESCO Award - Journalism, Integration & Human Rights).</li>
+                                <li>Director and Screenwriter: "O Feitiço de Areia" (82', Portugal/Mozambique, 2025), documentary film: in distribution (2026).</li>
+                                <li>Director, Producer, and Screenwriter: "Baptismo de Terra" (90', Portugal/Brazil, 2015), documentary film (Special Mention at Avanca Film Festival, 2017; Terres/Spain Award for Best Soundtrack, 2018; Best Cinematography Award - Hollywood Women's Film Festival, 2019).</li>
+                                <li>Director and Screenwriter: "Palestina, Diários de um lugar incerto" (37', West Bank/Jordan, 2013), TSF audio-documentary (Honorable Mention, UNESCO Award - Journalism, Integration & Human Rights).</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Andreia Pinto de Sousa -->
                 <div class="docente-row">
                     <div class="docente-img"><img src="IMGS/docentes/andreia_pinto-de_sousa.png" alt="Andreia Pinto de Sousa"></div>
                     <div class="docente-info">
                         <h3>Andreia Pinto de Sousa</h3>
                         <span class="cargo">PhD and Specialist in Usability and Interaction Design</span>
                         <div class="premios-container">
-                            <h4 class="premios-titulo">Featured Creations:</h4>
+                            <h4 class="premios-titulo">Highlighted Creations:</h4>
                             <ul class="premios-lista">
                                 <li>Researcher at HEI-Lab.</li>
-                                <li>Researcher in the DoIt4Children and You N Digital projects, among others.</li>
-                                <li>Co-organizer of the D4Si Conference (Design for Social Impact).</li>
+                                <li>Researcher in the "DoIt4Children" and "You N Digital" projects, among others.</li>
+                                <li>Co-organizer of the D4Si (Design for Social Impact) Conference.</li>
                             </ul>
                         </div>
                     </div>
@@ -336,7 +442,7 @@
     <footer id="main-footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="https://www.ulusofona.pt/en/" target="_blank">
+                <a href="https://www.ulusofona.pt/" target="_blank">
                     <img src="IMGS/logo_lusofona.png" alt="Lusófona" class="lusofona-logo">
                 </a>
                 <p class="footer-address">Rua Augusto Rosa, nº 24<br>4000-098 Porto - Portugal</p>
@@ -345,28 +451,28 @@
             <div class="footer-info">
                 <h4>Contacts</h4>
                 <div class="info-content">
-                    <div class="info-item"><strong>Tel:</strong> 222 073 230</div>
+                    <div class="info-item"><strong>Tel:</strong> +351 222 073 230</div>
                     <div class="info-item"><strong>Email:</strong> info.cup@ulusofona.pt</div>
-                    <div class="info-item"><strong>Direction:</strong> joao.alves.de.sousa@ulusofona.pt</div>
+                    <div class="info-item"><strong>Direction:</strong> joao.alves.de.sousa@ulusofona.pt</div> 
                     <div class="info-item">
                         <strong>Institutional Page:</strong> 
-                        <a href="https://www.ulusofona.pt/porto/licenciaturas/comunicacao-audiovisual-e-multimedia" target="_blank" class="footer-link-simple">VAM</a>
+                        <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="footer-link-simple">VAM</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-socials">
                 <h4>Follow us</h4>
-                <a href="https://www.facebook.com/camlusofona" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/cam_lusofona/" target="_blank">Instagram</a>
-                <a href="https://www.youtube.com/@CAMLusofona" target="_blank">YouTube</a>
-                <a href="https://vimeo.com/camlusofona" target="_blank">Vimeo</a>
+                <a href="https://www.facebook.com/VAMULP" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/vam_ulp/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/channel/UC6kld1O_PUSw5Hv9Ft1knUQ" target="_blank">YouTube</a>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2024 VAM - ULusófona Porto</div>
+        <div class="footer-bottom">
+            &copy; 2026 VAM - ULusófona Porto
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="JS/soundvideo.js"></script>
     <script src="JS/effects.js"></script>
     <script src="JS/open-titles.js"></script>

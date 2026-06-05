@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div id="particles-js"></div>
+    <div id="particles-container"></div>
 
     <header id="header">
         <div class="header-container">
@@ -23,7 +23,7 @@
             <nav>
                 <a href="index_en.html">HOME</a>
                 <a href="sobre_en.html" class="active">ABOUT</a>
-                <a href="plano_en.html">STUDY PLAN</a>
+                <a href="plano_en.html">PLAN</a>
                 <a href="hof_en.html">HALL OF FAME</a>
                 <a href="timeline_en.html">TIMELINE</a>
             </nav>
@@ -38,13 +38,10 @@
 
     <main>
         <section id="hero-wrap">
-            <div class="logo-animation-container">
-                <img src="IMGS/logo_VAM_branco.png" alt="VAM Icon" class="logo-img-icon">
-            </div>
 
             <div id="indexvideo">
                 <div class="video-overlay">
-                    <h1 class="shadow-text reveal-video-text">CREATING THE <span class="highlight">FUTURE</span></h1>
+                    <h1 class="shadow-text reveal-video-text">Get to know your <span class="highlight">Course</span></h1>
                 </div>
                 <video autoplay muted loop playsinline id="myVideo">
                     <source src="VIDS/VAM_2.mp4" type="video/mp4">
@@ -58,15 +55,13 @@
 
         <section class="content-wrapper">
             <p class="texto-corrido">
-                VAM is a Bachelor's degree with an intense practical component that prepares you directly for the job market. Not sure if you would like to follow the path of programming, art, sound design, or game design? You are in the right place, as you will have the opportunity to learn and experiment in all of these fields, gaining a comprehensive vision of the main workflows and tasks in Video Games and Multimedia Applications development. The group projects we develop will allow you to specialize in the areas where you show the most skill; this way, each student's path is personalized, and distinct profiles are built within each class. The course's multiple modules are highly interconnected, making you feel like you are always working on smaller pieces of a larger project.
+                VAM is a Bachelor's degree with an intense practical component that prepares you for the job market. Not sure if you want to pursue programming, art, sound design, or game design? You are in the right place, as you will have the opportunity to learn and experiment in all these areas, gaining a comprehensive view of the main processes and work in the field of Video Games and Multimedia Applications development. The group projects we develop will allow you to specialize in the areas where you demonstrate the most skill; thus, each student's training is personalized, and distinct profiles are developed in each class. The various subjects in the course work in close interconnection, and you will feel that you are always working on small parts of larger projects.
             </p>
         </section>
 
         <section class="destaques-section reveal">
-            <h2 class="titulo-seccao" style="text-align: center; margin-bottom: 40px;">HIGHLIGHTED <span class="highlight">FEATURES</span></h2>
             <div class="destaques-grid">
                 
-                <!-- CARD 1: PITCH VAM -->
                 <div class="card">
                     <div class="media-container">
                         <div class="carousel-sobre" id="carousel-pitch">
@@ -75,24 +70,30 @@
                                 <img src="IMGS/picth/pitch1.png" alt="Pitch VAM 2" class="c-img">
                                 <img src="IMGS/picth/pitch2.png" alt="Pitch VAM 3" class="c-img">
                                 <img src="IMGS/picth/pitch3.png" alt="Pitch VAM 4" class="c-img">
+                                <img src="IMGS/picth/pitch4.png" alt="Pitch VAM 5" class="c-img">
+                                <img src="IMGS/picth/pitch5.png" alt="Pitch VAM 6" class="c-img">
+                                <img src="IMGS/picth/pitch6.png" alt="Pitch VAM 7" class="c-img">
+                                <img src="IMGS/picth/pitch7.png" alt="Pitch VAM 8" class="c-img">
+                                <img src="IMGS/picth/pitch8.png" alt="Pitch VAM 9" class="c-img">
+                                <img src="IMGS/picth/pitch9.png" alt="Pitch VAM 10" class="c-img">
                             </div>
                             <button class="c-prev" onclick="moveSobreSlide('carousel-pitch', -1)">&#10094;</button>
                             <button class="c-next" onclick="moveSobreSlide('carousel-pitch', 1)">&#10095;</button>
                         </div>
                     </div>
                     <div class="card-info">
-                        <span class="tag-amarela">Skill</span>
-                        <h3>PITCH VAM</h3>
-                        <p>Do you find it hard to speak in public? We are here to help you overcome that! Work presentations are a key component of our course, and all students will learn how to pitch their ideas in the best possible way. Projects are chosen based on merit, creativity, and feasibility, and are voted on by both professors and students.</p>
+                        <span class="tag-amarela">EVENTS</span>
+                        <h3>PITCH AND VAM SHOWCASE</h3>
+                        <p>Do you struggle with public speaking? We will help you overcome it! Work presentations are an important part of our course, and all students will learn how to present their ideas in the best possible way. Projects are chosen based on the merit, creativity, and feasibility of each proposal. Each semester culminates with a public playtest Showcase of the games, with voting for the best ones.</p>
                     </div>
                 </div>
 
-                <!-- CARD 2: DISCORD VAM -->
                 <div class="card">
                     <div class="media-container">
                         <div class="carousel-sobre" id="carousel-discord">
                             <div class="carousel-track">
-                                <img src="IMGS/discord/discord.png" alt="Discord Community 1" class="c-img active">
+                                <img src="IMGS/discord/discord_0.png" alt="Discord Community 1" class="c-img active">
+                                <img src="IMGS/discord/discord_1.png" alt="Discord Community 2" class="c-img">
                             </div>
                             <button class="c-prev" onclick="moveSobreSlide('carousel-discord', -1)">&#10094;</button>
                             <button class="c-next" onclick="moveSobreSlide('carousel-discord', 1)">&#10095;</button>
@@ -100,12 +101,11 @@
                     </div>
                     <div class="card-info">
                         <span class="tag-amarela">Community</span>
-                        <h3>DISCORD VAM</h3>
-                        <p>We have an active Discord community where students, alumni, professors, and industry professionals can interact online, showcase their work, ask questions, access job opportunities, and discuss games, movies, anime, geek culture, and more. It goes way beyond a simple WhatsApp group.</p>
+                        <h3>VAM DISCORD</h3>
+                        <p>We have an active Discord community, created and managed by our students and graduates, where professors and professionals are also present. Here, everyone can interact online, showcase work, ask questions, access job opportunities, and debate games, movies, anime, and geek culture in general.</p>
                     </div>
                 </div>
 
-                <!-- CARD 3: VAM GAME JAM -->
                 <div class="card">
                     <div class="media-container">
                         <div class="carousel-sobre" id="carousel-jam">
@@ -117,68 +117,50 @@
                                 <img src="IMGS/gamejam/JAM_5.png" alt="Game Jam 5" class="c-img">
                                 <img src="IMGS/gamejam/JAM_6.png" alt="Game Jam 6" class="c-img">
                                 <img src="IMGS/gamejam/JAM_7.png" alt="Game Jam 7" class="c-img">
+                                <img src="IMGS/gamejam/JAM_8.png" alt="Game Jam 8" class="c-img">
                             </div>
                             <button class="c-prev" onclick="moveSobreSlide('carousel-jam', -1)">&#10094;</button>
                             <button class="c-next" onclick="moveSobreSlide('carousel-jam', 1)">&#10095;</button>
                         </div>
                     </div>
                     <div class="card-info">
-                        <span class="tag-amarela">Annual Event</span>
+                        <span class="tag-amarela">48h of creation</span>
                         <h3>VAM GAME JAM</h3>
-                        <p>On the last weekend of January, Lusófona University opens its doors for 48 hours exclusively for VAM and friends. As an official JAM Site representing the global event Global Game JAM, we welcome everyone interested in building video games in a 48-hour marathon of collaboration, creativity, gaming, and pizza!</p>
+                        <p>Every year, on the last weekend of January, Universidade Lusófona is open exclusively for 48 hours to the entire VAM community and new friends. We are one of the JAM Sites representing the global Global Game JAM event, and we welcome everyone interested in creating video games during 48 hours of socializing, creativity, games, and, of course, lots of pizza!</p>
                     </div>
                 </div>
 
-                <!-- CARD 4: MOSTRA VAM -->
                 <div class="card">
-                    <div class="media-container">
-                        <div class="carousel-sobre" id="carousel-mostra">
-                            <div class="carousel-track">
-                                <img src="IMGS/mostra/mostra_1.png" alt="Mostra VAM 1" class="c-img active">
-                                <img src="IMGS/mostra/mostra_2.png" alt="Mostra VAM 2" class="c-img">
-                                <img src="IMGS/mostra/mostra_3.png" alt="Mostra VAM 3" class="c-img">
-                                <img src="IMGS/mostra/mostra_4.png" alt="Mostra VAM 4" class="c-img">
-                                <img src="IMGS/mostra/mostra_5.png" alt="Mostra VAM 5" class="c-img">
-                                <img src="IMGS/mostra/mostra_6.png" alt="Mostra VAM 6" class="c-img">
-                                <img src="IMGS/mostra/mostra_7.png" alt="Mostra VAM 6" class="c-img">
-                                <img src="IMGS/mostra/mostra_8.png" alt="Mostra VAM 8" class="c-img">
-                                <img src="IMGS/mostra/mostra_9.png" alt="Mostra VAM 9" class="c-img">
-                                <img src="IMGS/mostra/mostra_10.png" alt="Mostra VAM 10" class="c-img">
-                                <img src="IMGS/mostra/mostra_11.png" alt="Mostra VAM 11" class="c-img">
-                                <img src="IMGS/mostra/mostra_12.png" alt="Mostra VAM 12" class="c-img">
-                                <img src="IMGS/mostra/mostra_13.png" alt="Mostra VAM 13" class="c-img">
-                                <img src="IMGS/mostra/mostra_14.png" alt="Mostra VAM 14" class="c-img">
-                            </div>
-                            <button class="c-prev" onclick="moveSobreSlide('carousel-mostra', -1)">&#10094;</button>
-                            <button class="c-next" onclick="moveSobreSlide('carousel-mostra', 1)">&#10095;</button>
-                        </div>
-                    </div>
+                    <video class="card-video" controls poster="IMGS/poster_video.png">
+                        <source src="VIDS/Universidade.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
                     <div class="card-info">
-                        <span class="tag-amarela">Exhibition</span>
-                        <h3>MOSTRA VAM</h3>
-                        <p>The culmination of each semester takes place during our public showcase of student-developed projects. It is the perfect environment to playtest and gather feedback from peers, professors, and industry experts. Attendees also vote to elect the best projects of the year across several categories. At times, we expand beyond the university walls, exhibiting at events like MEO XL GAMES or interactive art showcases.</p>
+                        <span class="tag-amarela">THE UNIVERSITY</span>
+                        <h3>LUSÓFONA - PORTO</h3>
+                        <p>Universidade Lusófona Porto University Center is located in the heart of the city with easy access to public transport. It is in full expansion and modernization, with a studio area dedicated entirely to audiovisual and multimedia production coming in the near future.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="saidas-section reveal">
-            <h2 class="titulo-seccao">CAREER <span class="highlight">OPPORTUNITIES</span></h2>
+            <h2 class="titulo-seccao">PROFESSIONAL <span class="highlight">CAREER PATHS</span></h2>
             <div class="saidas-tabela">
                 <div class="saida-row">
                     <div class="saida-header">
                         <h4>Video Game Studios</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Whether in an Indie studio setup or inside a large team, locally or internationally, you will be fully prepared for the demands of the industry.</p>
+                        <p>Whether on an Indie scale or in a large team, nationally or internationally, you will be prepared for the job market.</p>
                     </div>
                 </div>
                 <div class="saida-row">
                     <div class="saida-header">
-                        <h4>Serious Games Development</h4>
+                        <h4>Serious Games Creation</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Gamification principles are vital for creating engaging content for advertising, simulation training, educational environments, or public awareness across any sector of society.</p>
+                        <p>Gamification concepts are vital for creating engaging advertising, training, learning, or outreach content in any area of society.</p>
                     </div>
                 </div>
                 <div class="saida-row">
@@ -186,23 +168,23 @@
                         <h4>Digital Animation Studios</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Apply your 2D and 3D animation knowledge to communicate ideas in highly creative, high-impact formats.</p>
+                        <p>Use your 2D and 3D animation knowledge to communicate in a creative and impactful way.</p>
                     </div>
                 </div>
                 <div class="saida-row">
                     <div class="saida-header">
-                        <h4>Web and Multimedia Content Creation & Management</h4>
+                        <h4>Web and Multimedia Content Creation and Management</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Build custom websites and coordinate the complete content production pipeline for social media and interactive multimedia applications.</p>
+                        <p>Create web pages, manage content production for social media, and multimedia applications.</p>
                     </div>
                 </div>
                 <div class="saida-row">
                     <div class="saida-header">
-                        <h4>Audiovisual Art, Multimedia and AI</h4>
+                        <h4>Audiovisual Art, Multimedia, and AI</h4>
                     </div>
                     <div class="saida-info">
-                        <p>Blaze your own trail, explore new technologies, and shape the creative career paths and tech-driven roles of tomorrow.</p>
+                        <p>Explore your own path and create new opportunities and the jobs of the future.</p>
                     </div>
                 </div>
             </div>
@@ -212,7 +194,7 @@
             <h2 class="titulo-seccao">OUR <span class="highlight">PARTNERS</span></h2>
             
             <div class="parceiros-intro">
-                <p>Over the years, we have had the privilege of collaborating with several companies within the Video Games and Multimedia Applications sector, primarily through curricular internship opportunities. Here are some of our notable partners:</p>
+                <p>Over the years, we have had the opportunity to work with several companies in the field of Video Game and Multimedia Applications development, mainly as internship partners. We highlight some:</p>
             </div>
 
             <div class="parceiros-grid">
@@ -237,8 +219,8 @@
             </div>
             
             <div class="cta-section">
-                <a href="plano_en.html" class="btn-cta">Study Plan</a>
-                <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="btn-cta highlight-btn">Applications</a>
+                <a href="plano_en.html" class="btn-cta">Course Plan</a>
+                <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="btn-cta highlight-btn">Apply</a>
             </div>
         </section>
     </main>
@@ -246,7 +228,7 @@
     <footer id="main-footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="https://www.ulusofona.pt/en/" target="_blank">
+                <a href="https://www.ulusofona.pt/" target="_blank">
                     <img src="IMGS/logo_lusofona.png" alt="Lusófona" class="lusofona-logo">
                 </a>
                 <p class="footer-address">Rua Augusto Rosa, nº 24<br>4000-098 Porto - Portugal</p>
@@ -255,9 +237,9 @@
             <div class="footer-info">
                 <h4>Contacts</h4>
                 <div class="info-content">
-                    <div class="info-item"><strong>Tel:</strong> 222 073 230</div>
+                    <div class="info-item"><strong>Tel:</strong> +351 222 073 230</div>
                     <div class="info-item"><strong>Email:</strong> info.cup@ulusofona.pt</div>
-                    <div class="info-item"><strong>Director:</strong> joao.alves.de.sousa@ulusofona.pt</div>
+                    <div class="info-item"><strong>Direction:</strong> joao.alves.de.sousa@ulusofona.pt</div> 
                     <div class="info-item">
                         <strong>Institutional Page:</strong> 
                         <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="footer-link-simple">VAM</a>
@@ -276,8 +258,7 @@
             &copy; 2026 VAM - ULusófona Porto
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     <script src="JS/soundvideo.js"></script>
     <script src="JS/effects.js"></script>
     <script src="JS/open-titles.js"></script>

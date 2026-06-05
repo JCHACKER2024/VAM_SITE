@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALL OF FAME - VAM</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/hof.css">
+    <link rel="icon" type="image/png" href="IMGS/logo_VAM_favicon.png">
+</head>
+<body>
+
+    <div id="particles-container"></div>
+
+    <header id="header">
+        <div class="header-container">
+            <a href="index_en.html" class="logo-link">
+                <div class="logo-header">
+                    <img src="IMGS/logo_VAM.png" alt="VAM Logo" class="header-logo-img">
+                    <span class="extenso">VIDEOGAMES AND MULTIMEDIA APPLICATIONS</span>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="sobre.html">ABOUT</a>
+                <a href="plano.html">CURRICULUM</a>
+                <a href="hof_en.html" class="active">HALL OF FAME</a>
+                <a href="timeline.html">TIMELINE</a>
+            </nav>
+
+            <div class="language-selector">
+                <a href="hof.html" class="lang-btn">PT</a>
+                <span class="divider">|</span>
+                <a href="hof_en.html" class="lang-btn active">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-wrap">
+            <div id="indexvideo">
+                <div class="video-overlay">
+                    <h1 class="shadow-text reveal-video-text">
+                        <span>HALL OF</span> 
+                        <span class="highlight">FAME</span>
+                    </h1>
+                </div>
+                <video autoplay muted loop playsinline id="myVideo">
+                    <source src="VIDS/VAM_4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="muteBtn" class="mute-toggle">
+                    SOUND: <span id="statusSom">OFF</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <p class="texto-corrido">
+                Over the years, our students have created dozens of games, animations, web and multimedia applications, and alternative controllers. We highlight some of the many projects developed throughout the years in the VAM course.
+            </p>
+        </section>
+
+        <section class="hof-section">
+            <h2 class="titulo-medio">
+                <span>PROJECT</span> 
+                <span class="highlight">HIGHLIGHTS</span>
+            </h2>
+            
+            <div class="video-slider-container">
+                <div class="video-slider" id="video-slider">
+                    <div class="video-slide active">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAlPuOJDelKDy6bDtxV-O667" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Games Playlist</h3>
+                            <p class="description">Watch the trailers of games developed by our students.</p>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/hCz3j0ZKrqo" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>2D Animation</h3>
+                            <p class="description">Showreel of bone-based and frame-by-frame animation sets.</p>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/0IL6SW9WsEE" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>3D Animation</h3>
+                            <p class="description">In this course unit, you will create animation sets for your 3D games.</p>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAmAx0AOpIVNhXYFoMFUsrS0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Pitches</h3>
+                            <p class="description">Watch some of our most memorable pitches.</p>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAleVd3CYgrktpyCtHYw_QjQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Alternative Controllers</h3>
+                            <p class="description">You will learn to work with sensors and create unique ways of interacting.</p>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLWJrkjjbyJAl084e-5Ym9k4evZKTIQGLp" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-info">
+                            <h3>Video Reviews</h3>
+                            <p class="description">Watch the video reviews created by our students.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-prev" onclick="changeVideoSlide(-1)">&#10094;</button>
+                <button class="slider-next" onclick="changeVideoSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <div class="review-jogos-container reveal">
+                <h2 class="titulo-grande-secção">
+                    <span>GAME</span> 
+                    <span class="highlight">REVIEWS</span>
+                </h2>
+                <p class="texto-corrido-centrado">
+                    Read the critical essays written by our students; the best ones are published in the book collection "The Student's Critical Vision"!
+                </p>
+                <div class="botao-centrado-wrapper">
+                    <a href="https://criticaanalisevideojogos.wordpress.com/" target="_blank" class="btn-link-centrado">Read Reviews</a>
+                </div>
+            </div>
+
+            <h2 class="titulo-medio reveal" style="margin-top: 6rem;">
+                <span>WORK</span> 
+                <span class="highlight">GALLERIES</span>
+            </h2>
+
+            <div class="galerias-carrosseis-container">
+                <div class="galeria-carrossel-item reveal">
+                    <h3>Posters</h3>
+                    <div class="carrossel-wrapper">
+                        <button class="arrow arrow-left" onclick="moveManual('track-posters', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-posters" data-pasta="posters" data-total="19"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-posters', 1)">&#10095;</button>
+                    </div>
+                    <p>Gallery of posters created by our students.</p>
+                </div>
+
+                <div class="galeria-carrossel-item reveal">
+                    <h3>Concept Art</h3>
+                    <div class="carrossel-wrapper">
+                        <button class="arrow arrow-left" onclick="moveManual('track-concepts', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-concepts" data-pasta="concepts" data-total="20"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-concepts', 1)">&#10095;</button>
+                    </div>
+                    <p>Gallery of concept art illustrations for games.</p>
+                </div>
+
+                <div class="galeria-carrossel-item reveal">
+                    <h3>Mockups</h3>
+                    <div class="carrossel-wrapper">
+                        <button class="arrow arrow-left" onclick="moveManual('track-mockups', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-mockups" data-pasta="mockups" data-total="17"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-mockups', 1)">&#10095;</button>
+                    </div>
+                    <p>Gallery of illustrations, mockups, and restyling of existing games.</p>
+                </div>
+
+                <div class="galeria-carrossel-item reveal">
+                    <h3>3D Modeling</h3>
+                    <div class="carrossel-wrapper">
+                        <button class="arrow arrow-left" onclick="moveManual('track-modelacao', -1)">&#10094;</button>
+                        <div class="carrossel-track" id="track-modelacao" data-pasta="modelacao" data-total="12"></div>
+                        <button class="arrow arrow-right" onclick="moveManual('track-modelacao', 1)">&#10095;</button>
+                    </div>
+                    <p>Gallery of 3D modeling and texturing exercises.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h2 class="titulo-medio">
+                <span>OUR</span> 
+                <span class="highlight">GRADUATES</span>
+            </h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card reveal" onclick="openAlumniModal('bruno')">
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_vitor_bruno_costa.png" alt="Bruno Costa"></div>
+                    <h3>Bruno Costa</h3>
+                    <span class="cargo">Sinking Codfish (Producer and Game Designer)</span>
+                    <p class="depoimento-preview">"This course was a door that opened in my life..."</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-bruno" class="hidden-text">"This course was a door that opened in my life after finishing my nursing degree, allowing me to combine my passion for video games with my creativity and curiosity about their creation process. From a student's perspective, it essentially taught me to be independent, proactive, and to deal with very different personalities. This degree is a great way to learn the foundations of the various creative aspects of a video game and meet professionals in the field who introduce us to the market. I focused on game design throughout the course and was also in charge of the producer role for projects, and currently, I work as a game director and game designer."</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('joao_azevedo')">
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_joao_azevedo.png" alt="João Azevedo"></div>
+                    <h3>João Azevedo</h3>
+                    <span class="cargo">Astral Shift (Programmer)</span>
+                    <p class="depoimento-preview">"The Video Games and Multimedia Applications course at Lusófona University..."</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-joao_azevedo" class="hidden-text">"The Video Games and Multimedia Applications course at Lusófona University of Porto gave me a complete overview of the entire game creation process, from game design and prototyping to programming and final production. The collaborative environment, practical projects, and constant contact with real industry tools truly prepared me to enter the job market. Today, I work as a programmer in the field, supported by the solid skills, critical thinking, and confidence I developed throughout the course."</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('vasco')">
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_vasco_rocha.png" alt="Vasco Rocha"></div>
+                    <h3>Vasco Rocha</h3>
+                    <span class="cargo">Mindera (2D/3D Artist)</span>
+                    <p class="depoimento-preview">"The Video Games and Multimedia Applications course had an important impact..."</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-vasco" class="hidden-text">"The Video Games and Multimedia Applications course had an important impact on my academic and professional path because it was there that I was able to develop my skills in game art and better understand what I wanted to pursue professionally. Beyond the technical component, the course also gave me experience in teamwork and project development, which turned out to be very important for my entry into the industry. I currently work in video game development, mainly focused on 3D and 2D art, environment art, while also continuing to develop personal projects."</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('carolina')">
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_carolina_ribeiro.png" alt="Carolina Ribeiro"></div>
+                    <h3>Carolina Ribeiro</h3>
+                    <span class="cargo">Environment Artist, Game/Level Designer</span>
+                    <p class="depoimento-preview">"The Video Games and Multimedia Applications course was essential to build..."</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-carolina" class="hidden-text">"The Video Games and Multimedia Applications course was essential to build the technical and creative foundation that opened doors for me in the game industry. My internship and final project strengthened my resume and portfolio. The comprehensive training made me a more versatile professional. Thanks to this preparation, I had the opportunity to work as an Environment Artist and Game/Level Designer on projects for major brands, such as Prime Video, Nickelodeon, and Miraculous."</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('romeu')">
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_romeu_neto.png" alt="Romeu Neto"></div>
+                    <h3>Romeu Neto</h3>
+                    <span class="cargo">Sinking Codfish (2D/3D Artist)</span>
+                    <p class="depoimento-preview">"For me, this course was a door to meet and work with..."</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-romeu" class="hidden-text">"For me, this course was a door to meet and work with other creatives. The emphasis on projects and the freedom in their content becomes a very strong motivation for students who are hungry to create and express themselves through video games. To realize this vision, we were provided with the basics for any area related to video games; therefore, it is especially suitable for those who still don't quite know their path and especially for those looking to do solo development."</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('melissa')">
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_melissa_cebola.png" alt="Melissa Cébola"></div>
+                    <h3>Melissa Cébola</h3>
+                    <span class="cargo">2D/UI Artist</span>
+                    <p class="depoimento-preview">"Taking the VAM course was, without a doubt, one of the best decisions I made..."</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-melissa" class="hidden-text">"Taking the VAM course was, without a doubt, one of the best decisions I made. I found colleagues and teachers who I will carry with me for life and who helped me rediscover the passion for video games that I had since childhood. I also had the opportunity to participate in professional projects that I never imagined were possible, experiences that made me grow both personally and professionally. I can only be grateful for all the opportunities this course provided me."</div>
+                </div>
+
+                <div class="testimonial-card reveal" onclick="openAlumniModal('carolina_costa')">
+                    <div class="alumni-photo"><img src="IMGS/graduados/VAM_carolina_costa.jpg" alt="Carolina Costa"></div>
+                    <h3>Carolina Costa</h3>
+                    <span class="cargo">Programmer</span>
+                    <p class="depoimento-preview">"Taking the VAM course was, without a doubt, one of the best decisions I made..."</p>
+                    <span class="ler-mais">READ TESTIMONIAL</span>
+                    <div id="text-carolina_costa" class="hidden-text">"The Video Games and Multimedia Applications course at Lusófona University of Porto allowed me to learn and improve in all areas of video game and software development. Thanks to what I learned in the course and the help of the teachers, I was able to acquire enough knowledge and skills to apply to Futuregames Sweden (Stockholm) and enter with a merit scholarship. At Futuregames, I completed the Game Programmer course, where I had the opportunity to work with companies in the Swedish video game industry. Today, I work as a Designer and Software/Web Developer at ATLAR Innovation. In my free time, I continue to develop games and software in various programming languages."</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="alumniModal" class="modal-v2">
+        <div class="modal-content-v2">
+            <span class="close-modal" onclick="closeAlumniModal()">&times;</span>
+            <div id="modal-body-v2"></div>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="https://www.ulusofona.pt/" target="_blank">
+                    <img src="IMGS/logo_lusofona.png" alt="Lusófona" class="lusofona-logo">
+                </a>
+                <p class="footer-address">Rua Augusto Rosa, nº 24<br>4000-098 Porto - Portugal</p>
+            </div>
+
+            <div class="footer-info">
+                <h4>Contacts</h4>
+                <div class="info-content">
+                    <div class="info-item"><strong>Phone:</strong> 222 073 230</div>
+                    <div class="info-item"><strong>Email:</strong> info.cup@ulusofona.pt</div>
+                    <div class="info-item"><strong>Management:</strong> joao.alves.de.sousa@ulusofona.pt</div> 
+                    <div class="info-item">
+                        <strong>Institutional Page:</strong> 
+                        <a href="https://www.ulusofona.pt/porto/licenciaturas/videojogos-e-aplicacoes-multimedia" target="_blank" class="footer-link-simple">VAM</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Follow us</h4>
+                <a href="https://www.facebook.com/VAMULP" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/vam_ulp/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/channel/UC6kld1O_PUSw5Hv9Ft1knUQ" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 VAM - ULusófona Porto
+        </div>
+    </footer>
+
+    <script src="JS/soundvideo.js"></script>
+    <script src="JS/effects.js"></script>
+    <script src="JS/open-titles.js"></script>
+</body>
+</html>
