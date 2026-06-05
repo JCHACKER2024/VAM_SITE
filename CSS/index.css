@@ -69,7 +69,7 @@ nav a.active, nav a:hover { color: #00ff66; }
 .logo-animation-container {
     display: none; align-items: center; justify-content: center;
     z-index: 50; position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.28); 
     animation: moveLogoUp 1.2s cubic-bezier(0.85, 0, 0.15, 1) 2.5s forwards;
 }
 
@@ -144,8 +144,14 @@ nav a.active, nav a:hover { color: #00ff66; }
 
 @keyframes revealIcon { to { opacity: 1; transform: scale(1); } }
 @keyframes moveLogoUp {
-    0% { top: 50%; transform: translate(-50%, -50%) scale(1); }
-    100% { top: -80px; transform: translate(-50%, 0) scale(0.28); }
+    0% { 
+        top: 50%; 
+        transform: translate(-50%, -50%) scale(0.28); 
+    }
+    100% { 
+        top: -80px; 
+        transform: translate(-50%, 0) scale(0.28); 
+    }
 }
 @keyframes moveTitleUp {
     0% { top: 50%; transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
