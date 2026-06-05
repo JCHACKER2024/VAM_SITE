@@ -1,7 +1,7 @@
-/* 1. TÍTULO E CABEÇALHO DA SECÇÃO */
+/* TÍTULO */
 .titulo-seccao { 
     text-align: center; 
-    padding: 60px 20px 40px; 
+    padding: 40px 20px 30px; /* REDUZIDO de 60px/40px */
 }
 
 .shadow-text {
@@ -14,11 +14,11 @@
     text-align: center;
 }
 
-/* 2. ESTRUTURA DA TIMELINE */
+/* TIMELINE */
 #timeline-wrapper { 
     max-width: 900px; 
-    margin: 0 auto 50px auto; 
-    padding: 40px;
+    margin: 0 auto 40px auto; /* REDUZIDO de 50px */
+    padding: 25px; /* REDUZIDO de 40px */
     background: #1a1c23; 
     border: 1px solid #333742; 
     border-radius: 24px;
@@ -28,11 +28,10 @@
 #timeline-content { 
     display: flex; 
     flex-direction: column; 
-    gap: 40px; 
+    gap: 25px; /* REDUZIDO de 40px */
     position: relative; 
 }
 
-/* Linha da Timeline (apenas desktop) */
 #timeline-content::before {
     content: '';
     position: absolute;
@@ -67,7 +66,7 @@
     align-items: flex-start;
     justify-content: space-between;
     background: #23262e; 
-    padding: 30px; 
+    padding: 20px; /* REDUZIDO de 30px */
     border-radius: 18px; 
     border-left: 4px solid #00ff66; 
     flex: 1; 
@@ -83,11 +82,11 @@
 
 .card-left { flex: 1; padding-right: 20px; }
 .card-left h3 { color: #fff; margin-bottom: 12px; text-transform: uppercase; font-size: 1.3rem; }
-.card-left p { color: #b0b0b0; line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px; text-align: justify;}
+.card-left p { color: #b0b0b0; line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px; text-align: justify; }
 
 .card-right {
-    width: 200px; 
-    height: 200px; 
+    width: 160px; /* REDUZIDO de 200px */
+    height: 160px; /* REDUZIDO de 200px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,7 +103,7 @@
     transition: transform 0.3s ease;
 }
 
-/* 3. BOTÕES */
+/* BOTÕES */
 .tl-link-btn {
     padding: 8px 18px;
     background: transparent;
@@ -120,24 +119,19 @@
 
 .tl-link-btn:hover { background: #00ff66; color: #050505; }
 
-/* --- RESPONSIVIDADE --- */
-
-/* 1. Tablets (até 1024px) */
+/* RESPONSIVIDADE */
 @media (max-width: 1024px) {
-    #timeline-wrapper { max-width: 800px; padding: 40px 20px; }
+    #timeline-wrapper { max-width: 800px; padding: 30px 20px; }
     .tl-ano { font-size: 1.6rem; }
     .tl-card { padding: 20px; }
 }
 
-/* 2. Tablets Verticais (até 768px) */
 @media (max-width: 768px) {
     .shadow-text { font-size: 24px; margin-bottom: 20px; }
     #timeline-wrapper { padding: 20px 15px; margin: 10px 10px; }
     #timeline-content::before { display: none; }
-
     .tl-item { flex-direction: column; gap: 15px; margin-bottom: 40px; }
     .tl-ano { text-align: center; font-size: 1.4rem; margin-bottom: 5px; width: 100%; }
-
     .tl-card { 
         border-left: none; 
         border-top: 3px solid #00ff66; 
@@ -145,54 +139,16 @@
         align-items: center; 
         text-align: center;
     }
-
     .card-left { padding-right: 0; width: 100%; }
     .card-right { width: 100%; height: auto; margin-top: 15px; }
     .tl-links { margin-top: 15px; justify-content: center; gap: 8px; }
 }
 
-/* 3. Telemóveis (até 480px) */
 @media (max-width: 480px) {
-    .shadow-text { 
-        font-size: 1.5rem; 
-        letter-spacing: 0; 
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    #timeline-content {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tl-card { 
-        padding: 15px; 
-        width: 92%; 
-        margin-bottom: 20px;
-        box-sizing: border-box;
-    }
-
-    .tl-card h4 { 
-        font-size: 1.1rem; 
-        margin-bottom: 10px;
-    }
-
-    .tl-card p { 
-        font-size: 0.9rem; 
-        line-height: 1.5;
-        text-align: justify; 
-    }
-
-    .tl-link-btn { 
-        display: inline-block;
-        padding: 8px 15px; 
-        font-size: 0.8rem;
-        margin-top: 10px;
-    }
-
-    .timeline-line {
-        display: none; 
-    }
+    .shadow-text { font-size: 1.5rem; letter-spacing: 0; padding: 0 10px; text-align: center; }
+    #timeline-content { padding: 10px; display: flex; flex-direction: column; align-items: center; }
+    .tl-card { padding: 15px; width: 92%; margin-bottom: 20px; box-sizing: border-box; }
+    .tl-card h4 { font-size: 1.1rem; margin-bottom: 10px; }
+    .tl-card p { font-size: 0.9rem; line-height: 1.5; text-align: justify; }
+    .tl-link-btn { display: inline-block; padding: 8px 15px; font-size: 0.8rem; margin-top: 10px; }
 }

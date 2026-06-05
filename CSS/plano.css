@@ -1,4 +1,4 @@
-/* ESTRUTURA GERAL (PLANO DE ESTUDOS) */
+/* ESTRUTURA GERAL */
 main {
     background-color: #0f1014;
     min-height: 100vh;
@@ -7,17 +7,17 @@ main {
 
 .plano-container {
     max-width: 1000px;
-    margin: 60px auto 120px;
+    margin: 40px auto 80px; /* REDUZIDO de 60px/120px */
     padding: 0 20px;
 }
 
-/* ATOS CRONOLÓGICOS / BLOCOS PEDAGÓGICOS */
+/* BLOCOS PEDAGÓGICOS */
 .ato-wrapper {
-    margin-bottom: 80px;
+    margin-bottom: 50px; /* REDUZIDO de 80px */
 }
 
 .ato-header {
-    margin-bottom: 35px;
+    margin-bottom: 25px; /* REDUZIDO de 35px */
     border-left: 4px solid #00ff66;
     padding-left: 25px;
     text-align: left;
@@ -36,7 +36,7 @@ main {
     margin-top: 5px;
 }
 
-/* ELEMENTOS DE SEMESTRES */
+/* SEMESTRES */
 .semestre-box {
     background: #15161c;
     margin-bottom: 15px;
@@ -76,31 +76,15 @@ main {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.semestre-box[open] {
-    border-color: rgba(0, 255, 102, 0.3);
-}
+.semestre-box[open] { border-color: rgba(0, 255, 102, 0.3); }
+.semestre-box[open] summary { color: #00ff66; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.semestre-box[open] summary::after { transform: rotate(90deg); }
 
-.semestre-box[open] summary {
-    color: #00ff66;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
+/* UCs */
+.uc-list { padding: 20px 30px; }
 
-.semestre-box[open] summary::after {
-    transform: rotate(90deg);
-}
-
-/* UNIDADES CURRICULARES (UCs MÓDULOS) */
-.uc-list {
-    padding: 20px 30px;
-}
-
-.uc-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.uc-item:last-child { 
-    border: none; 
-}
+.uc-item { border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
+.uc-item:last-child { border: none; }
 
 .uc-item summary {
     padding: 15px 0;
@@ -111,9 +95,7 @@ main {
     transition: color 0.2s ease;
 }
 
-.uc-item summary:hover { 
-    color: #ffffff; 
-}
+.uc-item summary:hover { color: #ffffff; }
 
 .uc-item p {
     padding: 0 0 20px 0;
@@ -125,7 +107,7 @@ main {
 
 /* CORPO DOCENTE */
 .docentes-section {
-    padding: 120px 20px;
+    padding: 70px 20px; /* REDUZIDO de 120px */
     background: #0a0b0e;
     display: flex;
     flex-direction: column;
@@ -136,7 +118,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px; /* REDUZIDO de 60px */
 }
 
 .docentes-section .titulo-medio {
@@ -153,9 +135,7 @@ main {
     margin: 0 auto;
 }
 
-.highlight {
-    color: #00ff66;
-}
+.highlight { color: #00ff66; }
 
 .docentes-lista-v2 {
     width: 100%;
@@ -176,14 +156,8 @@ main {
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.docente-row:hover {
-    border-color: #00ff66;
-    transform: translateY(-5px);
-}
-
-.docente-row.reverse {
-    flex-direction: row-reverse;
-}
+.docente-row:hover { border-color: #00ff66; transform: translateY(-5px); }
+.docente-row.reverse { flex-direction: row-reverse; }
 
 .docente-img {
     flex: 1;
@@ -199,9 +173,7 @@ main {
     transition: filter 0.5s ease;
 }
 
-.docente-row:hover .docente-img img {
-    filter: grayscale(0%);
-}
+.docente-row:hover .docente-img img { filter: grayscale(0%); }
 
 .docente-info {
     flex: 2;
@@ -226,16 +198,15 @@ main {
 }
 
 .docente-info p {
-    color: #aaaaaaaa;
+    color: #aaaaaa;
     font-size: 15px;
     line-height: 1.6;
 }
 
-/* Sub-bloco de Prémios e Histórico do Docente */
 .premios-container {
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .premios-titulo {
@@ -247,16 +218,13 @@ main {
     font-weight: 800;
 }
 
-.premios-lista {
-    list-style: none; 
-    padding: 0;
-}
+.premios-lista { list-style: none; padding: 0; }
 
 .premios-lista li {
     font-size: 14px;
     color: #999999;
-    line-height: 1.6; 
-    margin-bottom: 10px; 
+    line-height: 1.6;
+    margin-bottom: 10px;
     position: relative;
     padding-left: 20px;
 }
@@ -275,108 +243,32 @@ main {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.reveal.active {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
+.reveal.active { animation: fadeInUp 0.8s ease-out forwards; }
 
-/* --- RESPONSIVIDADE --- */
-
-/* 1. Tablets e Desktops Pequenos (até 1024px) */
+/* RESPONSIVIDADE */
 @media (max-width: 1024px) {
-    .docente-row, 
-    .docente-row.reverse {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .docente-img {
-        max-width: 100%;
-        width: 100%;
-        height: 350px; 
-        object-fit: cover;
-    }
-
-    .docente-info {
-        padding: 30px;
-        text-align: center;
-        width: 100%;
-    }
-
+    .docente-row,
+    .docente-row.reverse { flex-direction: column; align-items: center; }
+    .docente-img { max-width: 100%; width: 100%; height: 320px; }
+    .docente-info { padding: 30px; text-align: center; width: 100%; }
     .premios-lista li { text-align: left; }
 }
 
-/* 2. Tablets Verticais (até 768px) */
 @media (max-width: 768px) {
     .plano-container { padding: 0 15px; }
-
     .ato-header { padding-left: 15px; }
     .ato-header h2 { font-size: clamp(20px, 5vw, 24px); }
-
-    .semestre-box summary { 
-        padding: 18px 20px; 
-        font-size: 14px; 
-        line-height: 1.3;
-    }
-
+    .semestre-box summary { padding: 18px 20px; font-size: 14px; line-height: 1.3; }
     .uc-list { padding: 10px 15px; }
-
-    .docentes-section .titulo-medio {
-        font-size: 22px;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
+    .docentes-section .titulo-medio { font-size: 22px; flex-direction: column; align-items: center; gap: 5px; }
 }
 
-/* 3. Telemóveis e Ecrãs Pequenos (até 480px) */
 @media (max-width: 480px) {
-    .plano-container { 
-        margin: 20px 10px 40px; 
-        width: calc(100% - 20px);
-    }
-
-    .docente-img { 
-        height: 200px; 
-        object-fit: cover; 
-    } 
-
-    .docente-info h3 { 
-        font-size: 1.1rem; 
-        margin-bottom: 5px; 
-    }
-    
-    .docente-info p { 
-        font-size: 0.85rem; 
-        line-height: 1.4; 
-    }
-
-    .semestre-box summary {
-        font-size: 0.95rem; 
-        padding: 15px 12px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    .uc-item summary {
-        font-size: 0.85rem; 
-        padding: 12px 10px;
-        line-height: 1.3;
-    }
-
-    .uc-item p {
-        font-size: 0.8rem; 
-        line-height: 1.6;
-        padding: 12px;
-        background-color: rgba(255, 255, 255, 0.05);
-    }
-
-    table, .tabela-plano {
-        width: 100% !important;
-        font-size: 12px;
-    }
-    
-    section {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
+    .plano-container { margin: 20px 10px 40px; width: calc(100% - 20px); }
+    .docente-img { height: 200px; }
+    .docente-info h3 { font-size: 1.1rem; margin-bottom: 5px; }
+    .docente-info p { font-size: 0.85rem; line-height: 1.4; }
+    .semestre-box summary { font-size: 0.95rem; padding: 15px 12px; font-weight: bold; }
+    .uc-item summary { font-size: 0.85rem; padding: 12px 10px; line-height: 1.3; }
+    .uc-item p { font-size: 0.8rem; line-height: 1.6; padding: 12px; background-color: rgba(255, 255, 255, 0.05); }
 }
