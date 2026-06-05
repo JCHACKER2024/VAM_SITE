@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { ano: "2025", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Alchemy, jogo físico de cartas, destacou-se nas principais categorias, mostrando que se pode marcar pela diferença e qualidade do game design, na primeira vez no curso em que foi apresentado um jogo não digital.", 
-                    img: "mostra_vam_1.png" 
+                    desc: "Brewing Trouble, um jogo de criação de poções mágicas, ganhou o melhor jogo, mas Bot Blast e Shadow of the Oni também deram luta, num ano com grande diversidade de géneros de jogo apresentados.", 
+                    img: "mostra_vam_2.png" 
                 },
                 { 
                     titulo: "Exposição de Artes Digitais", 
@@ -76,17 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     img: "phased.png", 
                     links: [{url: "https://play.google.com/store/apps/details?id=com.arboresis.phased"}] 
                 },
+                
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Brewing Trouble, um jogo de criação de poções mágicas, ganhou o melhor jogo, mas Bot Blast e Shadow of the Oni também deram luta, num ano com grande diversidade de géneros de jogo apresentados.", 
-                    img: "mostra_2025_2.png" 
-                }
+                    desc: "Alchemy, jogo físico de cartas, destacou-se nas principais categorias, mostrando que se pode marcar pela diferença e qualidade do game design, na primeira vez no curso em que foi apresentado um jogo não digital.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]},
             { ano: "2024", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Bergolis é uma estreia e aposta ganha em VAM em vários parâmetros: É o primeiro projeto finalista criado para headsets de Realidade Virtual e também o primeiro jogo sério VAM, ajudando pessoas a superar as suas fobias.", 
-                    img: "mostra_vam_1.png" 
+                    desc: "Portavenge, jogo de steath e estratégia brilhou entre o conjunto de jogos apresentados, destacando-se pela enorme competência técnica e criatividade da jogabilidade.", 
+                    img: "mostra_vam_2.png" 
                 },
                 { 
                     titulo: "3ª Conferência Internacional Playful by Design", 
@@ -117,15 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Portavenge, jogo de steath e estratégia brilhou entre o conjunto de jogos apresentados, destacando-se pela enorme competência técnica e criatividade da jogabilidade.", 
-                    img: "mostra_vam_2.png" 
-                }
+                    desc: "Bergolis é uma estreia e aposta ganha em VAM em vários parâmetros: É o primeiro projeto finalista criado para headsets de Realidade Virtual e também o primeiro jogo sério VAM, ajudando pessoas a superar as suas fobias.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]},
             { ano: "2023", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Brute Force Attack atacou com força total neste jogo arcade cheio de estilo e efeitos especiais, mas certamente  ninguém conseguirá esquecer também o Mon Montesk, um Tamagotchi muito macabro.", 
-                    img: "+jogo.png" 
+                    desc: "Into the Dreamlands apresenta jogabilidade assimétrica numa aventura de sonho, num ano em que a concorrência e qualidade foi enorme destacando-se também o racer Don Dragon e o misterioso Campus Conundrum.", 
+                    img: "mostra_vam_2.png" 
                 },
                 { 
                     titulo: "1ª Conferência Internacional Playful by Design", 
@@ -174,13 +175,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     titulo: "A Fotografia nos Videojogos", 
                     desc: "Lançamento do Livro / Ensaio Fotográfico ao The Last of Us Part II, do Professor André Carita.", 
                     img: "livrocarita.png" 
-                }
+                },
+                { 
+                    titulo: "Mostra VAM", 
+                    desc: "Brute Force Attack atacou com força total neste jogo arcade cheio de estilo e efeitos especiais, mas certamente  ninguém conseguirá esquecer também o Mon Montesk, um Tamagotchi muito macabro.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]},
             { ano: "2022", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "In Memory of You  é uma comovente narrativa interativa sobre uma vida comum, com desafios e alegrias, marcando pela diferença, realismo e empatia que nos propõe experienciar.", 
-                    img: "+jogo.jpg" 
+                    desc: "Dream Trap explora os conceitos das Backrooms e mundos em loop num labirinto inquietante. Num estilo totalmente distinto, a Type of Adventure prova  que um jogo de typing pode ser ao mesmo tempo divertido e desafiante.", 
+                    img: "mostra_vam_2.jpg" 
                 },
                 { 
                     titulo: "Exposição No Plan for Japan", 
@@ -203,7 +209,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Projeto iniciado no 2º ano e desenvolvido como estágio na Exaud pelos estudantes Melissa Cébola e José Fonseca.", 
                     img: "devilslicense.png", 
                     links: [{url: "https://exaud.com/blog/exaudlab-internship"}] 
-                }
+                },
+                { 
+                    titulo: "Mostra VAM", 
+                    desc: "In Memory of You  é uma comovente narrativa interativa sobre uma vida comum, com desafios e alegrias, marcando pela diferença, realismo e empatia que nos propõe experienciar.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]},
             { ano: "2021", items: [
                 { 
@@ -234,13 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Prémio melhor arte na IPCA Game Jam, equipa de estudantes VAM.", 
                     img: "morbus.png", 
                     links: [{url: "https://marcos-engelhard.itch.io/mo"}] 
-                }
+                },
+                { 
+                    titulo: "Mostra VAM", 
+                    desc: "Airplane Saviour Simulator é um incrível jogo assimétrico de aventura e puzzle em que dois jogadores têm que se manter em constante comunicação para resolver puzzles, derrotar os terroristas e salvar todos os passageiros de um avião.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]},
             { ano: "2020", items: [
                 { 
-                    titulo: "Little Girl", 
-                    desc: "Primeiro projeto final da primeira turma de VAM.", 
-                    img: "little_girl.png" 
+                    titulo: "Mostra VAM", 
+                    desc: "Little Girl foi o projeto final da primeira turma de VAM, num grande e ambicioso esforço conjunto de criar uma aventura narrativa cinemática de puzzle e mistériO.", 
+                    img: "mostra_vam_2.png" 
                 },
                 { 
                     titulo: "Those who Remain - Camel 101", 
@@ -253,7 +269,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Curso online em parceria entre a Universidade Lusófona e a Ubisoft.", 
                     img: "gamecreatorsodissey.png", 
                     links: [{url: "https://gamecreatorodyssey.com/"}] 
-                }
+                },
+                { 
+                    titulo: "Entrevista a Daniel Pesina (Mortal Kombat)", 
+                    desc: "Entrevista a Daniel Pesina (Mortal Kombat).", 
+                    img: "entrevista.png", 
+                    links: [{url: "https://www.youtube.com/watch?v=xsTmWLK119Q"}] 
+                },
+                { 
+                    titulo: "Mostra VAM", 
+                    desc: "Khaba Run é um jogo arcade frenético para até 4 jogadores, numa corrida desafiante até ao centro de símbolos Maias cheia de power ups e reviravoltas.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]},
             { ano: "2019", items: [
                 { 
@@ -271,12 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Primeira edição organizada pelo curso de VAM, contou com uma excelente participação dos estudantes de 1º e 2º ano, assim como de profissionais e outras pessoas externas ao curso.", 
                     img: "globalgamejam.png" 
                 },
-                { 
-                    titulo: "Entrevista a Daniel Pesina (Mortal Kombat)", 
-                    desc: "Entrevista a Daniel Pesina (Mortal Kombat).", 
-                    img: "entrevista.png", 
-                    links: [{url: "https://www.youtube.com/watch?v=xsTmWLK119Q"}] 
-                }
             ]},
             { ano: "2018", items: [
                 { 
@@ -284,14 +305,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "Lançamento do jogo com a colaboração dos Professores Ricardo Mota e Henrique Basto.", 
                     img: "dakar.png", 
                     links: [{url: "https://www.youtube.com/watch?v=85xUvllbW10"}, {url: "https://store.steampowered.com/app/767390/Dakar_18/"}] 
-                }
+                },
+                { 
+                    titulo: "Mostra VAM", 
+                    desc: "BOP foi o nosso primeiro 2D platformer, usando criatividade, físicas e mecânicas divertidas, num ano que também tivemos o The Chair, um criativo jogo narrativo que simula consultas de psicologia.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]},
             { ano: "2017", items: [
                 { 
                     titulo: "Hello World!", 
                     desc: "Abertura do curso e chegada da primeira turma de VAM.", 
                     img: "hello.png" 
-                }
+                },
+                { 
+                    titulo: "Mostra VAM", 
+                    desc: "Com os estudantes (e o curso) ainda a dar os seus primeiros passos, Baby Fox, um fighter 2D simples, foi um pequeno primeiro passo para os nossos estudantes e um grande passo para o futuro de VAM.", 
+                    img: "mostra_vam_1.png" 
+                },
             ]}
         ];
 
