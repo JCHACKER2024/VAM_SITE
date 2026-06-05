@@ -83,10 +83,10 @@
 
 .card-left { flex: 1; padding-right: 20px; }
 .card-left h3 { color: #fff; margin-bottom: 12px; text-transform: uppercase; font-size: 1.3rem; }
-.card-left p { color: #b0b0b0; line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px; }
+.card-left p { color: #b0b0b0; line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px; text-align: justify;}
 
 .card-right {
-    width: 250px; 
+    width: 200px; 
     height: 200px; 
     display: flex;
     align-items: center;
