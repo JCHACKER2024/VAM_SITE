@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { ano: "2026", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 25-26.", 
+                    desc: "Disasterpiece, um divertido jogo co-op de assaltos desastrados, destacou-se em todas as categorias, no ano em que, por coincidência,  todos jogos finalistas usaram diferentes motores de jogo: Unreal, Unity, Godot e Roblox.", 
                     img: "mostra_vam_1.png" 
                 },
                 { 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { ano: "2025", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 24-25.", 
+                    desc: "Alchemy, jogo físico de cartas, destacou-se nas principais categorias, mostrando que se pode marcar pela diferença e qualidade do game design, na primeira vez no curso em que foi apresentado um jogo não digital.", 
                     img: "mostra_vam_1.png" 
                 },
                 { 
@@ -78,14 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 2º Sem (2024-2025).", 
+                    desc: "Brewing Trouble, um jogo de criação de poções mágicas, ganhou o melhor jogo, mas Bot Blast e Shadow of the Oni também deram luta, num ano com grande diversidade de géneros de jogo apresentados.", 
                     img: "mostra_2025_2.png" 
                 }
             ]},
             { ano: "2024", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 23-24.", 
+                    desc: "Bergolis é uma estreia e aposta ganha em VAM em vários parâmetros: É o primeiro projeto finalista criado para headsets de Realidade Virtual e também o primeiro jogo sério VAM, ajudando pessoas a superar as suas fobias.", 
                     img: "mostra_vam_1.png" 
                 },
                 { 
@@ -117,14 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 2º Semestre (2023-2024).", 
+                    desc: "Portavenge, jogo de steath e estratégia brilhou entre o conjunto de jogos apresentados, destacando-se pela enorme competência técnica e criatividade da jogabilidade.", 
                     img: "mostra_vam_2.png" 
                 }
             ]},
             { ano: "2023", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 1º Semestre (2023-2024).", 
+                    desc: "Brute Force Attack atacou com força total neste jogo arcade cheio de estilo e efeitos especiais, mas certamente  ninguém conseguirá esquecer também o Mon Montesk, um Tamagotchi muito macabro.", 
                     img: "+jogo.png" 
                 },
                 { 
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { ano: "2022", items: [
                 { 
                     titulo: "Mostra VAM", 
-                    desc: "Premiados 2º Semestre (2021-2022).", 
+                    desc: "In Memory of You  é uma comovente narrativa interativa sobre uma vida comum, com desafios e alegrias, marcando pela diferença, realismo e empatia que nos propõe experienciar.", 
                     img: "+jogo.jpg" 
                 },
                 { 
@@ -258,22 +258,22 @@ document.addEventListener('DOMContentLoaded', () => {
             { ano: "2019", items: [
                 { 
                     titulo: "1ª Mostra VAM", 
-                    desc: "Primeira exibição pública com André Constantino (Amplify Creations).", 
+                    desc: "A nossa verdadeira primeira Mostra VAM foi muito especial pois contou com os projetos 3D de 2º ano do curso e também com a participação de um convidado muito especial, o Programador e Game Designer André Constantino da Amplify Creations que apresentou em primeira mão o seu jogo Decay of Logos.", 
                     img: "mostra_vam.png" 
                 },
                 { 
                     titulo: "1º Pitch VAM", 
-                    desc: "Seleção de projetos para o 2º ano.", 
+                    desc: "Pela primeira vez fizemos um Pitch VAM colocando o enorme desafio à nossa turma inaugural: apresentar aos seus colegas mais novos as ideias dos projetos que viriam a ser escolhidos para desenvolver.", 
                     img: "pitch1.png" 
                 },
                 { 
                     titulo: "Global Game JAM", 
-                    desc: "Primeira edição organizada pelo curso VAM.", 
+                    desc: "Primeira edição organizada pelo curso de VAM, contou com uma excelente participação dos estudantes de 1º e 2º ano, assim como de profissionais e outras pessoas externas ao curso.", 
                     img: "globalgamejam.png" 
                 },
                 { 
                     titulo: "Entrevista a Daniel Pesina (Mortal Kombat)", 
-                    desc: "Realizada pelos estudantes VAM para um trabalho de História dos Videojogos.", 
+                    desc: "Entrevista a Daniel Pesina (Mortal Kombat).", 
                     img: "entrevista.png", 
                     links: [{url: "https://www.youtube.com/watch?v=xsTmWLK119Q"}] 
                 }
