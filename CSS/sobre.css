@@ -422,9 +422,13 @@
     .content-wrapper {
         padding: 40px 20px;
     }
+
+    .texto-corrido {
+        border-left: 3px solid #00ff66;
+        padding-left: 15px;
+    }
 }
 
-/* Telemóveis e Ecrãs Pequenos */
 @media (max-width: 480px) {
     .titulo-seccao, 
     .titulo-medio {
@@ -438,7 +442,7 @@
         flex-direction: column; 
         align-items: center; 
         gap: 20px;
-        padding: 20px 15px 40px; 
+        padding: 20px 15px 60px; 
     }
     
     .btn-cta { 
@@ -457,9 +461,10 @@
     .texto-corrido {
         font-size: 0.95rem; 
         line-height: 1.6;
-        padding: 0 15px;
+        padding: 0 15px 0 18px;
         margin-bottom: 20px;
         text-align: justify; 
         word-break: break-word;
+        border-left: 3px solid #00ff66;
     }
 }

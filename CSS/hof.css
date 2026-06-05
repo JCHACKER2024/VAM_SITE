@@ -539,8 +539,8 @@
         box-sizing: border-box; 
         margin: 0 auto;
     }
-    
-    .alumni-photo img {
+
+    .alumni-photo {
         width: 80px;
         height: 80px;
         margin-bottom: 15px;
