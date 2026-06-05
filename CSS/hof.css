@@ -118,9 +118,8 @@
 }
 
 .video-slide .project-info .description {
-    color: #a0a0a0;
+    color: #ffffff;
     font-size: 14px;
-    font-style: italic;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -366,7 +365,7 @@
 }
 
 .depoimento-preview {
-    color: #888;
+    color: #ffffff;
     font-style: italic;
     font-size: 14px;
     margin: 15px 0;
@@ -432,7 +431,7 @@
 }
 
 #modal-body-v2 p {
-    color: #d1d1d1;
+    color: #ffffff;
     font-style: italic;
     line-height: 1.8;
     text-align: justify;

@@ -434,7 +434,9 @@ function openAlumniModal(id) {
             <h3 style="color: #fff; font-size: 26px; margin-bottom: 5px;">${nome}</h3>
             <span class="cargo" style="color: #00ff66; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">${cargo}</span>
         </div>
-        <div class="modal-text-alumni">${hiddenTextEl.innerHTML}</div>
+        <div class="modal-text-alumni" style="text-align: justify;">
+            ${hiddenTextEl.innerHTML}
+        </div>
     `;
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
