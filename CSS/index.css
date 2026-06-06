@@ -259,20 +259,22 @@ nav a.active, nav a:hover { color: #00ff66; }
 }
 
 @media (max-width: 480px) {
-    #hero-wrap { height: auto; min-height: 60vh; display: flex; align-items: center; justify-content: center; }
+    body { padding-top: 70px; }
+    #hero-wrap { height: auto; min-height: 50vh; min-height: unset; display: flex; align-items: center; justify-content: center; }
     #indexvideo { width: 100%; height: auto; max-height: 300px; }
     .shadow-text { font-size: 1.5rem; padding: 0 15px; text-align: center; }
     .texto-corrido { font-size: 1rem; line-height: 1.6; padding: 0 20px; text-align: justify; }
     .mute-toggle { font-size: 10px; padding: 5px; bottom: 10px; right: 10px; }
+    .extenso { font-size: 7px; white-space: normal; max-width: 120px; line-height: 1.2; }
     nav a { margin: 0 4px; font-size: 8px; }
-    .lusofona-logo { width: 100%; max-width: 200px; }
+    .lusofona-logo { width: 100%; max-width: 180px; }
     .footer-container { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
     .footer-brand { min-width: unset; width: 100%; align-items: center; }
     .footer-brand h4 { margin-bottom: 10px; }
     .footer-info { min-width: unset; width: 100%; align-items: center; }
     .footer-info h4 { margin-bottom: 10px; }
     .footer-socials { min-width: unset; width: 100%; align-items: center; }
-    .info-item { font-size: 13px; }
+    .info-item { font-size: 12px; }
     .footer-bottom { font-size: 10px; }
 }
 
