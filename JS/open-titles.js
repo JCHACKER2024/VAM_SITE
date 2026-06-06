@@ -314,14 +314,14 @@ document.addEventListener('DOMContentLoaded', () => {
             ]},
             { ano: "2017", items: [
                 { 
-                    titulo: "Hello World!", 
-                    desc: "Abertura do curso e chegada da primeira turma de VAM.", 
-                    img: "hello.png" 
-                },
-                { 
                     titulo: "Mostra VAM", 
                     desc: "Com os estudantes (e o curso) ainda a dar os seus primeiros passos, Baby Fox, um fighter 2D simples, foi um pequeno primeiro passo para os nossos estudantes e um grande passo para o futuro de VAM.", 
                     img: "mostra_vam_1.png" 
+                },
+                { 
+                    titulo: "Hello World!", 
+                    desc: "Abertura do curso e chegada da primeira turma de VAM.", 
+                    img: "hello.png" 
                 },
             ]}
         ];
