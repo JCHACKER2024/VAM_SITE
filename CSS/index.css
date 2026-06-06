@@ -267,7 +267,11 @@ nav a.active, nav a:hover { color: #00ff66; }
     nav a { margin: 0 4px; font-size: 8px; }
     .lusofona-logo { width: 100%; max-width: 200px; }
     .footer-container { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
-    .footer-info, .footer-socials, .footer-brand { align-items: center; width: 100%; }
+    .footer-brand { min-width: unset; width: 100%; align-items: center; }
+    .footer-brand h4 { margin-bottom: 10px; }
+    .footer-info { min-width: unset; width: 100%; align-items: center; }
+    .footer-info h4 { margin-bottom: 10px; }
+    .footer-socials { min-width: unset; width: 100%; align-items: center; }
     .info-item { font-size: 13px; }
     .footer-bottom { font-size: 10px; }
 }
