@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 { 
                     titulo: "PUBG - Black Budget - Krafton", 
                     desc: "É lançado a Closed Alpha Demo do novo jogo da franquia PUBG, desenvolvido em Portugal pelo estúdio Krafton, com a participação do Professor Ricardo Mota.", 
-                    img: "PUBG.PNG", 
+                    img: "PUBG.png", 
                     links: [{url: "https://www.youtube.com/watch?v=LQuXszqAnYE"}, {url: "https://steamcommunity.com/app/4077740"}] 
                 },
                 { 
                     titulo: "Oktoberfest VR", 
                     desc: "Jogo oficial do famoso festival, realizado com a participação do Professor Eduardo Magalhães vence os AUREA Awards 2026 na categoria “Imersão”.", 
-                    img: "oktoberfest_2.PNG", 
+                    img: "oktoberfest_2.png", 
                     links: [{url: "https://www.youtube.com/watch?v=DdRSPWD0TT0"}, {url: "https://www.oktoberfest.game/en"}] 
                 },
                 { 
