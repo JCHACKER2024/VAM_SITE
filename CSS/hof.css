@@ -1,17 +1,23 @@
-/* ESTRUTURA */
+/* ============================================================
+   ESTRUTURA DAS SECÇÕES PRINCIPAIS
+   .hof-section — secção dos projetos em destaque (slider)
+   .testimonials-section — secção dos graduados (cards)
+   Largura máxima centrada com padding lateral
+   ============================================================ */
 .hof-section, 
 .testimonials-section {
     max-width: 1200px;
-    margin: 50px auto; /* REDUZIDO de 80px */
+    margin: 50px auto;
     padding: 0 20px;
 }
 
+/* Título de secção — partilhado entre hof e testemunhos */
 .titulo-medio {
     text-align: center;
     font-size: clamp(28px, 5vw, 40px);
     font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 40px; /* REDUZIDO de 60px */
+    margin-bottom: 40px;
     letter-spacing: 2px;
     display: flex;
     justify-content: center;
@@ -20,9 +26,15 @@
     color: #fff;
 }
 
+/* Palavra de destaque em verde dentro do título */
 .highlight { color: #00ff66; }
 
-/* SLIDER */
+/* ============================================================
+   SLIDER DE VÍDEOS (PROJETOS EM DESTAQUE)
+   Navegação controlada por JS/open-titles.js — changeVideoSlide()
+   Cada slide é um .video-slide — só o .active é visível
+   Para adicionar vídeo: copia um bloco .video-slide no hof.html
+   ============================================================ */
 .video-slider-container {
     position: relative;
     width: 100%;
@@ -35,9 +47,11 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
+/* Slide individual — escondido por defeito */
 .video-slide { display: none; animation: fadeIn 0.5s ease-in-out forwards; }
 .video-slide.active { display: block; }
 
+/* Wrapper do iframe com proporção 16:9 (padding-bottom: 56.25%) */
 .iframe-wrapper {
     position: relative;
     width: 100%;
@@ -46,6 +60,7 @@
     background: #000;
 }
 
+/* iframe do YouTube ocupa todo o wrapper */
 .iframe-wrapper iframe {
     position: absolute;
     top: 0; left: 0;
@@ -53,6 +68,7 @@
     border: none;
 }
 
+/* Botões prev/next do slider — circulares, verdes */
 .slider-prev, 
 .slider-next {
     position: absolute;
@@ -77,16 +93,18 @@
 .slider-prev { left: 30px; }
 .slider-next { right: 30px; }
 
+/* Área de informação por baixo do vídeo */
 .video-slide .project-info {
-    padding: 30px 20px 25px; /* REDUZIDO de 45px/40px */
+    padding: 30px 20px 25px;
     background: #1a1c23;
     text-align: center;
-    min-height: 150px; /* REDUZIDO de 200px */
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Título do projeto em verde */
 .video-slide .project-info h3 {
     font-size: 28px;
     color: #00ff66;
@@ -109,11 +127,14 @@
     margin: 0 auto;
 }
 
-/* REVIEW DE JOGOS */
+/* ============================================================
+   SECÇÃO REVIEW DE JOGOS
+   Bloco centrado com título, texto e botão para blog externo
+   ============================================================ */
 .review-jogos-container {
     text-align: center;
     max-width: 800px;
-    margin: 40px auto 20px; /* REDUZIDO de 60px */
+    margin: 40px auto 20px;
     padding: 0 20px;
 }
 
@@ -133,8 +154,10 @@
     margin-bottom: 30px;
 }
 
+/* Contentor do botão centrado */
 .botao-centrado-wrapper { display: flex; justify-content: center; align-items: center; }
 
+/* Botão verde arredondado — link para blog externo */
 .btn-link-centrado {
     display: inline-block;
     background: #00ff66;
@@ -152,20 +175,29 @@
 
 .btn-link-centrado:hover { background: #ffffff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3); }
 
-/* GALERIAS */
+/* ============================================================
+   GALERIAS DE TRABALHOS (CARROSSEIS 3D)
+   Cada galeria é um .galeria-carrossel-item com um .carrossel-wrapper
+   Efeito 3D com perspective: 1200px
+   Classes de posição: .active (centro) | .prev .next (lados) | .prev2 .next2 (fundo)
+   Controlado por JS/open-titles.js — moveManual()
+   data-pasta no HTML define o tipo de galeria (posters, concepts, etc.)
+   Para adicionar galeria: copia um bloco .galeria-carrossel-item no hof.html
+   ============================================================ */
 .galerias-carrosseis-container {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* REDUZIDO de 50px */
-    margin-top: 30px; /* REDUZIDO de 40px */
+    gap: 40px;
+    margin-top: 30px;
     width: 100%;
 }
 
+/* Card de cada galeria individual */
 .galeria-carrossel-item {
     background: #1a1c23;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 25px; /* REDUZIDO de 30px */
+    padding: 25px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -173,6 +205,7 @@
 
 .galeria-carrossel-item h3 { font-size: 24px; color: #ffffff; font-weight: 700; margin: 0; }
 
+/* Área de visualização do carrossel com efeito 3D */
 .carrossel-wrapper {
     width: 100%;
     height: 520px;
@@ -181,9 +214,10 @@
     position: relative;
     background: #0d0e12;
     border: 1px solid rgba(255, 255, 255, 0.03);
-    perspective: 1200px;
+    perspective: 1200px; /* Define a profundidade do efeito 3D */
 }
 
+/* Botões de navegação do carrossel */
 .arrow {
     position: absolute;
     top: 50%;
@@ -204,13 +238,15 @@
 .arrow-left { left: 20px; }
 .arrow-right { right: 20px; }
 
+/* Track que contém todas as imagens */
 .carrossel-track { display: block; width: 100%; height: 100%; position: relative; }
 
+/* Imagem base — todas invisíveis e ao fundo por defeito */
 .carrossel-slide-img {
     position: absolute;
     top: 5%; left: 50%;
     width: auto; height: 90%;
-    max-width: 320px;
+    max-width: 320px; /* Posters: mais estreitos */
     object-fit: contain;
     opacity: 0;
     pointer-events: none;
@@ -219,8 +255,10 @@
     z-index: 1;
 }
 
+/* Galerias que não são posters têm imagens mais largas (concepts, mockups, etc.) */
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 640px; }
 
+/* Imagem ativa — centro, frente, visível */
 .carrossel-slide-img.active {
     opacity: 1;
     pointer-events: auto;
@@ -229,25 +267,36 @@
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out, z-index 0.8s step-start;
 }
 
+/* Imagem anterior — esquerda, recuada, semi-transparente */
 .carrossel-slide-img.prev { opacity: 0.55; transform: translateX(-140%) translateZ(-150px) scale(0.85); z-index: 5; }
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.prev { transform: translateX(-118%) translateZ(-150px) scale(0.8); }
 
+/* Imagem seguinte — direita, recuada, semi-transparente */
 .carrossel-slide-img.next { opacity: 0.55; transform: translateX(40%) translateZ(-150px) scale(0.85); z-index: 5; }
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.next { transform: translateX(18%) translateZ(-150px) scale(0.8); }
 
+/* Imagem 2 posições atrás — mais recuada, quase invisível */
 .carrossel-slide-img.prev2 { opacity: 0.15; transform: translateX(-220%) translateZ(-300px) scale(0.7); z-index: 2; }
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.prev2 { transform: translateX(-165%) translateZ(-300px) scale(0.65); }
 
+/* Imagem 2 posições à frente — mais recuada, quase invisível */
 .carrossel-slide-img.next2 { opacity: 0.15; transform: translateX(120%) translateZ(-300px) scale(0.7); z-index: 2; }
 .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img.next2 { transform: translateX(65%) translateZ(-300px) scale(0.65); }
 
-/* TESTEMUNHOS */
+/* ============================================================
+   CARDS DE TESTEMUNHOS (GRADUADOS)
+   Grelha automática — mínimo 350px por card
+   Clicável — abre modal com depoimento completo
+   Controlado por JS/open-titles.js — openAlumniModal()
+   Para adicionar graduado: copia um .testimonial-card no hof.html
+   ============================================================ */
 .testimonials-section {
     max-width: 1800px;
-    margin: 50px auto; /* REDUZIDO de 80px */
+    margin: 50px auto;
     padding: 0 40px;
 }
 
+/* Grelha responsiva automática */
 .testimonials-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -256,9 +305,10 @@
     align-items: stretch;
 }
 
+/* Card individual do graduado */
 .testimonial-card {
     background: #1a1c23;
-    padding: 25px 20px; /* REDUZIDO de 40px 30px */
+    padding: 25px 20px;
     border-radius: 28px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
@@ -270,8 +320,10 @@
     height: 100%;
 }
 
+/* Hover: borda verde, sobe, fundo mais claro */
 .testimonial-card:hover { border-color: #00ff66; transform: translateY(-8px); background: #22252e; box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
 
+/* Foto circular do graduado com borda verde */
 .alumni-photo {
     width: 120px;
     height: 120px;
@@ -284,14 +336,22 @@
 
 .alumni-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* Cargo/função profissional em verde */
 .cargo { color: #00ff66; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+/* Pré-visualização do depoimento em itálico */
 .depoimento-preview { color: #ffffff; font-style: italic; font-size: 14px; margin: 15px 0; line-height: 1.5; }
+/* "VER DEPOIMENTO" — empurrado para o fundo do card via margin-top: auto */
 .ler-mais { font-size: 11px; color: #00ff66; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-top: auto; padding-top: 10px; }
+/* Texto completo escondido — lido pelo JS para preencher o modal */
 .hidden-text { display: none; }
 
-/* MODAL */
+/* ============================================================
+   MODAL DO DEPOIMENTO COMPLETO
+   Abre ao clicar num card de graduado
+   Controlado por JS/open-titles.js — openAlumniModal() / closeAlumniModal()
+   ============================================================ */
 .modal-v2 {
-    display: none;
+    display: none; /* Visível via JS: modal.style.display = "flex" */
     position: fixed;
     z-index: 10005;
     left: 0; top: 0;
@@ -303,6 +363,7 @@
     padding: 20px;
 }
 
+/* Conteúdo do modal — scrollável se o texto for longo */
 .modal-content-v2 {
     background: #1a1c23;
     padding: 50px 40px;
@@ -316,50 +377,72 @@
     -webkit-overflow-scrolling: touch;
 }
 
+/* Botão × para fechar o modal */
 .close-modal { position: absolute; right: 25px; top: 15px; color: #fff; font-size: 40px; font-weight: 300; cursor: pointer; line-height: 1; transition: color 0.2s ease; }
 .close-modal:hover { color: #00ff66; }
 
+/* Texto do depoimento dentro do modal */
 #modal-body-v2 p { color: #ffffff; font-style: italic; line-height: 1.8; text-align: justify; font-size: 16px; margin-bottom: 15px; }
 
-/* ANIMAÇÕES */
+/* ============================================================
+   ANIMAÇÕES
+   fadeIn — usado na transição entre slides do slider
+   ============================================================ */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.98); }
     to { opacity: 1; transform: scale(1); }
 }
 
-/* RESPONSIVIDADE */
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* Tablets e desktops pequenos */
 @media (max-width: 1024px) {
     .video-slide .project-info { padding: 25px 60px; }
     .carrossel-wrapper { height: 400px; }
 }
 
+/* Tablets */
 @media (max-width: 900px) {
+    /* Botões do slider mais pequenos */
     .slider-prev, .slider-next { width: 50px; height: 50px; font-size: 20px; bottom: 50px; }
     .slider-prev { left: 15px; }
     .slider-next { right: 15px; }
     .video-slide .project-info { padding: 25px 75px; }
+    /* Galerias centradas */
     .galeria-carrossel-item { align-items: center; text-align: center; }
     .galeria-carrossel-item h3 { text-align: center; margin-bottom: 10px; }
+    /* Cards de testemunhos com mínimo menor */
     .testimonials-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     .carrossel-wrapper { height: 350px; }
+    /* Imagens do carrossel mais pequenas */
     .carrossel-slide-img { max-width: 220px; }
     .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 350px; }
+    /* Posições laterais ajustadas para ecrã menor */
     .carrossel-slide-img.prev { transform: translateX(-120%) translateZ(-100px) scale(0.8); }
     .carrossel-slide-img.next { transform: translateX(20%) translateZ(-100px) scale(0.8); }
+    /* Imagens de fundo escondidas em tablet — muito pequenas para serem úteis */
     .carrossel-slide-img.prev2, .carrossel-slide-img.next2 { display: none; }
 }
 
+/* Telemóveis */
 @media (max-width: 480px) {
+    /* Botões do slider mais pequenos e reposicionados */
     .slider-prev, .slider-next { bottom: 10px; width: 36px; height: 36px; font-size: 14px; background: rgba(0,0,0,0.5); }
     .video-slide .project-info { padding: 20px 15px 60px; text-align: center; }
     .galeria-carrossel-item { align-items: center; padding: 20px 10px; }
     .galeria-carrossel-item h3 { font-size: 1.2rem; margin-bottom: 15px; }
+    /* Carrossel mais baixo em mobile */
     .carrossel-wrapper { height: 240px; }
     .carrossel-slide-img { max-width: 140px; object-fit: contain; }
     .carrossel-track:not([data-pasta="posters"]) .carrossel-slide-img { max-width: 200px; }
+    /* Imagens laterais mais recuadas e quase invisíveis */
     .carrossel-slide-img.prev { transform: translateX(-120%) translateZ(-50px) scale(0.6); opacity: 0.2; }
     .carrossel-slide-img.next { transform: translateX(20%) translateZ(-50px) scale(0.6); opacity: 0.2; }
+    /* Testemunhos em coluna única */
     .testimonials-container { grid-template-columns: 1fr; gap: 20px; padding: 0 10px; }
     .testimonial-card { padding: 20px; width: 100%; max-width: 100%; box-sizing: border-box; margin: 0 auto; }
+    /* Foto do graduado mais pequena em mobile */
     .alumni-photo { width: 80px; height: 80px; margin-bottom: 15px; }
 }
