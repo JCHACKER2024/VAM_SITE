@@ -429,7 +429,7 @@
 /* Telemóveis */
 @media (max-width: 480px) {
     /* Botões do slider mais pequenos e reposicionados */
-    .slider-prev, .slider-next { bottom: 10px; width: 36px; height: 36px; font-size: 14px; background: rgba(0,0,0,0.5); }
+    .slider-prev, .slider-next { bottom: 10px; width: 36px; height: 36px; font-size: 14px; }
     .video-slide .project-info { padding: 20px 15px 60px; text-align: center; }
     .galeria-carrossel-item { align-items: center; padding: 20px 10px; }
     .galeria-carrossel-item h3 { font-size: 1.2rem; margin-bottom: 15px; }
