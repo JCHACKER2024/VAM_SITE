@@ -1,11 +1,22 @@
-/* --- EFEITOS GLOBAIS: CURSOR E PARTICULAS INDEPENDENTES --- */
+// ============================================================
+// effects.js
+// Efeitos visuais globais independentes de página:
+// 1. Cursor personalizado (só em desktop com rato)
+// 2. Partículas geométricas animadas de fundo
+// ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* 1. LÓGICA DO CURSOR PERSONALIZADO */
+    // --------------------------------------------------------
+    // 1. CURSOR PERSONALIZADO
+    // Substitui o cursor padrão por um triângulo verde
+    // Só ativo em dispositivos com rato (não touch)
+    // Estilo definido em index.css — #custom-cursor
+    // --------------------------------------------------------
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     if (!isTouchDevice) {
+        // Cria o elemento do cursor se não existir
         if (!document.getElementById('custom-cursor')) {
             const cursorDiv = document.createElement('div');
             cursorDiv.id = 'custom-cursor';
@@ -14,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const cursor = document.getElementById('custom-cursor');
         
+        // Segue o rato com requestAnimationFrame para performance
         window.addEventListener('mousemove', (e) => {
             requestAnimationFrame(() => {
                 cursor.style.left = `${e.clientX}px`;
@@ -21,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Elementos interativos que fazem o cursor crescer e ficar branco
         const targetSelectors = 'a, button, details summary, .lang-btn, .btn-cta, .btn-candidata, video, .saida-row, .parceiro-link';
         
         document.addEventListener('mouseover', (e) => {
@@ -38,17 +51,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* 2. NOVA LÓGICA DE PARTÍCULAS (ELEMENTOS HTML INDIVIDUAIS) */
+    // --------------------------------------------------------
+    // 2. PARTÍCULAS GEOMÉTRICAS
+    // Cria elementos HTML com imagens geométricas animadas
+    // que flutuam aleatoriamente no fundo de todas as páginas
+    // Animação definida em index.css — @keyframes moveAndRotate
+    // Para alterar número de partículas: muda 'count' em cada shape
+    // Para alterar imagens: substitui os ficheiros em IMGS/
+    // --------------------------------------------------------
     function createParticles() {
         const container = document.createElement('div');
         container.id = 'particles-container';
         document.body.appendChild(container);
 
+        // Tipos de formas e quantidade de cada uma
         const shapes = [
             { src: "IMGS/Triangle.png", count: 6, class: "p-tri" },
-            { src: "IMGS/Square.png", count: 6, class: "p-sq" },
-            { src: "IMGS/Circle.png", count: 6, class: "p-circ" },
-            { src: "IMGS/X.png", count: 6, class: "p-x" }
+            { src: "IMGS/Square.png",   count: 6, class: "p-sq" },
+            { src: "IMGS/Circle.png",   count: 6, class: "p-circ" },
+            { src: "IMGS/X.png",        count: 6, class: "p-x" }
         ];
 
         shapes.forEach(shape => {
@@ -57,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.src = shape.src;
                 img.className = `floating-particle ${shape.class}`;
                 
-                // Posição aleatória na tela
+                // Posição inicial aleatória no ecrã
                 img.style.left = Math.random() * 95 + "vw";
-                img.style.top = Math.random() * 95 + "vh";
+                img.style.top  = Math.random() * 95 + "vh";
                 
-                // Velocidades aleatórias
+                // Duração de animação aleatória para movimento orgânico
                 img.style.animationDuration = (Math.random() * 20 + 15) + "s";
                 
                 container.appendChild(img);

@@ -1,7 +1,10 @@
-/* TÍTULO */
+/* ============================================================
+   TÍTULO DA PÁGINA TIMELINE
+   Partilha .shadow-text do index.css
+   ============================================================ */
 .titulo-seccao { 
     text-align: center; 
-    padding: 40px 20px 30px; /* REDUZIDO de 60px/40px */
+    padding: 40px 20px 30px;
 }
 
 .shadow-text {
@@ -14,24 +17,32 @@
     text-align: center;
 }
 
-/* TIMELINE */
+/* ============================================================
+   CONTENTOR PRINCIPAL DA TIMELINE
+   Caixa com fundo escuro (#1a1c23) centrada na página
+   A linha vertical verde é gerada por CSS via ::before
+   Os dados são carregados dinamicamente por JS/open-titles.js
+   ============================================================ */
 #timeline-wrapper { 
     max-width: 900px; 
-    margin: 0 auto 40px auto; /* REDUZIDO de 50px */
-    padding: 25px; /* REDUZIDO de 40px */
+    margin: 0 auto 40px auto;
+    padding: 25px;
     background: #1a1c23; 
     border: 1px solid #333742; 
     border-radius: 24px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
+/* Lista vertical de itens com espaçamento entre eles */
 #timeline-content { 
     display: flex; 
     flex-direction: column; 
-    gap: 25px; /* REDUZIDO de 40px */
+    gap: 25px;
     position: relative; 
 }
 
+/* Linha vertical verde gerada por CSS — só visível em desktop
+   Posicionada a 120px da esquerda para alinhar com os anos */
 #timeline-content::before {
     content: '';
     position: absolute;
@@ -43,14 +54,23 @@
     z-index: 1;
 }
 
+/* ============================================================
+   ITEM INDIVIDUAL DA TIMELINE
+   Cada item tem: ano à esquerda + card à direita
+   Controlado por JS/open-titles.js que injeta os itens no HTML
+   Para adicionar entrada: edita o array de dados em open-titles.js
+   ATENÇÃO: nomes de ficheiros de imagem são case-sensitive no servidor
+   Usa sempre minúsculas na extensão — .png não .PNG
+   ============================================================ */
 .tl-item { 
     display: flex; 
     gap: 40px; 
     align-items: flex-start; 
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Fica acima da linha vertical */
 }
 
+/* Ano em verde à esquerda — alinhado à direita para tocar na linha */
 .tl-ano { 
     font-size: 2.2rem; 
     font-weight: 900; 
@@ -61,18 +81,24 @@
     letter-spacing: -1px;
 }
 
+/* ============================================================
+   CARD DO ITEM
+   Lado direito de cada item — contém título, descrição e imagem
+   Borda esquerda verde que aumenta no hover
+   ============================================================ */
 .tl-card { 
     display: flex; 
     align-items: flex-start;
     justify-content: space-between;
     background: #23262e; 
-    padding: 20px; /* REDUZIDO de 30px */
+    padding: 20px;
     border-radius: 18px; 
     border-left: 4px solid #00ff66; 
     flex: 1; 
     transition: all 0.3s ease;
 }
 
+/* Hover: sobe ligeiramente, fundo mais claro, borda mais espessa */
 .tl-card:hover { 
     transform: translateY(-5px); 
     background: #2a2e38; 
@@ -80,13 +106,17 @@
     box-shadow: 0 12px 24px rgba(0,0,0,0.4);
 }
 
+/* Área de texto — título, descrição e botões */
 .card-left { flex: 1; padding-right: 20px; }
 .card-left h3 { color: #fff; margin-bottom: 12px; text-transform: uppercase; font-size: 1.3rem; }
 .card-left p { color: #b0b0b0; line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px; text-align: justify; }
 
+/* Área da imagem — quadrado fixo à direita do card
+   Para trocar imagem: altera o campo img no array de dados em open-titles.js
+   ATENÇÃO: extensão case-sensitive no servidor — .png não .PNG */
 .card-right {
-    width: 160px; /* REDUZIDO de 200px */
-    height: 160px; /* REDUZIDO de 200px */
+    width: 160px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +133,10 @@
     transition: transform 0.3s ease;
 }
 
-/* BOTÕES */
+/* ============================================================
+   BOTÕES DE LINK
+   Links externos relacionados com cada entrada da timeline
+   ============================================================ */
 .tl-link-btn {
     padding: 8px 18px;
     background: transparent;
@@ -119,31 +152,41 @@
 
 .tl-link-btn:hover { background: #00ff66; color: #050505; }
 
-/* RESPONSIVIDADE */
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* Tablets e desktops pequenos */
 @media (max-width: 1024px) {
     #timeline-wrapper { max-width: 800px; padding: 30px 20px; }
     .tl-ano { font-size: 1.6rem; }
     .tl-card { padding: 20px; }
 }
 
+/* Tablets verticais */
 @media (max-width: 768px) {
     .shadow-text { font-size: 24px; margin-bottom: 20px; }
     #timeline-wrapper { padding: 20px 15px; margin: 10px 10px; }
+    /* Linha vertical escondida em mobile — não há espaço */
     #timeline-content::before { display: none; }
+    /* Itens em coluna: ano em cima, card em baixo */
     .tl-item { flex-direction: column; gap: 15px; margin-bottom: 40px; }
     .tl-ano { text-align: center; font-size: 1.4rem; margin-bottom: 5px; width: 100%; }
+    /* Card em coluna: borda muda para topo em mobile */
     .tl-card { 
         border-left: none; 
-        border-top: 3px solid #00ff66; 
+        border-top: 3px solid #00ff66;
         flex-direction: column; 
         align-items: center; 
         text-align: center;
     }
     .card-left { padding-right: 0; width: 100%; }
+    /* Imagem ocupa largura total em mobile */
     .card-right { width: 100%; height: auto; margin-top: 15px; }
     .tl-links { margin-top: 15px; justify-content: center; gap: 8px; }
 }
 
+/* Telemóveis */
 @media (max-width: 480px) {
     .shadow-text { font-size: 1.5rem; letter-spacing: 0; padding: 0 10px; text-align: center; }
     #timeline-content { padding: 10px; display: flex; flex-direction: column; align-items: center; }

@@ -1,5 +1,23 @@
-// --- 1. CONFIGURAÇÃO DE ANIMAÇÕES DE ENTRADA ---
+// ============================================================
+// open-titles.js
+// Toda a interatividade das páginas:
+// 1. Animações de entrada (reveal on scroll)
+// 2. Geração dinâmica da timeline
+// 3. Carrossel 3D das galerias (Hall of Fame)
+// 4. Saídas profissionais (tabela expansível)
+// 5. Slider de vídeos (Hall of Fame)
+// 6. Modal de graduados (Hall of Fame)
+// 7. Carrossel de imagens (página Sobre)
+// ============================================================
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --------------------------------------------------------
+    // 1. ANIMAÇÕES DE ENTRADA (REVEAL ON SCROLL)
+    // Elementos com class="reveal" animam ao entrar no ecrã
+    // A animação CSS é definida em cada ficheiro CSS — .reveal.active
+    // Para aplicar a um elemento: adiciona class="reveal" no HTML
+    // --------------------------------------------------------
     const observerOptions = { threshold: 0.15 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -10,10 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
+    // Lista de elementos que animam ao entrar no ecrã
     const elementsToReveal = document.querySelectorAll('.card, .saida-row, .parceiro-link, .titulo-seccao, .titulo-medio, .project-card, .testimonial-card, .ato-wrapper, .video-slide, .galeria-carrossel-item, .tl-card');
     elementsToReveal.forEach(el => observer.observe(el));
 
-    // --- 2. GESTÃO DA TIMELINE ---
+    // --------------------------------------------------------
+    // 2. TIMELINE — GERAÇÃO DINÂMICA
+    // Os dados estão no array timelineData abaixo
+    // Para adicionar entrada: adiciona um objeto ao array do ano correto
+    // Para adicionar ano: adiciona um novo objeto { ano: "XXXX", items: [...] }
+    // Estrutura de cada item:
+    //   titulo: string — título do evento
+    //   desc: string — descrição
+    //   img: string — nome do ficheiro em IMGS/timeline/ANO/ (case-sensitive!)
+    //   links: array opcional — [{url: "..."}] — YouTube gera "Trailer", resto gera "Link"
+    // ATENÇÃO: extensão do ficheiro é case-sensitive no servidor Linux
+    // Usa sempre minúsculas: .png não .PNG
+    // --------------------------------------------------------
+    
     const timelineContainer = document.getElementById('timeline-content');
             if (timelineContainer) {
                 // [Mantive os teus dados intactos]
@@ -326,9 +358,12 @@ document.addEventListener('DOMContentLoaded', () => {
             ]}
         ];
 
+        // Gera o HTML da timeline a partir dos dados acima
         timelineData.forEach(periodo => {
             let itemsHTML = "";
             periodo.items.forEach((item) => {
+
+                // Gera botões de link — YouTube = "Trailer", resto = "Link"
                 let linksHTML = "";
                 if (item.links) {
                     item.links.forEach((l) => {
@@ -337,7 +372,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
                 
-                // Só cria o HTML da imagem se o 'img' estiver definido
+                // Só gera a imagem se o campo 'img' estiver definido
+                // onerror esconde a imagem se o ficheiro não for encontrado
                 let imagemHTML = item.img ? `
                     <div class="card-right">
                         <img src="IMGS/timeline/${periodo.ano}/${item.img}" alt="${item.titulo}" onerror="this.style.display='none'">
@@ -364,13 +400,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. CARROSSEL DE IMAGENS (HALL OF FAME) ---
+    // --------------------------------------------------------
+    // 3. CARROSSEL 3D DAS GALERIAS (HALL OF FAME)
+    // Carrega imagens automaticamente a partir de data-pasta e data-total no HTML
+    // Ficheiros esperados: IMGS/hall_of_fame/PASTA/1.png, 2.png, etc.
+    // Para adicionar imagens: adiciona ficheiros numerados na pasta correta
+    //                         e atualiza data-total no hof.html
+    // Loop automático de 5 em 5 segundos
+    // --------------------------------------------------------
     const tracks = document.querySelectorAll('.carrossel-track');
     tracks.forEach(track => {
         const pasta = track.getAttribute('data-pasta');
         const totalImagens = parseInt(track.getAttribute('data-total'), 10);
         if (!pasta || !totalImagens) return;
         
+        // Cria os elementos de imagem dinamicamente
         for (let i = 1; i <= totalImagens; i++) {
             const img = document.createElement('img');
             img.src = `IMGS/hall_of_fame/${pasta}/${i}.png`;
@@ -383,13 +427,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (slides.length > 0) {
             slides[0].classList.add('active');
             updateCarouselClasses(slides, 0);
-            
-            // Loop automático
+            // Avança automaticamente de 5 em 5 segundos
             setInterval(() => moveManual(track.id, 1), 5000);
         }
     });
 
-    // --- 4. EVENTOS E MODAIS ---
+    // --------------------------------------------------------
+    // 4. SAÍDAS PROFISSIONAIS (TABELA EXPANSÍVEL)
+    // Cada .saida-row abre/fecha ao clicar
+    // Só uma linha pode estar aberta de cada vez
+    // --------------------------------------------------------
     const saidaRows = document.querySelectorAll('.saida-row');
     saidaRows.forEach(row => {
         row.addEventListener('click', () => {
@@ -398,13 +445,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Autoplay do vídeo hero em páginas que o usem
     const heroVideo = document.getElementById('hero-video');
     if (heroVideo) heroVideo.play().catch(() => {});
 });
 
-// --- 5. FUNÇÕES DE MOVIMENTAÇÃO E INTERAÇÃO ---
+// ============================================================
+// FUNÇÕES GLOBAIS (chamadas diretamente no HTML via onclick)
+// ============================================================
 
-// Atualiza classes CSS para efeitos visuais do carrossel
+// --------------------------------------------------------
+// Atualiza classes CSS para o efeito 3D do carrossel
+// active = centro | prev/next = lados | prev2/next2 = fundo
+// --------------------------------------------------------
 function updateCarouselClasses(slides, currentIdx) {
     slides.forEach(slide => slide.classList.remove('active', 'prev', 'next', 'prev2', 'next2'));
     const total = slides.length;
@@ -420,22 +473,27 @@ function updateCarouselClasses(slides, currentIdx) {
     }
 }
 
-// Movimento manual para as setas
+// Movimento manual das setas do carrossel 3D
+// Chamado no HTML: onclick="moveManual('track-posters', 1)"
 function moveManual(trackId, step) {
     const track = document.getElementById(trackId);
     if (!track) return;
     const slides = Array.from(track.querySelectorAll('.carrossel-slide-img'));
     let currentIdx = slides.findIndex(s => s.classList.contains('active'));
-    
     currentIdx = (currentIdx + step + slides.length) % slides.length;
     updateCarouselClasses(slides, currentIdx);
 }
 
-// Slider de Vídeos
+// --------------------------------------------------------
+// SLIDER DE VÍDEOS (HALL OF FAME)
+// Chamado no HTML: onclick="changeVideoSlide(-1 ou 1)"
+// Reset do iframe ao mudar de slide para parar o áudio
+// --------------------------------------------------------
 let currentVideoSlide = 0;
 function changeVideoSlide(direction) {
     const slides = document.querySelectorAll('.video-slide');
     if (slides.length === 0) return;
+    // Reset do iframe para parar o vídeo/som anterior
     const currentIframe = slides[currentVideoSlide].querySelector('iframe');
     if (currentIframe) {
         const src = currentIframe.getAttribute('src');
@@ -447,7 +505,13 @@ function changeVideoSlide(direction) {
     slides[currentVideoSlide].classList.add('active');
 }
 
-// Modal de Alumni
+// --------------------------------------------------------
+// MODAL DE GRADUADOS (HALL OF FAME)
+// Abre popup com foto, nome, cargo e depoimento completo
+// Chamado no HTML: onclick="openAlumniModal('id_do_graduado')"
+// O texto completo está em <div id="text-ID" class="hidden-text">
+// Para adicionar graduado: copia um .testimonial-card no hof.html
+// --------------------------------------------------------
 function openAlumniModal(id) {
     const modal = document.getElementById('alumniModal');
     const modalBody = document.getElementById('modal-body-v2');
@@ -470,31 +534,28 @@ function openAlumniModal(id) {
         </div>
     `;
     modal.style.display = "flex";
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; // Bloqueia scroll da página
 }
 
 function closeAlumniModal() {
     const modal = document.getElementById('alumniModal');
     if (modal) {
         modal.style.display = "none";
-        document.body.style.overflow = "auto"; 
+        document.body.style.overflow = "auto"; // Restaura scroll da página
     }
 }
 
-// --- FUNÇÃO PARA AS SETAS DO SOBRE ---
+// --------------------------------------------------------
+// CARROSSEL DE IMAGENS (PÁGINA SOBRE)
+// Setas prev/next dentro dos cards de imagens
+// Chamado no HTML: onclick="moveSobreSlide('carousel-id', 1)"
+// --------------------------------------------------------
 function moveSobreSlide(carouselId, direction) {
     const carousel = document.getElementById(carouselId);
     if (!carousel) return;
-
     const slides = Array.from(carousel.querySelectorAll('.c-img'));
     let currentIdx = slides.findIndex(s => s.classList.contains('active'));
-    
-    // Remove a classe active do atual
     slides[currentIdx].classList.remove('active');
-    
-    // Calcula o novo índice
     currentIdx = (currentIdx + direction + slides.length) % slides.length;
-    
-    // Adiciona a classe active ao novo
     slides[currentIdx].classList.add('active');
 }
