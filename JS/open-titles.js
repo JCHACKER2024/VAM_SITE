@@ -516,6 +516,120 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ========================================================
+    // SISTEMA DE FACHADAS DO YOUTUBE (YT-FACADE) - COM RESET NO SLIDER
+    // ========================================================
+    const facades = document.querySelectorAll('.yt-facade');
+    
+    // 1. Guardar o HTML original de cada fachada para podermos restaurar mais tarde
+    facades.forEach(facade => {
+        facade.setAttribute('data-original-html', facade.innerHTML);
+        
+        facade.addEventListener('click', function() {
+            const videoId = this.getAttribute('data-videoid');
+            const playlistId = this.getAttribute('data-playlistid');
+            let embedUrl = "";
+
+            if (playlistId) {
+                embedUrl = `https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}&autoplay=1&rel=0`;
+            } else if (videoId) {
+                embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+            }
+
+            if (embedUrl) {
+                const iframe = document.createElement('iframe');
+                iframe.setAttribute('src', embedUrl);
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                iframe.setAttribute('allowfullscreen', 'true');
+                iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+
+                const wrapper = this.parentElement;
+                wrapper.innerHTML = "";
+                wrapper.appendChild(iframe);
+            }
+        });
+    });
+
+    // 2. Função para restaurar todas as fachadas e parar os vídeos escondidos
+    function resetAllVideoSlides() {
+        const slides = document.querySelectorAll('.video-slide');
+        
+        slides.forEach(slide => {
+            const wrapper = slide.querySelector('.iframe-wrapper');
+            // Se encontrar um iframe lá dentro, significa que o utilizador clicou nele
+            if (wrapper && wrapper.querySelector('iframe')) {
+                // Descobre quais eram os atributos originais que estavam guardados
+                const videoId = slide.querySelector('[data-videoid]')?.getAttribute('data-videoid') || '';
+                const playlistId = slide.querySelector('[data-playlistid]')?.getAttribute('data-playlistid') || '';
+                
+                // Recria a div da fachada com as propriedades corretas
+                const newFacade = document.createElement('div');
+                newFacade.classList.add('yt-facade');
+                if (videoId) newFacade.setAttribute('data-videoid', videoId);
+                if (playlistId) newFacade.setAttribute('data-playlistid', playlistId);
+                
+                // Vai buscar o HTML interno original (imagem e botão de play) que guardámos no início
+                const originalHTML = facades[0].getAttribute('data-original-html'); 
+                
+                // Como cada slide tem imagens/alts diferentes, reestruturamos de forma limpa:
+                let imgUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : `https://img.youtube.com/vi/${playlistId}/maxresdefault.jpg`;
+                if(playlistId) {
+                    // Ajuste caso a playlist precise de IDs específicos de imagem ou use o ID truncado do teu HTML
+                    const fallbackId = playlistId.substring(12, 23); // Pega no ID do vídeo de capa da playlist
+                    imgUrl = `https://img.youtube.com/vi/${fallbackId}/maxresdefault.jpg`;
+                }
+
+                newFacade.innerHTML = `
+                    <img src="${imgUrl}" alt="Video Thumbnail" onerror="this.src='${imgUrl}.replace("maxresdefault", "hqdefault")'">
+                    <button class="yt-play-btn" aria-label="Play">▶</button>
+                `;
+
+                // Limpa o iframe e mete a fachada nova a funcionar
+                wrapper.innerHTML = "";
+                wrapper.appendChild(newFacade);
+                
+                // Reatribui o evento de clique à nova fachada criada
+                newFacade.addEventListener('click', function() {
+                    facadeClickAction(this, wrapper);
+                });
+            }
+        });
+    }
+
+    // Função auxiliar isolada para lidar com o clique (evita repetição de código)
+    function facadeClickAction(facadeElement, wrapperElement) {
+        const videoId = facadeElement.getAttribute('data-videoid');
+        const playlistId = facadeElement.getAttribute('data-playlistid');
+        let embedUrl = "";
+
+        if (playlistId) {
+            embedUrl = `https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}&autoplay=1&rel=0`;
+        } else if (videoId) {
+            embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+        }
+
+        if (embedUrl) {
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('src', embedUrl);
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', 'true');
+            iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+
+            wrapperElement.innerHTML = "";
+            wrapperElement.appendChild(iframe);
+        }
+    }
+
+    // 3. Intercetar os botões do slider para limpar os vídeos antes de mudar de slide
+    const sliderButtons = document.querySelectorAll('.slider-prev, .slider-next');
+    sliderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            resetAllVideoSlides();
+        });
+    });
+
     // --------------------------------------------------------
     // 4. SAÍDAS PROFISSIONAIS (TABELA EXPANSÍVEL)
     // Cada .saida-row abre/fecha ao clicar
