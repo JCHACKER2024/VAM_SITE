@@ -487,10 +487,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --------------------------------------------------------
     // 3. CARROSSEL 3D DAS GALERIAS (HALL OF FAME)
     // Carrega imagens automaticamente a partir de data-pasta e data-total no HTML
-    // Ficheiros esperados: IMGS/hall_of_fame/PASTA/1.png, 2.png, etc.
-    // Para adicionar imagens: adiciona ficheiros numerados na pasta correta
-    //                         e atualiza data-total no hof.html
-    // Loop automático de 5 em 5 segundos
     // --------------------------------------------------------
     const tracks = document.querySelectorAll('.carrossel-track');
     tracks.forEach(track => {
@@ -498,7 +494,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalImagens = parseInt(track.getAttribute('data-total'), 10);
         if (!pasta || !totalImagens) return;
         
-        // Cria os elementos de imagem dinamicamente
         for (let i = 1; i <= totalImagens; i++) {
             const img = document.createElement('img');
             img.src = `IMGS/hall_of_fame/${pasta}/${i}.png`;
@@ -511,122 +506,97 @@ document.addEventListener('DOMContentLoaded', () => {
         if (slides.length > 0) {
             slides[0].classList.add('active');
             updateCarouselClasses(slides, 0);
-            // Avança automaticamente de 5 em 5 segundos
             setInterval(() => moveManual(track.id, 1), 5000);
         }
     });
 
-    // ========================================================
-    // SISTEMA DE FACHADAS DO YOUTUBE (YT-FACADE) - COM RESET NO SLIDER
-    // ========================================================
-    const facades = document.querySelectorAll('.yt-facade');
-    
-    // 1. Guardar o HTML original de cada fachada para podermos restaurar mais tarde
-    facades.forEach(facade => {
-        facade.setAttribute('data-original-html', facade.innerHTML);
-        
-        facade.addEventListener('click', function() {
-            const videoId = this.getAttribute('data-videoid');
-            const playlistId = this.getAttribute('data-playlistid');
-            let embedUrl = "";
+    // --------------------------------------------------------
+    // SISTEMA DE FACHADAS DO YOUTUBE (YT-FACADE) - SUPORTE PT / EN
+    // Mapeia os títulos de ambos os idiomas para as mesmas capas locais
+    // --------------------------------------------------------
 
+    const localThumbnailsMap = {
+        // Mapeamento PT
+        "Playlist de Jogos": "playlist_jogos.jpg",
+        "Animação 2D": "animacao_2d.jpg",
+        "Animação 3D": "animacao_3d.jpg",
+        "Pitches": "pitches.jpg",
+        "Controladores Alternativos": "controladores.jpg",
+        "Críticas Vídeo": "criticas.jpg",
+        
+        // Mapeamento EN
+        "Games Playlist": "playlist_jogos.jpg",
+        "2D Animation": "animacao_2d.jpg",
+        "3D Animation": "animacao_3d.jpg",
+        "Alternative Controllers": "controladores.jpg",
+        "Video Reviews": "criticas.jpg"
+    };
+
+    function buildFacade(slide) {
+        const wrapper = slide.querySelector('.iframe-wrapper');
+        if (!wrapper) return;
+
+        const videoId = slide.getAttribute('data-js-videoid') || '';
+        const playlistId = slide.getAttribute('data-js-playlistid') || '';
+        const projectTitle = slide.querySelector('.project-info h3')?.textContent.trim() || '';
+
+        const localFileName = localThumbnailsMap[projectTitle] || "default_thumb.jpg";
+        const localImgSrc = `IMGS/hall_of_fame/thumbnails/${localFileName}`;
+
+        const facade = document.createElement('div');
+        facade.classList.add('yt-facade');
+
+        facade.innerHTML = `
+            <img src="${localImgSrc}" alt="${projectTitle}">
+            <button class="yt-play-btn" aria-label="Play">▶</button>
+        `;
+
+        facade.addEventListener('click', function () {
+            let embedUrl = '';
             if (playlistId) {
                 embedUrl = `https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}&autoplay=1&rel=0`;
             } else if (videoId) {
                 embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
             }
+            if (!embedUrl) return;
 
-            if (embedUrl) {
-                const iframe = document.createElement('iframe');
-                iframe.setAttribute('src', embedUrl);
-                iframe.setAttribute('frameborder', '0');
-                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-                iframe.setAttribute('allowfullscreen', 'true');
-                iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-
-                const wrapper = this.parentElement;
-                wrapper.innerHTML = "";
-                wrapper.appendChild(iframe);
-            }
+            const iframe = document.createElement('iframe');
+            iframe.src = embedUrl;
+            iframe.frameBorder = '0';
+            iframe.allowFullscreen = true;
+            iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;';
+            
+            wrapper.innerHTML = '';
+            wrapper.appendChild(iframe);
         });
+
+        wrapper.innerHTML = '';
+        wrapper.appendChild(facade);
+    }
+
+    // Inicialização unificada (Funciona tanto no HTML PT como EN)
+    document.querySelectorAll('.video-slide').forEach(slide => {
+        const targetDataSource = slide.querySelector('[data-videoid]') || slide.querySelector('[data-playlistid]') || slide;
+        
+        const videoId = targetDataSource.getAttribute('data-videoid') || '';
+        const playlistId = targetDataSource.getAttribute('data-playlistid') || '';
+
+        if (videoId) slide.setAttribute('data-js-videoid', videoId);
+        if (playlistId) slide.setAttribute('data-js-playlistid', playlistId);
+
+        buildFacade(slide);
     });
 
-    // 2. Função para restaurar todas as fachadas e parar os vídeos escondidos
-    function resetAllVideoSlides() {
-        const slides = document.querySelectorAll('.video-slide');
-        
-        slides.forEach(slide => {
-            const wrapper = slide.querySelector('.iframe-wrapper');
-            // Se encontrar um iframe lá dentro, significa que o utilizador clicou nele
-            if (wrapper && wrapper.querySelector('iframe')) {
-                // Descobre quais eram os atributos originais que estavam guardados
-                const videoId = slide.querySelector('[data-videoid]')?.getAttribute('data-videoid') || '';
-                const playlistId = slide.querySelector('[data-playlistid]')?.getAttribute('data-playlistid') || '';
-                
-                // Recria a div da fachada com as propriedades corretas
-                const newFacade = document.createElement('div');
-                newFacade.classList.add('yt-facade');
-                if (videoId) newFacade.setAttribute('data-videoid', videoId);
-                if (playlistId) newFacade.setAttribute('data-playlistid', playlistId);
-                
-                // Vai buscar o HTML interno original (imagem e botão de play) que guardámos no início
-                const originalHTML = facades[0].getAttribute('data-original-html'); 
-                
-                // Como cada slide tem imagens/alts diferentes, reestruturamos de forma limpa:
-                let imgUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : `https://img.youtube.com/vi/${playlistId}/maxresdefault.jpg`;
-                if(playlistId) {
-                    // Ajuste caso a playlist precise de IDs específicos de imagem ou use o ID truncado do teu HTML
-                    const fallbackId = playlistId.substring(12, 23); // Pega no ID do vídeo de capa da playlist
-                    imgUrl = `https://img.youtube.com/vi/${fallbackId}/maxresdefault.jpg`;
-                }
-
-                newFacade.innerHTML = `
-                    <img src="${imgUrl}" alt="Video Thumbnail" onerror="this.src='${imgUrl}.replace("maxresdefault", "hqdefault")'">
-                    <button class="yt-play-btn" aria-label="Play">▶</button>
-                `;
-
-                // Limpa o iframe e mete a fachada nova a funcionar
-                wrapper.innerHTML = "";
-                wrapper.appendChild(newFacade);
-                
-                // Reatribui o evento de clique à nova fachada criada
-                newFacade.addEventListener('click', function() {
-                    facadeClickAction(this, wrapper);
-                });
-            }
-        });
-    }
-
-    // Função auxiliar isolada para lidar com o clique (evita repetição de código)
-    function facadeClickAction(facadeElement, wrapperElement) {
-        const videoId = facadeElement.getAttribute('data-videoid');
-        const playlistId = facadeElement.getAttribute('data-playlistid');
-        let embedUrl = "";
-
-        if (playlistId) {
-            embedUrl = `https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}&autoplay=1&rel=0`;
-        } else if (videoId) {
-            embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
-        }
-
-        if (embedUrl) {
-            const iframe = document.createElement('iframe');
-            iframe.setAttribute('src', embedUrl);
-            iframe.setAttribute('frameborder', '0');
-            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-            iframe.setAttribute('allowfullscreen', 'true');
-            iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-
-            wrapperElement.innerHTML = "";
-            wrapperElement.appendChild(iframe);
-        }
-    }
-
-    // 3. Intercetar os botões do slider para limpar os vídeos antes de mudar de slide
-    const sliderButtons = document.querySelectorAll('.slider-prev, .slider-next');
-    sliderButtons.forEach(btn => {
+    // Controladores de reset das setas do slider
+    document.querySelectorAll('.slider-prev, .slider-next').forEach(btn => {
         btn.addEventListener('click', () => {
-            resetAllVideoSlides();
+            document.querySelectorAll('.video-slide').forEach(slide => {
+                if (slide.querySelector('iframe')) {
+                    buildFacade(slide);
+                }
+            });
         });
     });
 
